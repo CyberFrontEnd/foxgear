@@ -9,11 +9,59 @@
 
     <link href="css/style.css" rel="stylesheet">
 
-
     <title>Главная</title>
 </head>
 <body>
 
+<!--Start header-->
+<header class="header flex">
+    <div class="headerLeft flex">
+        <a href="#" class="headerBtn flex">
+            <span></span>
+            <span></span>
+            <span></span>
+        </a>
+
+        <a href="#" class="header__logo"><img src="images/logo.svg" alt="" loading="lazy"></a>
+    </div>
+
+    <div class="headerRight flex">
+        <ul class="headerRightMenu flex">
+            <li>
+                <a href="#" class="text_12_caps">О компании</a>
+            </li>
+
+            <li>
+                <a href="#" class="text_12_caps">Производство</a>
+            </li>
+
+            <li>
+                <a href="#" class="text_12_caps">Каталог</a>
+            </li>
+
+            <li>
+                <a href="#" class="text_12_caps">Партнерам</a>
+            </li>
+
+            <li>
+                <a href="#" class="text_12_caps">Подбор продукта</a>
+            </li>
+
+            <li>
+                <a href="#" class="text_12_caps">Где купить</a>
+            </li>
+
+            <li>
+                <a href="#" class="text_12_caps">Контакты</a>
+            </li>
+        </ul>
+        
+        <div class="headerRightInfo flex">
+            <a href="#" class="headerRightInfo__search"></a>
+        </div>
+    </div>
+</header>
+<!--End header-->
 
 <!--Start clients-->
 <section class="clients simbol">
@@ -31,7 +79,9 @@
         <div class="clientRightBlock">
             <h3 class="clientRightBlock__title h3">Совмещая опыт, технологии, клиентоцентричность и понимание рынков, FOXGEAR предлагает надежные продукты для любых условий</h3>
 
-            <p class="clientRight text_16">FOXGEAR – это эволюция бренда FUCHS. Сохраняя традиции и высочайшие стандарты качества материнского бренда, FOXGEAR более гибко адаптируется к меняющимся реалиям рынков России и СНГ за счет своей региональной экспертизы и команды профессионалов, что позволяет ему быть российским брендом по-настоящему международного уровня.</p>
+            <p class="clientRight text_16">FOXGEAR – это эволюция бренда FUCHS. Сохраняя традиции и высочайшие стандарты качества материнского бренда, FOXGEAR более гибко
+                адаптируется к меняющимся реалиям рынков России и СНГ за счет своей региональной экспертизы и команды профессионалов, что позволяет ему быть российским брендом
+                по-настоящему международного уровня.</p>
         </div>
     </div>
 
@@ -42,15 +92,110 @@
 <!--Start news-->
 <section class="news">
     <div class="client__text text_12_caps">Пресс-центр</div>
+
     <div class="clientLeft">
         <h2 class="h2_caps">последние события</h2>
 
         <a href="#" class="client__btn btn">
-            <span>подробнее</span>
+            <span>все новости</span>
         </a>
+    </div>
+
+    <div class="newsScroll">
+        <div class="newsContent flex">
+            <div class="newsItem">
+                <a href="#"><img src="images/news.jpg" alt="" loading="lazy"></a>
+
+                <div class="newsItem__date text_14">14.09.2024</div>
+
+                <h4 class="newsItem__title"><a href="#" class="h4_caps">Заголовок новости</a></h4>
+                <p class="newsItem__paragraf text_14">Деэмульгирующие гидравлические и смазочные масла рекомендуются</p>
+            </div>
+
+            <div class="newsItem">
+                <a href="#"><img src="images/news2.jpg" alt="" loading="lazy"></a>
+
+                <div class="newsItem__date text_14">14.09.2024</div>
+
+                <h4 class="newsItem__title"><a href="#" class="h4_caps">Заголовок новости</a></h4>
+                <p class="newsItem__paragraf text_14">Деэмульгирующие гидравлические и смазочные масла рекомендуются</p>
+            </div>
+
+            <div class="newsItem">
+                <a href="#"><img src="images/news3.jpg" alt="" loading="lazy"></a>
+
+                <div class="newsItem__date text_14">14.09.2024</div>
+
+                <h4 class="newsItem__title"><a href="#" class="h4_caps">Заголовок новости</a></h4>
+                <p class="newsItem__paragraf text_14">Деэмульгирующие гидравлические и смазочные масла рекомендуются</p>
+            </div>
+
+            <div class="newsItem">
+                <a href="#"><img src="images/news4.jpg" alt="" loading="lazy"></a>
+
+                <div class="newsItem__date text_14">14.09.2024</div>
+
+                <h4 class="newsItem__title"><a href="#" class="h4_caps">Заголовок новости</a></h4>
+                <p class="newsItem__paragraf text_14">Деэмульгирующие гидравлические и смазочные масла рекомендуются</p>
+            </div>
+        </div>
     </div>
 </section>
 <!--End news-->
+
+<!--Start quality-->
+<section class="quality">
+    <div class="qualityVideo">
+        <img src="images/quality.jpg" alt="" class="quality__img" loading="lazy">
+    </div>
+
+    <div class="qualityIn flex">
+        <div class="client__text text_12_caps">производство</div>
+
+        <div class="qualityLeft">
+            <h2 class="quality__title h1_caps">Качество в приоритете</h2>
+            <a href="#" class="client__btn btn">
+                <span>подробнее</span>
+            </a>
+        </div>
+
+        <div class="qualityRight ">
+            <ul class="qualityRightList">
+                <li>
+                    <div class="h1_caps">300+</div>
+                    <div class="qualityRight__text text_12_caps">точек продаж</div>
+                </li>
+
+                <li>
+                    <div class="h1_caps">42</div>
+                    <div class="qualityRight__text text_12_caps">года на рынке</div>
+                </li>
+
+                <li>
+                    <div class="h1_caps">42</div>
+                    <div class="qualityRight__text text_12_caps">сотрудников</div>
+                </li>
+
+                <li>
+                    <div class="h1_caps">1,5</div>
+                    <div class="qualityRight__text text_12_caps">млн единиц товара в год</div>
+                </li>
+
+                <li>
+                    <div class="h1_caps">1,5</div>
+                    <div class="qualityRight__text text_12_caps">млн единиц товара в год</div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+<!--End quality-->
+
+<!--Start items-->
+<section class="items">
+
+</section>
+<!--End items-->
 
 <!--Start clients-->
 <section class="clients">
@@ -145,7 +290,7 @@
                         <span class="text_12_caps">отправить</span>
                     </a>
                 </div>
-                
+
                 <div class="answerFormBlock__text text_14">Поля, помеченные * обязательны для заполнения</div>
             </form>
         </div>

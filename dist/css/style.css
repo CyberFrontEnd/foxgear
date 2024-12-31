@@ -258,6 +258,70 @@ Start setting
   text-transform: uppercase;
 }
 
+.h4_caps {
+  color: #000E32;
+  font: normal 600 18px 'Inter', sans-serif;
+  line-height: 24px;
+  letter-spacing: 1px;
+}
+
+
+/*
+Start header
+############*/
+.header {
+  max-width: 1751px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 26px 0;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.headerLeft {
+  max-width: 350px;
+  width: 100%;
+}
+
+.headerRight {
+  max-width: 1380px;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.headerBtn {
+  width: 46px;
+  height: 46px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.headerBtn span {
+  display: block;
+  height: 2px;
+  background: #000;
+  width: 22px;
+  margin-bottom: 6px;
+}
+
+.header__logo {
+  margin-left: 20px;
+}
+
+.headerRightMenu {
+  justify-content: space-between;
+  max-width: 790px;
+  width: 100%;
+}
+
+.headerRightMenu li a {
+  text-transform: uppercase;
+}
+/*
+End header
+##########*/
+
 /*
 Start answer
 #############*/
@@ -731,9 +795,148 @@ Start news
   margin-top: 54px;
 }
 
+.news .clientLeft {
+  max-width: 100%;
+}
+
+.newsScroll {
+  max-width: 100%;
+  width: 100%;
+  overflow-x: scroll;
+}
+
+.newsScroll::-webkit-scrollbar-track {
+  border-radius: 0;
+}
+
+.newsScroll::-webkit-scrollbar {
+  width: 0;
+}
+
+.newsScroll::-webkit-scrollbar-thumb {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .0);
+}
+
+.newsContent {
+  width: 100%;
+  margin-top: 60px;
+}
+
+.newsItem {
+  max-width: 394px;
+  width: 100%;
+  margin-right: 8px;
+}
+
+.newsItem:last-child {
+  margin-right: 0;
+}
+
+.newsItem img {
+  display: block;
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+}
+
+.newsItem__date {
+  color: #989FAC;
+  margin-top: 12px;
+}
+
+.newsItem__title {
+  text-transform: uppercase;
+  margin-top: 4px;
+}
+
+.newsItem__paragraf {
+  color: #4B556F;
+  max-width: 360px;
+  width: 100%;
+  margin-top: 12px;
+  margin-bottom: 20px;
+}
+
 /*
 End news
 ########*/
+
+/*
+Start quality
+#############*/
+.quality {
+  max-width: 100%;
+  width: 100%;
+  position: relative;
+  height: 920px;
+}
+
+.qualityIn {
+  max-width: 1600px;
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 106px;
+  position: relative;
+  z-index: 1;
+  justify-content: space-between;
+}
+
+.qualityVideo {
+  position: absolute;
+  height: 920px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  max-width: 100%;
+  width: 100%;
+}
+
+.qualityVideo video,
+.qualityVideo img {
+  display: block;
+  margin: 0 auto;
+}
+
+.qualityIn .client__text {
+  color: #ffffff;
+  margin-left: -53px;
+  margin-top: 50px;
+}
+
+.quality__title {
+  color: #ffffff;
+}
+
+.qualityLeft {
+  max-width: 535px;
+  width: 100%;
+  margin-left: 117px;
+}
+
+.qualityRight {
+  max-width: 800px;
+  width: 100%;
+}
+
+.qualityRightList {
+  max-width: 615px;
+  width: 100%;
+}
+
+.qualityRightList li {
+  border-bottom: 1px solid #ffffff;
+  padding-bottom: 14px;
+}
+
+.qualityRight__text {
+  color: #ffffff;
+  text-transform: uppercase;
+  margin-top: 10px;
+}
+
+/*
+End quality
+############*/
 
 /*
 Start responsive
