@@ -287,6 +287,7 @@ Start header
   max-width: 1380px;
   width: 100%;
   justify-content: space-between;
+  align-items: center;
 }
 
 .headerBtn {
@@ -318,6 +319,56 @@ Start header
 .headerRightMenu li a {
   text-transform: uppercase;
 }
+
+.headerRightInfo__search {
+  background: url('../images/search.svg') no-repeat center center;
+  width: 20px;
+  height: 20px;
+  margin-right: 24px;
+}
+
+.headerRightInfo {
+  max-width: 530px;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.headerRightInfo__tel {
+  max-width: 185px;
+  width: 100%;
+}
+
+.headerRightInfo__tel:before {
+  background: #F1F3F4;
+}
+
+.headerRightInfo__tel span:after {
+  display: none;
+}
+
+.headerRightInfo__tel span {
+  color: #000E32;
+}
+
+.headerRightInfo__intro {
+  text-transform: uppercase;
+  max-width: 276px;
+  width: 100%;
+}
+
+.headerRightInfo__intro:before {
+  background: #000E32;
+}
+
+.headerRightInfo__intro span:after {
+  border-color: #ffffff;
+}
+
+.headerRightInfo__intro span {
+  color: #ffffff;
+}
+
 /*
 End header
 ##########*/
