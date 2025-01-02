@@ -248,6 +248,7 @@ Start setting
   width: 5px;
   height: 5px;
   margin-left: 6px;
+  margin-top: 2px;
 }
 
 .h2_caps {
@@ -988,6 +989,183 @@ Start quality
 /*
 End quality
 ############*/
+
+/*
+Start topSlider
+#############*/
+.topSlider {
+  max-width: 1920px;
+  width: 100%;
+  height: 712px;
+  margin: 0 auto;
+}
+
+.topSlider .mySwiper {
+  height: 712px;
+}
+
+.topSlider__img {
+  display: block;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  position: absolute;
+}
+
+.topSliderContent {
+  max-width: 100%;
+  width: 100%;
+  position: relative;
+  height: 712px;
+}
+
+.topSliderNav {
+  max-width: 1600px;
+  width: 100%;
+  margin: -70px auto 0;
+}
+
+.topSliderNavIn {
+  max-width: 140px;
+  width: 100%;
+  position: relative;
+  align-items: center;
+  justify-content: space-between !important;
+  height: 25px;
+}
+
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  color: #ffffff;
+  font-size: 20px !important;
+}
+
+.topSliderNavIn .swiper-button-prev,
+.topSliderNavIn .swiper-button-next {
+  position: relative !important;
+  width: 10px !important;
+}
+
+.topSliderIn {
+  min-width: 800px;
+  height: 100%;
+  position: relative;
+  padding-top: 120px;
+  background: url('../images/bg2.svg') no-repeat top left;
+  background-size: cover;
+}
+
+.topSliderInBlock {
+  max-width: 475px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.topSliderNavIn .swiper-pagination {
+  top: 0 !important;
+  position: relative !important;
+  max-width: 60%;
+  width: 100%;
+}
+
+.topSliderNavIn .swiper-pagination-bullet {
+  background: rgba(255, 255, 255, 0.6) !important;
+  margin: 0 5px !important;
+  cursor: pointer;
+}
+
+.topSliderNavIn .swiper-pagination-bullet-active {
+  background: #ffffff !important;
+}
+
+/*
+End topSlider
+############*/
+
+/*
+Start items
+###########*/
+.items {
+  max-width: 1600px;
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 100px;
+}
+
+.itemTabs {
+  max-width: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.tab-btn {
+  max-width: 686px;
+  width: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.tab-btn div {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  width: 226px;
+  border: 1px solid #989FAC;
+  height: 48px;
+  border-right: none;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.tab-btn div:last-child {
+  border-right: 1px solid #989FAC;
+}
+
+.tab-btn div.active {
+  border: 1px solid #000E32;
+}
+
+.tab_cnt {
+  position: absolute;
+  top: 80px;
+  width: 100%;
+}
+
+.tab_cnt > div {
+  visibility: hidden;
+  position: absolute;
+  width: 100%;
+}
+
+.itemTabs {
+  height: 600px;
+}
+
+.tab-btn div.active {
+  color: #000E32;
+}
+
+.itemBlock {
+  max-width: 394px;
+  width: 100%;
+  height: 580px;
+  background: #F1F3F4;
+}
+
+/*
+End items
+#########*/
 
 /*
 Start responsive
