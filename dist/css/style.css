@@ -86,49 +86,49 @@ a:hover {
 }
 
 textarea::-webkit-input-placeholder,
-input[type="text"]::-webkit-input-placeholder {
+input::-webkit-input-placeholder {
   opacity: 1;
   transition: opacity 0.3s ease;
 }
 
 textarea::-moz-placeholder,
-input[type="text"]::-moz-placeholder {
+input::-moz-placeholder {
   opacity: 1;
   transition: opacity 0.3s ease;
 }
 
 textarea:-ms-input-placeholder,
-input[type="text"]:-moz-placeholder {
+input:-moz-placeholder {
   opacity: 1;
   transition: opacity 0.3s ease;
 }
 
 textarea:-moz-placeholder,
-input[type="text"]:-ms-input-placeholder {
+input:-ms-input-placeholder {
   opacity: 1;
   transition: opacity 0.3s ease;
 }
 
 textarea:focus::-webkit-input-placeholder,
-input[type="text"]:focus::-webkit-input-placeholder {
+input:focus::-webkit-input-placeholder {
   opacity: 0;
   transition: opacity 0.3s ease;
 }
 
 textarea:focus::-moz-placeholder,
-input[type="text"]:focus::-moz-placeholder {
+input:focus::-moz-placeholder {
   opacity: 0;
   transition: opacity 0.3s ease;
 }
 
 textarea:focus:-ms-input-placeholder,
-input[type="text"]:focus:-moz-placeholder {
+input:focus:-moz-placeholder {
   opacity: 0;
   transition: opacity 0.3s ease;
 }
 
 textarea:focus:-moz-placeholder,
-input[type="text"]:focus:-ms-input-placeholder {
+input:focus:-ms-input-placeholder {
   opacity: 0;
   transition: opacity 0.3s ease;
 }
@@ -297,6 +297,24 @@ Start header
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  position: relative;
+}
+
+.headerBtn:before {
+  content: '';
+  display: block;
+  background: rgba(241, 243, 244, 1);
+  height: 46px;
+  width: 46px;
+  position: absolute;
+  transform: skewX(-12deg);
+  top: -3px;
+  transition: opacity, 0.5s;
+  opacity: 0;
+}
+
+.headerBtn:hover:before {
+  opacity: 1;
 }
 
 .headerBtn span {
@@ -305,6 +323,7 @@ Start header
   background: #000;
   width: 22px;
   margin-bottom: 6px;
+  position: relative;
 }
 
 .header__logo {
@@ -364,10 +383,28 @@ Start header
 
 .headerRightInfo__intro span:after {
   border-color: #ffffff;
+  margin-top: -1px;
 }
 
 .headerRightInfo__intro span {
   color: #ffffff;
+}
+
+.headerMenu {
+  max-width: 100%;
+  width: 100%;
+  background: #ffffff;
+  height: 240px;
+  border-top: 1px solid rgb(235 235 235);
+}
+
+.headerMenuIn {
+  align-items: center;
+  justify-content: flex-end;
+  max-width: 1740px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 11px 0 18px;
 }
 
 /*
@@ -1096,13 +1133,18 @@ Start items
   max-width: 100%;
   width: 100%;
   position: relative;
+  margin-top: -100px;
+}
+
+.item .client__text {
+  margin-left: -72px;
 }
 
 .tab-btn {
   max-width: 686px;
   width: 100%;
   position: absolute;
-  right: 0;
+  right: 40px;
   top: 0;
 }
 
@@ -1161,11 +1203,225 @@ Start items
   width: 100%;
   height: 580px;
   background: #F1F3F4;
+  position: relative;
+  margin-right: 4px;
+}
+
+.itemBlock__link {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  width: 100%;
+  height: 372px;
+}
+
+.itemBlockBottom {
+  max-width: 346px;
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 24px;
+}
+
+.itemBlockBottom__name {
+  text-transform: uppercase;
+  color: #000E32;
+  font: normal 600 19px 'Inter', sans-serif;
+  line-height: 24px;
+  letter-spacing: 1px;
+  margin-top: 5px;
+  display: block;
+  height: 24px;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+
+.itemBlockBottomBottom {
+  margin-top: 16px;
+}
+
+.itemBlockTop {
+  position: absolute;
+  top: -6px;
+  right: 10px;
+}
+
+.itemBlockTop__text2,
+.itemBlockTop__text {
+  text-transform: uppercase;
+  color: #ffffff;
+  padding: 10px 12px;
+  background: linear-gradient(97.56deg, #02295C -62.65%, #EFFCFF -62.6%, #E8FBFF -46.42%, #ADF1FF -30.79%, #9EE3F8 -24.94%, #68AEE0 -9.41%, #468DD2 2.97%, #3981CC 9.25%, #2966AA 23.39%, #1B508E 37.82%, #103F78 51.29%, #083368 61.62%, #032B5F 76.95%, #02295C 112.43%);
+  margin: 0 4px;
+}
+
+.itemBlockTop__text2 {
+  background: #6ABFEA;
+}
+
+.itemSlider .swiper-slide {
+  padding-top: 6px !important;
+}
+
+.itemSlider {
+  margin-top: 60px;
 }
 
 /*
 End items
 #########*/
+
+/*
+Start popupCabinet
+#############*/
+.popupCabinet {
+  max-width: 1066px !important;
+  width: 100%;
+  height: 670px;
+  background: #ffffff !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  justify-content: space-between;
+}
+
+.popupForm {
+  max-width: 732px;
+  width: 100%;
+  height: 670px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.popupFormIn {
+  max-width: 380px;
+  width: 100%;
+  margin: 100px auto 0;
+}
+
+.popupFormIn__title {
+  text-transform: uppercase;
+  text-align: center;
+  color: #000000;
+}
+
+.popupFormForm {
+  margin-top: 40px;
+}
+
+.popupFormFormInput {
+  margin-bottom: 24px;
+}
+
+.popupFormFormInput__title {
+  text-transform: uppercase;
+  color: #000E32;
+  margin-bottom: 5px;
+}
+
+.popupFormFormInput input {
+  border: none;
+  max-width: 100%;
+  width: 100%;
+  height: 56px;
+  background: #F1F3F4;
+  padding-left: 24px;
+  padding-right: 24px;
+  font: normal normal 16px 'Inter', sans-serif;
+  line-height: 24px;
+  color: #000E32;
+}
+
+.popupFormFormInput input::-moz-placeholder {
+  font: normal normal 16px 'Inter', sans-serif;
+  line-height: 24px;
+  color: #000E32;
+}
+
+.popupFormFormInput input::-webkit-input-placeholder {
+  font: normal normal 16px 'Inter', sans-serif;
+  line-height: 24px;
+  color: #000E32;
+}
+
+.popupFormFormInput input:-ms-input-placeholder {
+  font: normal normal 16px 'Inter', sans-serif;
+  line-height: 24px;
+  color: #000E32;
+}
+
+.popupFormForm__href {
+  display: block;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 24px;
+  color: #4B556F;
+}
+
+.popupFormForm__enter {
+  max-width: 100%;
+  width: 100%;
+  height: 56px;
+  justify-content: center;
+  align-items: center;
+  background: #000E32;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.popupFormForm__regis {
+  text-transform: uppercase;
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+  color: #4B556F;
+}
+
+.popupCabinetBottom {
+  max-width: 510px;
+  width: 100%;
+  justify-content: space-between;
+  margin-top: 60px;
+  position: relative;
+}
+
+.popupCabinetBottom li a {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.popupCabinetBottom:before {
+  content: "";
+  display: block;
+  width: 5px;
+  height: 5px;
+  background: #989FAC;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  bottom: 6px;
+}
+
+.fancybox-close-small {
+  background: #F1F3F4 !important;
+  border-radius: 100px !important;
+  top: 40px !important;
+  right: 40px !important;
+}
+
+/*
+End popupCabinet
+############*/
 
 /*
 Start responsive
