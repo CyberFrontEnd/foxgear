@@ -282,6 +282,7 @@ Start header
 .headerLeft {
   max-width: 350px;
   width: 100%;
+  align-items: center;
 }
 
 .headerRight {
@@ -324,6 +325,16 @@ Start header
   width: 22px;
   margin-bottom: 6px;
   position: relative;
+  transition: all, 0.5s;
+}
+
+.headerRightMenu.active {
+  visibility: hidden;
+}
+
+.headerBtn.active span:last-of-type,
+.headerBtn.active span:first-child {
+  display: none;
 }
 
 .header__logo {
@@ -396,6 +407,9 @@ Start header
   background: #ffffff;
   height: 240px;
   border-top: 1px solid rgb(235 235 235);
+  position: absolute;
+  z-index: 99;
+  display: none;
 }
 
 .headerMenuIn {
@@ -405,6 +419,43 @@ Start header
   width: 100%;
   margin: 0 auto;
   padding: 11px 0 18px;
+}
+
+.headerMenuList {
+  max-width: 1170px;
+  width: 100%;
+}
+
+.headerMenuListMenu {
+  border-right: 1px solid rgba(0, 0, 0, 0.08);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-direction: column;
+  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  height: 80px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.headerMenuListMenu:last-of-type {
+  border-right: none;
+}
+
+.headerMenuListMenu:first-child {
+  padding-left: 0;
+}
+
+.headerMenuListMenu li a {
+  text-transform: uppercase;
 }
 
 /*
@@ -1087,9 +1138,10 @@ Start topSlider
   min-width: 800px;
   height: 100%;
   position: relative;
-  padding-top: 120px;
-  background: url('../images/bg2.svg') no-repeat top left;
+  background: url('../images/bg3.png') no-repeat top left;
   background-size: cover;
+  display: flex;
+  align-items: center;
 }
 
 .topSliderInBlock {
@@ -1099,9 +1151,9 @@ Start topSlider
 }
 
 .topSliderNavIn .swiper-pagination {
-  top: 0 !important;
+  top: -2px !important;
   position: relative !important;
-  max-width: 60%;
+  max-width: 65%;
   width: 100%;
 }
 
@@ -1423,10 +1475,118 @@ Start popupCabinet
 End popupCabinet
 ############*/
 
+.headerRightInfoMobil__cabinet,
+.headerRightInfoMobil__tel {
+  width: 62px;
+  height: 48px;
+  align-items: center;
+  justify-content: center;
+  display: none;
+}
+
+.headerRightInfoMobil__cabinet:after,
+.headerRightInfoMobil__tel:after {
+  content: "";
+  display: block;
+  background: url('../images/icon2.svg') no-repeat center;
+  position: relative;
+  z-index: 9;
+  width: 48px;
+  height: 48px;
+  margin: 0 auto;
+}
+
+.headerRightInfoMobil__cabinet:after {
+  background: url('../images/icon3.svg') no-repeat center;
+}
+
+.headerRightInfoMobil__cabinet:before {
+  background: #000E32;
+}
+
+.headerRightInfoMobil__tel:before {
+  background: #F1F3F4;
+}
+
+.topSliderIn__2 {
+  min-width: 820px;
+}
+
+.topSliderIn__2 .topSliderInBlock {
+  max-width: 485px;
+}
+
+.topSliderIn__3 {
+  min-width: 856px;
+}
+
+.topSliderIn__3 .topSliderInBlock {
+  max-width: 520px;
+}
+
+.topSliderIn__4 {
+  min-width: 1134px;
+}
+
+.topSliderIn__4 .topSliderInBlock {
+  max-width: 790px;
+}
+
 /*
 Start responsive
 ################*/
+@media (max-width: 1895px) {
+  .topSliderInBlock {
+    margin: 0 0 0 135px;
+  }
+
+  .topSliderNav {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 1830px) {
+  .topSliderInBlock {
+    margin: 0 0 0 100px;
+  }
+}
+
+@media (max-width: 1800px) {
+  .headerRight {
+    max-width: 77%;
+  }
+
+  .headerRightMenu {
+    max-width: 60%;
+  }
+
+  .headerRightInfo {
+    max-width: 38%;
+  }
+
+  .headerRightInfo__intro {
+    max-width: 52%;
+  }
+
+  .headerRightInfo__tel {
+    max-width: 35%;
+  }
+
+  .header__logo {
+    max-width: 74%;
+    width: 100%;
+  }
+
+  .header {
+    max-width: 95%;
+  }
+}
+
 @media (max-width: 1660px) {
+  .headerLeft {
+    max-width: 22%;
+  }
+
   .footerBottom,
   .footerTop {
     max-width: 95%;
@@ -1441,7 +1601,26 @@ Start responsive
   }
 }
 
+@media (max-width: 1500px) {
+  .headerRightMenu {
+    display: none;
+  }
+
+  .headerRightInfo {
+    max-width: 60%;
+  }
+
+  .headerRight {
+    max-width: 60%;
+    justify-content: flex-end;
+  }
+}
+
 @media (max-width: 1460px) {
+  .topSliderNav {
+    max-width: 88%;
+  }
+
   .footerTopLeft {
     max-width: 27%;
   }
@@ -1466,6 +1645,23 @@ Start responsive
 }
 
 @media (max-width: 1260px) {
+  .topSliderNav {
+    max-width: 86%;
+  }
+
+  .topSliderIn__4 {
+    background-size: 100% 100%;
+    min-width: 1000px;
+  }
+
+  .headerRightInfo {
+    max-width: 80%;
+  }
+
+  .headerLeft {
+    max-width: 32%;
+  }
+
   .footer .h3 {
     font-size: 22px;
   }
@@ -1480,6 +1676,10 @@ Start responsive
 }
 
 @media (max-width: 1160px) {
+  .topSliderNav {
+    max-width: 83%;
+  }
+
   .footerTopLeft {
     max-width: 100%;
     justify-content: flex-start;
@@ -1505,9 +1705,26 @@ Start responsive
   .footerTop {
     margin: 0 auto;
   }
+
+  .topSliderInBlock .topSliderInBlock__title {
+    font-size: 50px;
+  }
+
+  .topSliderIn__4 .topSliderInBlock {
+    max-width: 644px;
+  }
+
+  .topSliderIn__4 {
+    min-width: 865px;
+  }
 }
 
 @media (max-width: 990px) {
+  .topSliderNav {
+    max-width: 81%;
+  }
+
+
   .footerBottomLeft {
     max-width: 420px;
   }
@@ -1519,9 +1736,88 @@ Start responsive
   .footerBottom {
     align-items: flex-end;
   }
+
+  .header {
+    max-width: 92%;
+  }
+
+  .headerRightInfo {
+    max-width: 95%;
+  }
+}
+
+@media (max-width: 870px) {
+  .topSliderNav {
+    max-width: 93%;
+  }
+
+  .topSliderInBlock .topSliderInBlock__title{
+    font-size: 46px;
+    max-width: 482px;
+  }
+
+  .topSliderInBlock {
+    margin: 0 0 0 42px;
+  }
+
+  .topSliderIn__2 .topSliderInBlock {
+    max-width: 460px;
+  }
+
+  .topSliderIn {
+    min-width: 656px;
+    background-size: 100% 100%;
+  }
+
+  .headerLeft {
+    max-width: 30%;
+  }
+
+  .header__logo {
+    max-width: 67%;
+  }
+
+  .headerRightInfo {
+    max-width: 100%;
+  }
 }
 
 @media (max-width: 770px) {
+  .headerRightInfo__intro {
+    max-width: 250px;
+  }
+
+  .header {
+    padding: 20px 0;
+  }
+
+  .headerRight,
+  .headerRightInfo {
+    max-width: 320px;
+  }
+
+  .headerRightInfo {
+    justify-content: space-between;
+  }
+
+  .headerLeft {
+    max-width: 270px;
+  }
+
+  .header__logo {
+    max-width: 210px;
+    margin-left: 10px;
+  }
+
+  .headerRightInfo__tel,
+  .headerRightInfo__search {
+    display: none;
+  }
+
+  .headerRightInfoMobil__tel {
+    display: block;
+  }
+
   .footerTopRightCatalog {
     max-width: 70%;
   }
@@ -1584,12 +1880,44 @@ Start responsive
 }
 
 @media (max-width: 670px) {
+  .header {
+    padding: 16px 0;
+  }
+
+  .headerRightInfoMobil__tel {
+    display: none;
+  }
+
+  .headerRightInfo__intro {
+    display: none;
+  }
+
+  .headerRightInfoMobil__cabinet {
+    display: flex;
+  }
+
+  .headerRightInfo__intro span {
+    font-size: 9px;
+  }
+
+  .headerRight, .headerRightInfo {
+    max-width: 80px;
+    justify-content: flex-end;
+  }
+
   .footerBottomLeft {
     max-width: 440px;
   }
 }
 
 @media (max-width: 620px) {
+  .topSliderNav {
+    max-width: 89%;
+  }
+  .headerRightInfoMobil__cabinet {
+    margin-right: 5px;
+  }
+
   .footer .h3 {
     font-size: 18px;
   }
@@ -1597,9 +1925,34 @@ Start responsive
   .footerTopRightAddress {
     max-width: 80%;
   }
+
+  .topSliderInBlock .topSliderInBlock__title {
+    font-size: 28px;
+  }
+
+  .topSliderIn {
+    min-width: 490px;
+  }
+
+  .topSliderInBlock .topSliderInBlock__title {
+    max-width: 270px;
+    line-height: 32px;
+  }
 }
 
 @media (max-width: 590px) {
+  .topSlider .mySwiper{
+    height: 540px;
+  }
+
+  .topSliderContent {
+    height: 540px;
+  }
+
+  .headerRightInfo__intro {
+    display: none;
+  }
+
   .footerTopRightAddressBottom {
     max-width: 50%;
   }
@@ -1615,6 +1968,10 @@ Start responsive
 }
 
 @media (max-width: 550px) {
+  .topSliderIn {
+    min-width: 420px;
+  }
+
   .footerTopRightCatalog {
     max-width: 60%;
   }
@@ -1645,12 +2002,36 @@ Start responsive
 }
 
 @media (max-width: 460px) {
+  .headerLeft {
+    max-width: 227px;
+  }
+
+  .header__logo {
+    max-width: 170px;
+  }
+
   .footerBottomList li:before {
     margin-right: 10px;
   }
 }
 
 @media (max-width: 430px) {
+  .topSliderNav{
+    max-width: 96%;
+  }
+
+  .topSliderIn {
+    min-width: 349px;
+  }
+
+  .topSliderInBlock {
+    margin: 0 0 0 20px;
+  }
+
+  .headerRight, .headerRightInfo {
+    max-width: 65px;
+  }
+
   .footerBottomList li:before {
     margin-right: 6px;
   }
