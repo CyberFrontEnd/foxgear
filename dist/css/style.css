@@ -1092,7 +1092,7 @@ Start topSlider
   max-width: 1920px;
   width: 100%;
   height: 712px;
-  margin: 0 auto 100px;
+  margin: 0 auto;
 }
 
 .topSlider .mySwiper {
@@ -1543,6 +1543,75 @@ End popupCabinet
 video.qualityPlanshet__img,
 img.qualityPlanshet__img {
   display: none;
+}
+
+.qualityLeft__text {
+  color: #fff;
+  font: normal 500 26px 'Inter', sans-serif;
+  line-height: 32px;
+}
+
+.qualityLeft__modif.qualityLeft {
+  max-width: 560px;
+}
+
+.qualityLeft__modif.qualityLeft .qualityLeft__text {
+  padding-top: 32px;
+}
+
+.bread {
+  max-width: 1600px;
+  width: 100%;
+  margin: 15px auto 70px;
+}
+
+.bread li span,
+.bread li a {
+  color: #000E32;
+  font: normal 500 12px 'Inter', sans-serif;
+  line-height: 16px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+}
+
+.bread li span:before {
+  content: '';
+  width: 5px;
+  height: 5px;
+  display: block;
+  background: #4B556F;
+  border-radius: 100%;
+  margin: 0 16px;
+}
+
+.clientsBlueBg {
+  background: #0D38A6;
+  padding-top: 80px;
+}
+
+.clientsBlueBg .clientRight,
+.clientsBlueBg .clientLeft__title,
+.clientsBlueBg .clientRightBlock__title,
+.clientsBlueBg .client__text {
+  color: #fff;
+}
+
+.client3Img {
+  max-width: 100%;
+  width: 100%;
+  margin: 0 auto;
+  display: block;
 }
 
 /*
