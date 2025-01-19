@@ -851,9 +851,13 @@ Start clients
 .clients {
   max-width: 1600px;
   width: 100%;
-  margin: 0 auto;
+  margin: 80px auto;
   padding-top: 0;
   position: relative;
+}
+
+.simbol {
+  margin-bottom: 0;
 }
 
 .clientIn {
@@ -1614,6 +1618,199 @@ img.qualityPlanshet__img {
   display: block;
 }
 
+.itemBlockList {
+  max-width: 270px;
+  width: 100%;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.itemBlockList li.itemBlockList__active span {
+  font-weight: 600;
+}
+
+.itemBlockList li.itemBlockList__active {
+  align-items: center;
+}
+
+.itemBlockList li.itemBlockList__active:before {
+  content: '';
+  display: block;
+  background: url('../images/icon5.svg') no-repeat top center;
+  width: 18px;
+  height: 18px;
+  margin: 0 5px 0 0;
+}
+
+.itemBlockList li {
+  position: relative;
+}
+
+.itemBlockList li:after {
+  content: '';
+  display: block;
+  width: 1px;
+  height: 10px;
+  background: #989FAC;
+  position: absolute;
+  top: 8px;
+  right: -12px;
+}
+
+.itemBlockList li:last-of-type:after {
+  display: none;
+}
+
+.itemBlockList li:nth-of-type(4):after {
+  display: none;
+}
+
+.itemBlockList li:last-of-type {
+  position: relative;
+  right: 10px;
+}
+
+.itemSlider .itemSliderNav {
+  max-width: 400px;
+  width: 100%;
+  margin: 46px auto 0;
+  position: relative;
+}
+
+.itemSlider .itemSliderNav .swiper-pagination-bullet {
+  border-radius: 0 !important;
+  width: 50%;
+  margin: 0 !important;
+  padding: 0 !important;
+  height: 2px;
+}
+
+.itemSlider .itemSliderNav .swiper-pagination-bullet-active {
+  background: #02295C;
+}
+
+.itemSlider .itemSliderNav .swiper-pagination {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+/*
+Start documents
+#############*/
+.documents {
+  max-width: 1600px;
+  width: 100%;
+  margin: 0 auto;
+  height: 440px;
+  padding-top: 60px;
+  position: relative;
+}
+
+.documentItem {
+  max-width: 287px;
+  width: 100%;
+  height: 320px;
+  justify-content: center;
+  align-items: center;
+  margin-right: 8px;
+  background: #F1F3F4 url('../images/icon6.svg') no-repeat 30px 30px;
+  position: relative;
+}
+
+.documentItem:last-of-type {
+  margin-right: 0;
+}
+
+.documentItem img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.documents .client__text {
+  margin-top: 38px;
+  margin-left: -55px;
+}
+
+.documentsIn {
+  max-width: 1470px;
+  width: 100%;
+  margin-left: 134px;
+}
+
+.documentItem__title {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  text-transform: uppercase;
+}
+
+/*
+End documents
+############*/
+
+
+/*
+Start liveCompany
+#############*/
+.liveCompany {
+  background: #F1F3F4;
+  padding: 60px 0;
+  height: 720px;
+}
+
+.liveCompanyIn {
+  position: relative;
+  max-width: 1600px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.liveCompanySlider {
+  max-width: 1470px;
+  width: 100%;
+  margin-left: 138px !important;
+}
+
+.liveCompanySliderImg {
+  max-width: 534px;
+  width: 100%;
+  height: 600px;
+}
+
+.liveCompanySliderImg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.liveCompanySliderRight {
+  max-width: 670px;
+  width: 100%;
+  margin-left: 133px;
+}
+
+.liveCompanySliderRight__date {
+  color: #4B556F;
+}
+
+.liveCompanySliderRight__title {
+  text-transform: uppercase;
+  color: #02295C;
+  margin-top: 10px;
+}
+
+.liveCompanySliderRight__paragraf {
+  margin-top: 30px;
+}
+
+/*
+End liveCompany
+############*/
+
 /*
 Start responsive
 ################*/
@@ -1808,6 +2005,10 @@ Start responsive
   .answerLeft {
     max-width: 50%;
   }
+
+  .itemSlider .itemSliderNav {
+    margin: 50px 0 0 0;
+  }
 }
 
 @media (max-width: 1260px) {
@@ -1955,6 +2156,23 @@ Start responsive
   .answer__paragraf {
     font-size: 22px;
   }
+
+  .items .newsScroll {
+    margin-top: 0;
+  }
+
+  .tab-btn {
+    right: 0;
+    left: 50px;
+  }
+
+  .itemSlider {
+    margin-top: 0;
+  }
+
+  .items .clientIn {
+    padding-bottom: 40px;
+  }
 }
 
 @media (max-width: 990px) {
@@ -2023,6 +2241,10 @@ Start responsive
 
   .answerFormBlockBottom .input-helper {
     padding-left: 50px;
+  }
+
+  .items .clientLeft {
+    max-width: 55%;
   }
 }
 
@@ -2240,6 +2462,22 @@ Start responsive
 
   .answerFormBlockBoth {
     margin-top: 15px;
+  }
+
+  .itemBlock {
+    max-width: 335px;
+  }
+
+  .quality {
+    height: 800px;
+  }
+
+  .tab-btn div {
+    max-width: 200px;
+  }
+
+  .items .clientLeft {
+    max-width: 70%;
   }
 }
 
