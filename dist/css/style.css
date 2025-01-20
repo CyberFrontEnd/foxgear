@@ -964,7 +964,7 @@ Start news
 
 .newsContent {
   width: 100%;
-  margin-top: 60px;
+  margin-top: 26px;
 }
 
 .newsItem {
@@ -973,7 +973,7 @@ Start news
   margin-right: 8px;
 }
 
-.newsItem:last-child {
+.newsItem:nth-of-type(4n+4) {
   margin-right: 0;
 }
 
@@ -2086,6 +2086,113 @@ End liveCompany
   max-width: 77%;
 }
 
+.mistake {
+  align-items: center;
+  justify-content: center;
+  min-height: 93vh;
+  height: 100%;
+  background-color: rgba(244, 248, 251);
+  max-width: 100%;
+  width: 100%;
+}
+
+.mistakeContent {
+  max-width: 890px;
+  width: 100%;
+  flex-direction: column;
+}
+
+.mistake__title {
+  text-transform: uppercase;
+  color: #000E32;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.mistake__text {
+  text-transform: uppercase;
+  width: 450px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.mistakeBtn {
+  max-width: 350px;
+  width: 100%;
+  justify-content: space-between;
+  margin: 40px auto 0;
+}
+
+.mistakeBtn__main.btn span:after,
+.mistakeBtn__question.btn span:after {
+  display: none;
+}
+
+.mistakeBtn__main.btn:before,
+.mistakeBtn__question.btn:before {
+  background: #000E32;
+}
+
+.mistakeBtn__main.btn,
+.mistakeBtn__question.btn {
+  max-width: 182px;
+  width: 100%;
+}
+
+.mistakeBtn__main.btn span,
+.mistakeBtn__question.btn span {
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.mistakeBtn__main.btn {
+  max-width: 157px;
+}
+
+.preessCenter {
+  max-width: 1600px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.preessCenter .clientLeft__title {
+  max-width: 650px;
+}
+
+.preessCenter .client__text {
+  margin-top: 52px;
+  margin-left: -44px;
+}
+
+.preessCenterBlock .newsItem {
+  margin-bottom: 28px;
+}
+
+.preessCenterBlock {
+  margin-bottom: 90px;
+}
+
+.preessCenterBlockList {
+  max-width: 280px;
+  width: 100%;
+  position: absolute;
+  top: 50px;
+  right: 400px;
+}
+
+.preessCenterBlockList li a {
+  color: #989FAC;
+  padding: 17px 26px;
+  border: 1px solid #989FAC;
+  text-transform: uppercase;
+}
+
+.preessCenterBlockList li a.active {
+  border: 1px solid #000E32;
+  color: #000E32;
+}
 
 /*
 Start responsive
