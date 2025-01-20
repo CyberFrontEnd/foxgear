@@ -2033,6 +2033,60 @@ End liveCompany
   padding-top: 25px;
 }
 
+.proizvodsto {
+  margin-top: 0;
+  padding-top: 0;
+  padding-left: 120px;
+}
+
+.proizvodsto .parthnerItem {
+  max-width: 354px;
+  height: 388px;
+}
+
+.proizvodsto .parthnerIn {
+  max-width: 1440px;
+}
+
+.bigProizvodstvo {
+  max-width: 1600px;
+  width: 100%;
+  margin: 50px auto 0;
+  justify-content: space-between;
+  padding-left: 120px;
+  align-items: center;
+  padding-right: 50px;
+}
+
+.bigProizvodstvoRight {
+  max-width: 667px;
+  width: 100%;
+  padding-top: 80px;
+}
+
+.bigProizvodstvoRight__title {
+  text-transform: uppercase;
+  color: #000E32;
+}
+
+.bigProizvodstvoRight__text {
+  margin-top: 30px;
+}
+
+.bigProizvodstvo .stepParthnersBlock__title span {
+  max-width: 70%;
+  width: 100%;
+}
+
+.bigProizvodstvoModif {
+  padding: 0;
+}
+
+.bigProizvodstvoModif .stepParthnersBlock__title span {
+  max-width: 77%;
+}
+
+
 /*
 Start responsive
 ################*/
