@@ -2642,6 +2642,7 @@ End liveCompany
 
 .mapPopupListBlock2__href {
   color: rgba(57, 129, 204);
+  display: block;
 }
 
 .mapPopupList li {
@@ -2677,6 +2678,87 @@ End liveCompany
   position: absolute;
   top: 20px;
   right: 20px;
+}
+
+.contact .clientLeft__title {
+  max-width: 645px;
+}
+
+.contact {
+  max-width: 1600px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.contactBlock {
+  max-width: 1600px;
+  width: 100%;
+  margin: 0 auto 100px;
+}
+
+.contactMap {
+  max-width: 667px;
+  width: 100%;
+  padding-left: 120px;
+}
+
+.contactsRight {
+  max-width: 683px;
+  width: 100%;
+  margin-left: 132px;
+  margin-top: 24px;
+}
+
+.contactsRight__title {
+  text-transform: uppercase;
+  color: #000E32;
+}
+
+.contactsRightBlock {
+  justify-content: space-between;
+  margin-top: 50px;
+}
+
+.contactsRightBlockIn {
+  max-width: 315px;
+  width: 100%;
+}
+
+.contactsRightBlockIn__title {
+  text-transform: uppercase;
+}
+
+.contactsRightBlockIn .mapPopupList {
+  padding: 0;
+  margin-top: 20px;
+}
+
+.contactsRightBlockIn .mapPopupListBlock2 {
+  max-width: 228px  ;
+}
+
+.contactsRight__title_modif {
+  margin-top: 10px;
+}
+
+.contactsRight .mapPopupListBlock {
+  width: 80px;
+}
+
+.contactsRight .contactsRightBlockIn {
+  max-width: 340px;
+  margin-bottom: 50px;
+}
+
+.contactsRight .mapPopupList li {
+  max-width: 91%;
+  width: 100%;
+  justify-content: flex-start;
+}
+
+.contactsRight .mapPopupListBlock2__title {
+  color: #000E32;
+  font: normal 600 16px 'Inter', sans-serif;
 }
 
 /*
