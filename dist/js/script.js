@@ -99,3 +99,12 @@ $(document).ready(function () {
     fractionContainer.textContent = `${currentSlide} / ${totalSlides}`;
   }
 });
+
+$(document).ready(function () {
+  $('#tab-container').easytabs({
+    animationSpeed: 'fast',
+    updateHash: false
+  });
+
+  $("#menu1").metisMenu();
+});

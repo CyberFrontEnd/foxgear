@@ -1584,7 +1584,7 @@ img.qualityPlanshet__img {
 }
 
 .bread {
-  max-width: 1600px;
+  max-width: 1618px;
   width: 100%;
   margin: 15px auto 70px;
 }
@@ -2423,6 +2423,139 @@ End liveCompany
 .serviceItemRevers .serviceItemLeft {
   margin-left: 0;
   margin-right: 115px;
+}
+
+.material .client__text {
+  width: 100px;
+  text-align: right;
+  margin-top: 34px;
+  margin-left: -48px;
+}
+
+.matrialContent {
+  max-width: 1600px;
+  width: 100%;
+  margin: 0 auto 140px;
+  padding-left: 115px;
+  justify-content: space-between;
+}
+
+.matrialImg {
+  max-width: 667px;
+  width: 100%;
+  height: 640px;
+  display: block;
+  object-fit: cover;
+}
+
+.material {
+  margin-bottom: 0;
+}
+
+.tab-container {
+  max-width: 670px;
+  width: 100%;
+}
+
+.etabs {
+  border-bottom: 1px solid rgba(152, 159, 172);
+}
+
+.etabs li {
+  margin-right: 40px;
+}
+
+.etabs li a {
+  text-transform: uppercase;
+  color: rgba(152, 159, 172);
+  padding: 0 0 16px;
+  display: block;
+}
+
+.etabs li.active a.active {
+  border-bottom: 1px solid #000E32;
+}
+
+.etabs li.active a.active {
+  color: #000E32;
+}
+
+.metismenu__href {
+  color: #000E32;
+  max-width: 590px;
+  width: 100%;
+  display: block;
+}
+
+.questionContent {
+  margin-top: 55px;
+}
+
+.metismenu > li {
+  border-bottom: 1px solid rgba(0, 0, 0, .1);
+  padding-bottom: 24px;
+  padding-top: 16px;
+}
+
+.metismenu .has-arrow::after {
+  width: 40px !important;
+  height: 40px !important;
+  background: url('../images/icon11.svg') no-repeat center !important;
+  display: block !important;
+  transform: rotate(0) translate(0, -50%) !important;
+  border: none !important;
+}
+
+.metismenu .mm-active > .has-arrow::after, .metismenu .has-arrow[aria-expanded=true]::after {
+  background: url('../images/icon12.svg') no-repeat top center !important;
+}
+
+.answearList__title {
+  text-transform: uppercase;
+}
+
+.answearList__href {
+  justify-content: space-between;
+  border: 1px solid rgba(0,0,0, .12);
+  height: 72px;
+  max-width: 667px;
+  width: 100%;
+  border-radius: 8px;
+  align-items: center;
+  padding: 0 24px 0 32px;
+}
+
+.answearList__href:after {
+  content: "";
+  display: block;
+  background: url('../images/icon13.svg') no-repeat center;
+  width: 43px;
+  height: 43px;
+}
+
+.answearList {
+  margin-top: 60px;
+}
+
+.answearList li {
+  margin-bottom: 8px;
+}
+
+.map{
+  max-width: 1600px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.mapForm {
+  max-width: 1600px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.mapForm label {
+  display: block;
+  text-transform: uppercase;
 }
 
 /*
