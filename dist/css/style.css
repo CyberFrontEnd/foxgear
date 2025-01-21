@@ -194,6 +194,21 @@ Start setting
   line-height: 24px;
 }
 
+.text_12_caps_bold {
+  color: #000E32;
+  font: normal bold 12px 'Inter', sans-serif;
+  line-height: 16px;
+  letter-spacing: 1px;
+}
+
+.h3_caps {
+  font: normal 600 26px 'Inter', sans-serif;
+  line-height: 32px;
+  letter-spacing: 1px;
+  color: #000E32;
+  text-transform: uppercase;
+}
+
 .btn {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2158,7 +2173,7 @@ End liveCompany
 .preessCenter {
   max-width: 1600px;
   width: 100%;
-  margin: 0 auto;
+  margin: 0 auto 0;
   position: relative;
 }
 
@@ -2281,6 +2296,133 @@ End liveCompany
 
 .preessCenterRightListNum li span:first-of-type {
   padding-right: 15px;
+}
+
+.toShare {
+  margin-top: 50px;
+  border-top: 1px solid #F1F3F4;
+  padding-top: 20px;
+}
+
+.toShare__title {
+  text-transform: uppercase;
+}
+
+.toShareList {
+  margin-top: 16px;
+  max-width: 328px;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.toShareList li a {
+  justify-content: center;
+  align-items: center;
+  background: #F1F3F4;
+  width: 160px;
+  height: 52px;
+}
+
+.toShareList li {
+  margin-right: 4px;
+}
+
+.pressSlider .swiper-button-next,
+.pressSlider .swiper-button-prev {
+  width: 40px;
+  height: 40px;
+  background: url('../images/icon9.svg') no-repeat center;
+}
+
+.pressSlider .swiper-button-next:after,
+.pressSlider .swiper-button-prev:after {
+  display: none;
+}
+
+.pressSlider .swiper-button-prev {
+  transform: rotate(180deg);
+}
+
+.newsPress {
+  padding-top: 70px;
+}
+
+.serviceInfo {
+  margin-bottom: 10px;
+}
+
+.serviceInfo .clientLeft__title {
+  max-width: 670px;
+}
+
+.serviceInfo .clientLeft {
+  max-width: 45%;
+}
+
+.serviceInfo .client__text {
+  margin-left: -61px;
+  margin-top: 55px;
+}
+
+.service {
+  max-width: 1600px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.serviceItem {
+  justify-content: space-between;
+  margin-bottom: 60px;
+}
+
+.serviceItem img {
+  display: block;
+  width: 500px;
+  height: 500px;
+  object-fit: cover;
+}
+
+.serviceItemLeft {
+  max-width: 890px;
+  width: 100%;
+  margin-left: 119px;
+  padding-top: 50px;
+}
+
+.serviceItemLeft__title {
+  align-items: center;
+}
+
+.serviceItemLeft__title:before {
+  content: "";
+  display: block;
+  background: url('../images/icon10.svg') no-repeat center;
+  width: 43px;
+  height: 50px;
+  margin-right: 30px;
+}
+
+.serviceItemBottom {
+  margin: 35px 0 0 73px;
+}
+
+.serviceList li {
+  max-width: 48%;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.serviceList li span {
+  color: #4B556F;
+}
+
+.serviceList li:before {
+  background: #4B556F;
+}
+
+.serviceItemRevers .serviceItemLeft {
+  margin-left: 0;
+  margin-right: 115px;
 }
 
 /*

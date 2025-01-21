@@ -58,10 +58,15 @@ $(document).ready(function () {
     $('.itemTabs .tab_3').addClass('active');
     $('.itemTabs .tab_1, .itemTabs .tab_2').removeClass('active');
   });
+});
 
-
-//   Start slider
-
+$(document).ready(function () {
+  const swiper = new Swiper(".pressSlider", {
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
 });
 
 $(document).ready(function () {
