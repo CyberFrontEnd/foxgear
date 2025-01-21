@@ -207,10 +207,45 @@
     <form action="" class="mapForm">
         <label for="map" class="text_12_caps_bold">Поиск по городу</label>
 
-        <div class="flex ">
-            <input placeholder="" required type="text" id="map">
+        <div class="flex mapFormInput">
+            <input placeholder="Город" required type="text" id="map">
+            <a href="#" class="mapFormInput__btn flex text_12_caps">найти</a>
         </div>
     </form>
+
+
+    <div class="mapContent">
+        <div class="mapPopup">
+            <a href="#" class="mapPopupClosed"></a>
+            <div class="mapPopup__title h4_caps">Название магазина</div>
+
+            <ul class="mapPopupList flex">
+                <li>
+                    <div class="mapPopupListBlock text_16">Адрес</div>
+
+                    <div class="mapPopupListBlock2">
+                        <span class="mapPopupListBlock2__title ">Москва, ул. Столетова, 7</span>
+                        <a href="" class="mapPopupListBlock2__href text_14">Посмотреть на карте</a>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="mapPopupListBlock text_16">Телефон</div>
+
+                    <a href="tel:+7 980 880 90 90" class="mapPopupListBlock__href text_bold_16">+7 980 880 90 90</a>
+                </li>
+
+                <li>
+                    <div class="mapPopupListBlock text_16">E-mail</div>
+
+                    <a href="mailTo:foxgear@office.com" class="mapPopupListBlock__href text_bold_16">foxgear@office.com</a>
+                </li>
+            </ul>
+        </div>
+
+        <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A86855395905a630b2b23b95723c3c4ca2b19a2fdee56365ccdbd67a8bb436dbf&amp;source=constructor" width="100%"
+                height="670" frameborder="0"></iframe>
+    </div>
 </section>
 <!--End map-->
 

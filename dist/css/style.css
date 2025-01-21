@@ -2516,7 +2516,7 @@ End liveCompany
 
 .answearList__href {
   justify-content: space-between;
-  border: 1px solid rgba(0,0,0, .12);
+  border: 1px solid rgba(0, 0, 0, .12);
   height: 72px;
   max-width: 667px;
   width: 100%;
@@ -2541,7 +2541,7 @@ End liveCompany
   margin-bottom: 8px;
 }
 
-.map{
+.map {
   max-width: 1600px;
   width: 100%;
   margin: 0 auto;
@@ -2556,6 +2556,127 @@ End liveCompany
 .mapForm label {
   display: block;
   text-transform: uppercase;
+}
+
+.mapFormInput input {
+  max-width: 620px;
+  width: 100%;
+  height: 56px;
+  background: #F1F3F4;
+  border: none;
+  margin-top: 16px;
+  color: #000E32;
+  font: normal 400 16px 'Inter', sans-serif;
+  line-height: 24px;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.mapFormInput input[type="text"]::-moz-placeholder {
+  color: #000E32;
+  font: normal 400 16px 'Inter', sans-serif;
+  line-height: 24px;
+}
+
+.mapFormInput input[type="text"]::-webkit-input-placeholder {
+  color: #000E32;
+  font: normal 400 16px 'Inter', sans-serif;
+  line-height: 24px;
+}
+
+.mapFormInput input[type="text"]:-ms-input-placeholder {
+  color: #000E32;
+  font: normal 400 16px 'Inter', sans-serif;
+  line-height: 24px;
+}
+
+.mapFormInput__btn {
+  justify-content: center;
+  align-items: center;
+  height: 56px;
+  max-width: 172px;
+  width: 100%;
+  background: #000E32;
+  color: #fff;
+  text-transform: uppercase;
+  margin-top: 16px;
+  margin-left: 8px;
+}
+
+.mapContent {
+  max-width: 1600px;
+  width: 100%;
+  margin: 60px auto 0;
+  position: relative;
+}
+
+.mapPopup {
+  max-width: 330px;
+  width: 100%;
+  height: 250px;
+  background: #ffffff;
+  position: absolute;
+  z-index: 1;
+  top: 200px;
+  left: 550px;
+}
+
+.mapPopup__title {
+  text-transform: uppercase;
+  text-align: center;
+  padding-top: 50px;
+}
+
+.mapPopupListBlock {
+  width: 70px;
+}
+
+.mapPopupList {
+  padding: 16px 32px 0;
+}
+
+.mapPopupListBlock2 {
+  max-width: 150px;
+  width: 100%;
+}
+
+.mapPopupListBlock2__href {
+  color: rgba(57, 129, 204);
+}
+
+.mapPopupList li {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.mapPopupListBlock {
+  color: rgba(75, 85, 111);
+}
+
+.mapPopupListBlock__href {
+  color: #000E32;
+}
+
+.mapPopupClosed {
+  background: url('../images/icon14.svg') no-repeat center;
+  width: 12px;
+  height: 12px;
+  display: block;
+  position: absolute;
+  top: 20px;
+  right: 20px;
 }
 
 /*
