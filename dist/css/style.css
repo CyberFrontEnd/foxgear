@@ -369,6 +369,14 @@ Start header
 
 .headerRightMenu li a {
   text-transform: uppercase;
+  -webkit-transition: all, 0.5s;
+  -moz-transition: all, 0.5s;
+  -o-transition: all, 0.5s;
+  transition: all, 0.5s;
+}
+
+.headerRightMenu li a:hover {
+  color: rgba(57, 129, 204);
 }
 
 .headerRightInfo__search {
@@ -2734,7 +2742,7 @@ End liveCompany
 }
 
 .contactsRightBlockIn .mapPopupListBlock2 {
-  max-width: 228px  ;
+  max-width: 228px;
 }
 
 .contactsRight__title_modif {
@@ -2759,6 +2767,74 @@ End liveCompany
 .contactsRight .mapPopupListBlock2__title {
   color: #000E32;
   font: normal 600 16px 'Inter', sans-serif;
+}
+
+.foxGearGroup {
+  max-width: 100%;
+  width: 100%;
+  background: #000E32;
+  padding: 76px 0 0 0;
+  height: 540px;
+  margin-top: -40px;
+}
+
+.foxGearGroupIn {
+  max-width: 940px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.foxGearGroup__title {
+  color: rgba(205, 206, 213);
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.foxGearGroup__h2 {
+  color: #fff;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.foxGearGroupSearch {
+  margin: 40px auto 0;
+  justify-content: center;
+}
+
+.foxGearGroupSearch__title {
+  text-transform: uppercase;
+  color: rgba(205, 206, 213);
+}
+
+.foxGearGroupSearch__text {
+  color: #ffffff;
+  text-transform: uppercase;
+  margin-left: 10px;
+}
+
+.foxGearGroupSearch__btn {
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  margin: 28px auto 0 auto;
+  width: 172px;
+  height: 48px;
+  background: #ffffff;
+}
+
+.itemSelection {
+  max-width: 1613px;
+  width: 100%;
+  margin: -140px auto 110px;
+}
+
+.itemSliderContent .itemBlock {
+  margin-bottom: 24px;
+  margin-right: 12px;
+}
+
+.itemSliderContent .itemBlock:nth-of-type(4n+4) {
+  margin-right: 0;
 }
 
 /*
