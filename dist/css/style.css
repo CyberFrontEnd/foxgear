@@ -2994,6 +2994,49 @@ End liveCompany
   margin-right: 0;
 }
 
+.items__title {
+  text-transform: uppercase;
+  margin-bottom: 13px;
+}
+
+.itemsDocuments {
+  max-width: 667px;
+}
+
+.itemsDocumentsList li {
+  max-width: 331px;
+  width: 100%;
+  height: 54px;
+  margin-right: 4px;
+  margin-bottom: 4px;
+}
+
+.itemsDocumentsList li:nth-of-type(2n+2) {
+  margin-right: 0;
+}
+
+.itemsDocumentsList li a {
+  max-width: 331px;
+  width: 100%;
+  height: 54px;
+  background-color: #F6F8F9;
+  align-items: center;
+}
+
+.itemsDocumentsList li a:before {
+  content: "";
+  display: block;
+  background: url('../images/icon17.svg') no-repeat center;
+  width: 22px;
+  height: 22px;
+  margin-left: 16px;
+  margin-right: 14px;
+}
+
+.itemsDocumentsList li a span {
+  text-transform: uppercase;
+}
+
 /*
 Start responsive
 ################*/
