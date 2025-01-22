@@ -1225,7 +1225,6 @@ Start items
   width: 100%;
   position: relative;
   margin-top: 0;
-  height: 840px;
 }
 
 .items .newsScroll {
@@ -2614,7 +2613,7 @@ End liveCompany
 .mapContent {
   max-width: 1600px;
   width: 100%;
-  margin: 60px auto 0;
+  margin: 0 auto;
   position: relative;
 }
 
@@ -2631,8 +2630,8 @@ End liveCompany
 
 .mapPopup__title {
   text-transform: uppercase;
-  text-align: center;
   padding-top: 50px;
+  padding-left: 31px;
 }
 
 .mapPopupListBlock {
@@ -2828,12 +2827,170 @@ End liveCompany
   margin: -140px auto 110px;
 }
 
-.itemSliderContent .itemBlock {
+.itemSelection .itemBlock {
   margin-bottom: 24px;
   margin-right: 12px;
 }
 
-.itemSliderContent .itemBlock:nth-of-type(4n+4) {
+.itemSelection .itemBlock:nth-of-type(4n+4) {
+  margin-right: 0;
+}
+
+.map .itemTabs .tab-btn div {
+  width: 49.3%;
+  border-right: 1px solid;
+}
+
+.map .tab-btn {
+  justify-content: space-between;
+  right: 0;
+}
+
+.map .itemTabs {
+  margin-top: -52px;
+  height: 765px;
+}
+
+.mapSliderContacts {
+
+}
+
+.map .mapContent {
+  margin: 30px auto 0;
+  height: 800px;
+}
+
+.map .cnt_2 {
+  margin-top: 170px;
+  visibility: hidden;
+}
+
+.map .contactsRightBlockIn {
+  max-width: 25%;
+  margin-bottom: 50px;
+}
+
+.map .contactsRightBlockIn .mapPopupList {
+  max-width: 100%;
+  width: 100%;
+}
+
+.map .mapPopupList li {
+  max-width: 300px;
+  width: 100%;
+  justify-content: flex-start;
+}
+
+.map .swiper-pagination-fraction {
+  font-size: 0;
+  max-width: 55px;
+  width: 100%;
+  position: absolute;
+  top: 8px;
+  left: 0;
+  justify-content: space-between;
+}
+
+.map .swiper-pagination-total,
+.map .swiper-pagination-current {
+  margin: 0 3px;
+  font: normal 600 18px 'Inter', sans-serif;
+  line-height: 24px;
+}
+
+.map .swiper-pagination-fraction {
+  display: flex;
+  align-items: center;
+}
+
+.map .swiper-pagination-fraction span:not(:last-child)::after {
+  content: url("../images/icon15.svg");
+  width: 15px;
+  height: 1px;
+  display: block;
+  margin-top: -5px;
+  margin-left: 16px;
+  position: absolute;
+}
+
+.map .swiper-pagination-current {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  color: rgb(2, 41, 92);
+}
+
+.mapSliderContactsNav {
+  max-width: 100%;
+  width: 100%;
+  height: 60px;
+  justify-content: flex-end;
+}
+
+.mapSliderContactsNavIn {
+  max-width: 160px;
+  width: 100%;
+  position: relative;
+  height: 60px;
+  justify-content: flex-end;
+}
+
+.mapSliderContactsNavIn .swiper-button-prev,
+.mapSliderContactsNavIn .swiper-button-next {
+  width: 37px;
+  height: 48px;
+  border: 1px solid #000E32;
+  border-radius: 3px;
+  background: url('../images/icon16.svg') no-repeat center;
+}
+
+.mapSliderContactsNavIn .swiper-button-next:after,
+.mapSliderContactsNavIn .swiper-button-prev:after {
+  display: none;
+}
+
+.mapSliderContactsNavIn .swiper-button-prev {
+  transform: rotate(180deg);
+}
+
+.mapSliderContactsNavInBtn {
+  position: relative;
+  width: 100px;
+  height: 55px;
+  margin-right: -8px;
+}
+
+.mapSliderBlock {
+  max-width: 1600px;
+  width: 100%;
+  margin: 100px auto 140px;
+}
+
+.mapSliderBlock__title {
+  text-transform: uppercase;
+  color: #000E32;
+  margin-bottom: 16px;
+}
+
+.mapSliderBlockContent a {
+  max-width: 313px;
+  width: 100%;
+  height: 129px;
+  margin-right: 8px;
+  margin-bottom: 8px;
+}
+
+.mapSliderBlockContent a:nth-of-type(5n+5) {
   margin-right: 0;
 }
 
