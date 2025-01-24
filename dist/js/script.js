@@ -29,6 +29,13 @@ $(document).ready(function () {
     },
   });
 
+  const itemSlider2 = new Swiper(".itemSlider2", {
+    pagination: {
+      el: ".swiper-pagination2",
+      clickable: true,
+    },
+  });
+
 
 
   $('.itemTabs .cnt_1').css("visibility", "visible");
@@ -103,6 +110,7 @@ $(document).ready(function () {
   });
 
   $("#menu1").metisMenu();
+  $("#menu2").metisMenu();
 });
 
 
@@ -112,6 +120,16 @@ $(document).ready(function () {
       el: ".swiper-pagination",
       type: "fraction",
     },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+});
+
+
+$(document).ready(function () {
+  const itemsLeftSlider = new Swiper(".itemsLeftSlider", {
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
