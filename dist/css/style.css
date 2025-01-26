@@ -2562,7 +2562,7 @@ End liveCompany
 .map {
   max-width: 1600px;
   width: 100%;
-  margin: 0 auto;
+  margin: 20px auto;
 }
 
 .mapForm {
@@ -2588,6 +2588,8 @@ End liveCompany
   line-height: 24px;
   padding-left: 24px;
   padding-right: 24px;
+  position: relative;
+  z-index: 2;
 }
 
 .mapFormInput input[type="text"]::-moz-placeholder {
@@ -2619,6 +2621,8 @@ End liveCompany
   text-transform: uppercase;
   margin-top: 16px;
   margin-left: 8px;
+  position: relative;
+  z-index: 1;
 }
 
 .mapContent {
@@ -2867,7 +2871,7 @@ End liveCompany
 
 .map .mapContent {
   margin: 30px auto 0;
-  height: 800px;
+  height: 740px;
 }
 
 .map .cnt_2 {
@@ -3625,6 +3629,10 @@ End liveCompany
   margin-left: -65px;
 }
 
+.mapSliderContacts.mapSliderContactsMobile {
+  display: none !important;
+}
+
 .client3ImgMobil {
   display: none;
 }
@@ -3645,6 +3653,16 @@ Start responsive
 @media (max-width: 1830px) {
   .topSliderInBlock {
     margin: 0 0 0 100px;
+  }
+
+  .map .itemTabs {
+    max-width: 92%;
+    margin: -50px auto 0;
+  }
+
+  .mapForm,
+  .map {
+    max-width: 92%;
   }
 }
 
@@ -3734,6 +3752,14 @@ Start responsive
 }
 
 @media (max-width: 1750px) {
+  .itemSelection {
+    max-width: 95%;
+  }
+
+  .itemSelection .itemBlock {
+    max-width: 24.4%;
+  }
+
   .mistakeBottomNum {
     font-size: 300px;
     margin-right: 200px;
@@ -3774,6 +3800,30 @@ Start responsive
 
   .questionContent .metismenu div {
     margin-top: 20px;
+  }
+
+  .map .itemTabs .tab-btn div {
+    max-width: 49%;
+  }
+
+  .map .tab-btn {
+    max-width: 450px;
+  }
+
+  .mapForm, .map {
+    max-width: 94.5%;
+  }
+
+  .map .itemTabs {
+    max-width: 94%;
+  }
+
+  .mapSliderBlock .mapSliderBlockContent a {
+    max-width: 19.5%;
+  }
+
+  .mapSliderBlock {
+    max-width: 89%;
   }
 }
 
@@ -3936,6 +3986,10 @@ Start responsive
   .contactsRight .contactsRightBlockIn {
     max-width: 50%;
   }
+
+  .itemSelection .itemBlock {
+    max-width: 24.3%;
+  }
 }
 
 @media (max-width: 1500px) {
@@ -3988,6 +4042,10 @@ Start responsive
 
   .answerRight {
     max-width: 44%;
+  }
+
+  .mapFormInput input {
+    max-width: 500px;
   }
 }
 
@@ -4063,6 +4121,11 @@ Start responsive
   .contactBlock {
     justify-content: space-between;
   }
+
+  .mapSliderBlock .mapSliderBlockContent a {
+    max-width: 19.4%;
+    height: 96px;
+  }
 }
 
 @media (max-width: 1340px) {
@@ -4084,6 +4147,10 @@ Start responsive
 
   .serviceInfo {
     max-width: 92%;
+  }
+
+  .itemSelection .itemBlock {
+    max-width: 24%;
   }
 }
 
@@ -4133,6 +4200,10 @@ Start responsive
 
   .contactMap {
     max-width: 50%;
+  }
+
+  .itemBlock__link {
+    height: 340px;
   }
 }
 
@@ -4197,6 +4268,18 @@ Start responsive
   .matrialImg {
     max-width: 39%;
   }
+
+  .mapFormInput input {
+    max-width: 350px;
+  }
+
+  .mapFormInput__btn {
+    max-width: 130px;
+  }
+
+  .mapPopup {
+    left: 390px;
+  }
 }
 
 @media (max-width: 1195px) {
@@ -4210,6 +4293,10 @@ Start responsive
 
   .answerLeft {
     background-position: 25.5% 99.4%;
+  }
+
+  .mapSliderBlock .mapSliderBlockContent a {
+    max-width: 19.3%;
   }
 }
 
@@ -4288,6 +4375,22 @@ Start responsive
   .contact .clientLeft {
     max-width: 40%;
   }
+
+  .map .itemTabs {
+    height: 900px;
+  }
+
+  .mapPopup {
+    left: 400px;
+  }
+
+  .map .contactsRightBlockIn {
+    max-width: 33%;
+  }
+
+  .mapSliderBlock {
+    margin: 0 auto 100px;
+  }
 }
 
 @media (max-width: 1060px) {
@@ -4303,6 +4406,22 @@ Start responsive
 
   .tab-container {
     max-width: 57%;
+  }
+
+  .itemSelection .itemBlock {
+    max-width: 32.5%;
+  }
+
+  .itemSelection .itemBlock:nth-of-type(4n+4) {
+    margin-right: 12px;
+  }
+
+  .itemSelection .itemBlock:nth-of-type(3n+3) {
+    margin-right: 0;
+  }
+
+  .map .tab-btn {
+    max-width: 340px;
   }
 }
 
@@ -4419,6 +4538,7 @@ Start responsive
   .contactBlock {
     flex-direction: column-reverse;
   }
+
   .contactsRight,
   .contactMap {
     max-width: 100%;
@@ -4427,6 +4547,33 @@ Start responsive
 
   .contactBlock {
     max-width: 90%;
+  }
+
+  .map .tab-btn {
+    margin-top: 0;
+    left: 0;
+    max-width: 100%;
+  }
+
+  .map .mapContent {
+    margin: 0 auto;
+  }
+
+  .mapPopup {
+    left: 350px;
+  }
+
+  .mapFormInput input {
+    max-width: 84%;
+  }
+
+  .map .itemTabs {
+    margin: 30px auto 0;
+  }
+
+  .mapSliderBlock .mapSliderBlockContent a {
+    max-width: 19.2%;
+    height: 65px;
   }
 }
 
@@ -4550,15 +4697,52 @@ Start responsive
   .tab-container {
     max-width: 100%;
   }
+
+  .itemSelection .itemBlock {
+    max-width: 31.5%;
+  }
+
+  .mapFormInput input {
+    max-width: 80%;
+  }
+
+  .mapFormInput__btn {
+    max-width: 19%;
+  }
+
+  .mapPopup {
+    left: 200px;
+  }
 }
 
-@media (max-width: 890px) {
+@media (max-width: 895px) {
   .answerLeft {
     background-position: 5.5% 80.4%;
   }
 
   .serviceInfo .clientLeft {
     margin-left: 40px;
+  }
+
+  .mapFormInput__btn {
+    max-width: 18%;
+  }
+
+  .mapFormInput {
+    justify-content: space-between;
+  }
+
+  .mapForm {
+    justify-content: space-between;
+  }
+
+  .map .contactsRightBlockIn {
+    max-width: 50%;
+  }
+
+  .mapSliderBlock .mapSliderBlockContent a {
+    max-width: 19%;
+    height: 60px;
   }
 }
 
@@ -4607,6 +4791,49 @@ Start responsive
 
   .clientsBlueBg {
     padding-top: 5px;
+  }
+
+  .mapSliderContacts {
+    display: none !important;
+  }
+
+  .mapSliderContacts.mapSliderContactsMobile {
+    display: block !important;
+  }
+
+  .mapSliderContactsMobileBlock {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .mapSliderContactsMobileBlockIn {
+    max-width: 50%;
+    width: 100%;
+  }
+
+  .mapSliderContactsMobileBlockIn .mapSliderContactsBlock {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .map .contactsRightBlockIn {
+    max-width: 100%;
+  }
+
+  .map .cnt_2 {
+    margin-top: 100px;
+  }
+
+  .mapSliderBlock .contactsRightBlockIn a {
+    display: block;
+    max-width: 97%;
+    width: 100%;
+    margin-bottom: 8px;
+  }
+
+  .mapSliderBlock .contactsRightBlockIn a img {
+    max-width: 100%;
+    width: 100%;
   }
 }
 
@@ -4875,6 +5102,14 @@ Start responsive
   .contact .clientLeft {
     max-width: 87%;
   }
+
+  .itemSelection .itemBlock {
+    max-width: 32%;
+  }
+
+  .itemSelection {
+    max-width: 97%;
+  }
 }
 
 @media (max-width: 700px) {
@@ -4939,6 +5174,22 @@ Start responsive
 
   .serviceItemRevers {
     flex-direction: column;
+  }
+
+  .itemSelection .itemBlock {
+    max-width: 49%;
+  }
+
+  .itemSelection .itemBlock {
+    margin-right: 0 !important;
+  }
+
+  .itemSliderContent {
+    justify-content: space-between;
+  }
+
+  .mapPopup {
+    left: 150px;
   }
 }
 
@@ -5126,6 +5377,10 @@ Start responsive
   .contact .clientRightBlock {
     padding-left: 44px;
   }
+
+  .mapPopup {
+    left: 50px;
+  }
 }
 
 @media (max-width: 550px) {
@@ -5261,6 +5516,30 @@ Start responsive
   .contactsRight .contactsRightBlockIn {
     max-width: 100%;
   }
+
+  .itemBlockTop__text2, .itemBlockTop__text {
+    font-size: 9px;
+  }
+
+  .itemBlockBottom {
+    padding-top: 5px;
+  }
+
+  .itemBlockBottom__name {
+    margin-bottom: 5px;
+  }
+
+  .map .itemTabs {
+    max-width: 100%;
+  }
+
+  .mapSliderContactsMobileBlockIn {
+    max-width: 100%;
+  }
+
+  .mapSliderContactsMobileBlockIn:last-of-type {
+    display: none;
+  }
 }
 
 @media (max-width: 460px) {
@@ -5324,6 +5603,10 @@ Start responsive
   .etabs li a {
     font-size: 15px;
   }
+
+  .mapFormInput input {
+    max-width: 79%;
+  }
 }
 
 @media (max-width: 430px) {
@@ -5345,6 +5628,18 @@ Start responsive
 
   .footerBottomList li:before {
     margin-right: 6px;
+  }
+
+  .mapFormInput input {
+    max-width: 70%;
+  }
+
+  .mapFormInput__btn {
+    max-width: 26%;
+  }
+
+  .mapPopup {
+    left: 20px;
   }
 }
 
