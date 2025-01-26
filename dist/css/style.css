@@ -2705,7 +2705,7 @@ End liveCompany
 .contact {
   max-width: 1600px;
   width: 100%;
-  margin: 0 auto;
+  margin: 60px auto 0;
 }
 
 .contactBlock {
@@ -2785,7 +2785,6 @@ End liveCompany
   background: #000E32;
   padding: 76px 0 0 0;
   height: 540px;
-  margin-top: -40px;
 }
 
 .foxGearGroupIn {
@@ -3698,6 +3697,40 @@ Start responsive
   .preessCenterRight {
     max-width: 56%;
   }
+
+  .material {
+    max-width: 85%;
+  }
+
+  .matrialContent {
+    max-width: 85%;
+  }
+
+  .matrialImg {
+    max-width: 47%;
+    width: 100%;
+  }
+
+  .tab-container {
+    max-width: 48%;
+    width: 100%;
+  }
+
+  .contact {
+    max-width: 87%;
+  }
+
+  .contact .clientLeft {
+    margin-left: 87px;
+  }
+
+  .contact .client__text {
+    margin-top: 44px;
+  }
+
+  .contactsRight {
+    max-width: 46%;
+  }
 }
 
 @media (max-width: 1750px) {
@@ -3726,6 +3759,22 @@ Start responsive
     width: 33%;
     height: 33%;
   }
+
+  .matrialContent {
+    max-width: 85%;
+  }
+
+  .tab-container {
+    max-width: 45%;
+  }
+
+  .matrialImg {
+    height: 100%;
+  }
+
+  .questionContent .metismenu div {
+    margin-top: 20px;
+  }
 }
 
 @media (max-width: 1660px) {
@@ -3733,6 +3782,7 @@ Start responsive
     max-width: 22%;
   }
 
+  .contactBlock,
   .preessCenter,
   .documents,
   .bigProizvodstvo,
@@ -3807,6 +3857,14 @@ Start responsive
   .serviceItemLeft {
     margin-left: 58px;
   }
+
+  .material {
+    max-width: 90%;
+  }
+
+  .matrialContent {
+    max-width: 90%;
+  }
 }
 
 @media (max-width: 1550px) {
@@ -3865,6 +3923,18 @@ Start responsive
 
   .simbol .client__text {
     margin-top: 65px;
+  }
+
+  .metismenu__href {
+    max-width: 85%;
+  }
+
+  .contactsRight {
+    max-width: 40%;
+  }
+
+  .contactsRight .contactsRightBlockIn {
+    max-width: 50%;
   }
 }
 
@@ -3980,6 +4050,19 @@ Start responsive
   .serviceInfo .clientLeft {
     margin-left: 80px;
   }
+
+  .matrialContent .etabs li {
+    margin-right: 20px;
+  }
+
+  .contactsRight {
+    margin-left: 0;
+    max-width: 45%;
+  }
+
+  .contactBlock {
+    justify-content: space-between;
+  }
 }
 
 @media (max-width: 1340px) {
@@ -4047,6 +4130,10 @@ Start responsive
     max-width: 95%;
     margin-left: 70px;
   }
+
+  .contactMap {
+    max-width: 50%;
+  }
 }
 
 @media (max-width: 1260px) {
@@ -4101,6 +4188,14 @@ Start responsive
 
   .preessCenterBlockList {
     right: 200px;
+  }
+
+  .tab-container {
+    max-width: 53%;
+  }
+
+  .matrialImg {
+    max-width: 39%;
   }
 }
 
@@ -4185,6 +4280,14 @@ Start responsive
   .serviceItemRevers .serviceItemLeft {
     margin-right: 50px;
   }
+
+  .matrialContent {
+    padding-left: 50px;
+  }
+
+  .contact .clientLeft {
+    max-width: 40%;
+  }
 }
 
 @media (max-width: 1060px) {
@@ -4196,6 +4299,10 @@ Start responsive
   .serviceItemRevers .serviceItemLeft {
     margin-right: 0;
     max-width: 63%;
+  }
+
+  .tab-container {
+    max-width: 57%;
   }
 }
 
@@ -4308,6 +4415,19 @@ Start responsive
   .preessCenterBlockList {
     right: 0;
   }
+
+  .contactBlock {
+    flex-direction: column-reverse;
+  }
+  .contactsRight,
+  .contactMap {
+    max-width: 100%;
+    padding-left: 0;
+  }
+
+  .contactBlock {
+    max-width: 90%;
+  }
 }
 
 @media (max-width: 990px) {
@@ -4408,6 +4528,28 @@ Start responsive
   .service {
     max-width: 92%;
   }
+
+  .tab-container {
+    max-width: 61%;
+  }
+
+  .matrialImg {
+    max-width: 100%;
+    margin-top: 40px;
+  }
+
+  .material {
+    margin: 40px auto 0;
+  }
+
+  .matrialContent {
+    flex-direction: column-reverse;
+    padding-left: 0;
+  }
+
+  .tab-container {
+    max-width: 100%;
+  }
 }
 
 @media (max-width: 890px) {
@@ -4497,6 +4639,11 @@ Start responsive
   }
 
   .serviceInfo .clientLeft {
+    max-width: 44%;
+  }
+
+  .contact .clientLeft {
+    margin-left: 40px;
     max-width: 44%;
   }
 }
@@ -4723,6 +4870,10 @@ Start responsive
 
   .serviceInfo .clientLeft {
     max-width: 100%;
+  }
+
+  .contact .clientLeft {
+    max-width: 87%;
   }
 }
 
@@ -4971,6 +5122,10 @@ Start responsive
   .preessCenter .client__text {
     margin-top: 40px;
   }
+
+  .contact .clientRightBlock {
+    padding-left: 44px;
+  }
 }
 
 @media (max-width: 550px) {
@@ -5090,6 +5245,22 @@ Start responsive
   .preessCenterBlock .newsItem img {
     height: 100%;
   }
+
+  .matrialContent .etabs li {
+    margin-right: 10px;
+  }
+
+  .matrialContent .etabs li:last-of-type {
+    margin-right: 0;
+  }
+
+  .etabs li a {
+    font-size: 16px;
+  }
+
+  .contactsRight .contactsRightBlockIn {
+    max-width: 100%;
+  }
 }
 
 @media (max-width: 460px) {
@@ -5149,6 +5320,10 @@ Start responsive
   .clientsBlueBg .clientLeft__title {
     padding-left: 0;
   }
+
+  .etabs li a {
+    font-size: 15px;
+  }
 }
 
 @media (max-width: 430px) {
@@ -5199,9 +5374,17 @@ Start responsive
   .toShareList {
     max-width: 315px;
   }
+
+  .etabs li a {
+    font-size: 14px;
+  }
 }
 
 @media (max-width: 380px) {
+  .etabs li a {
+    font-size: 13px;
+  }
+
   .footerTopRightCatalog {
     max-width: 56%;
   }
@@ -5212,6 +5395,12 @@ Start responsive
 
   .toShareList li a {
     width: 140px;
+  }
+}
+
+@media (max-width: 360px) {
+  .etabs li a {
+    font-size: 12px;
   }
 }
 
