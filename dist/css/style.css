@@ -3637,6 +3637,10 @@ End liveCompany
   display: none;
 }
 
+.itemsSlider .client__text {
+  margin-left: -58px;
+}
+
 /*
 Start responsive
 ################*/
@@ -3749,6 +3753,11 @@ Start responsive
   .contactsRight {
     max-width: 46%;
   }
+
+  .itemDoc,
+  .answearIn {
+    max-width: 90%;
+  }
 }
 
 @media (max-width: 1750px) {
@@ -3825,6 +3834,41 @@ Start responsive
   .mapSliderBlock {
     max-width: 89%;
   }
+
+  .itemsContentIn {
+    max-width: 92%;
+  }
+
+  .itemsLeftSlider:before {
+    right: 45px;
+  }
+
+  .itemsRightList li {
+    max-width: 33%;
+  }
+
+  .itemsDocuments {
+    max-width: 45%;
+    width: 100%;
+  }
+
+  .itemsDocumentsList li {
+    max-width: 48%;
+    width: 100%;
+  }
+
+  .clientLeft {
+    max-width: 44%;
+  }
+
+  .itemsSlider,
+  .companyItems {
+    max-width: 90%;
+  }
+
+  .itemSlider2 .itemBlock {
+    max-width: 24.6%;
+  }
 }
 
 @media (max-width: 1660px) {
@@ -3832,6 +3876,9 @@ Start responsive
     max-width: 22%;
   }
 
+  .itemsSlider,
+  .companyItems,
+  .answearIn,
   .contactBlock,
   .preessCenter,
   .documents,
@@ -3912,8 +3959,37 @@ Start responsive
     max-width: 90%;
   }
 
+  .itemDoc {
+    max-width: 95%;
+  }
+
   .matrialContent {
     max-width: 90%;
+  }
+
+  .itemsRight {
+    max-width: 44%;
+  }
+
+  .itemsLeft {
+    max-width: 50%;
+  }
+
+  .itemsLeftSlider:before {
+    right: 30px;
+  }
+
+  .answearBlockRight {
+    max-width: 79%;
+    width: 100%;
+  }
+
+  .answearBlockItem {
+    max-width: 32.6%;
+  }
+
+  .itemsSlider .client__text {
+    margin-left: -50px;
   }
 }
 
@@ -4046,6 +4122,23 @@ Start responsive
 
   .mapFormInput input {
     max-width: 500px;
+  }
+
+  .itemSlider2{
+    width: 1505px;
+  }
+
+  .itemsSliderBlock {
+    overflow: hidden;
+  }
+
+  .itemsSlider {
+    max-width: 100%;
+    margin-left: 50px;
+  }
+
+  .itemSlider2 .itemBlock {
+    max-width: 365px;
   }
 }
 
@@ -4205,6 +4298,22 @@ Start responsive
   .itemBlock__link {
     height: 340px;
   }
+
+  .answear {
+    height: 720px;
+  }
+
+  .answearBlockRight {
+    max-width: 100%;
+  }
+
+  .answearBlock .mapSliderContactsNavIn {
+    bottom: -76px;
+  }
+
+  .itemSlider2 {
+    margin-left: 95px !important;
+  }
 }
 
 @media (max-width: 1260px) {
@@ -4283,6 +4392,12 @@ Start responsive
 }
 
 @media (max-width: 1195px) {
+  .answearBlockItem{
+    padding: 40px 20px;
+  }
+
+
+
   .clientRight {
     max-width: 45%;
   }
@@ -4297,6 +4412,10 @@ Start responsive
 
   .mapSliderBlock .mapSliderBlockContent a {
     max-width: 19.3%;
+  }
+
+  .itemsRightFasovkaBlock {
+    margin-right: 15px;
   }
 }
 
@@ -4390,6 +4509,43 @@ Start responsive
 
   .mapSliderBlock {
     margin: 0 auto 100px;
+  }
+
+  .itemsRight {
+    max-width: 50%;
+  }
+
+  .itemsLeft {
+    max-width: 45%;
+  }
+
+  .itemsLeft:before {
+    max-width: 45%;
+  }
+
+  .itemsDocumentsList li a:before {
+    margin-left: 8px;
+    margin-right: 8px;
+  }
+
+  .answearBlock {
+    padding-left: 58px;
+  }
+
+  .answearIn .client__text {
+    margin-left: -24px;
+  }
+
+  .answearBlock .mapSliderContactsNavIn {
+    left: -19px;
+  }
+
+  .itemsSlider .client__text {
+    margin-left: -65px;
+  }
+
+  .itemSlider2 {
+    margin-left: 33px !important;
   }
 }
 
@@ -4575,6 +4731,58 @@ Start responsive
     max-width: 19.2%;
     height: 65px;
   }
+
+  .itemsRight {
+    max-width: 100%;
+    margin-top: 60px;
+  }
+
+  .itemsLeft:before,
+  .itemsLeft {
+    max-width: 100%;
+  }
+
+  .itemsRightList li {
+    max-width: 45%;
+  }
+
+  .itemsLeftSlider:before {
+    right: 0;
+  }
+
+  .answearBlockRight {
+    overflow: hidden;
+  }
+
+  .answearBlockRight::-webkit-scrollbar-track {
+    border-radius: 0;
+  }
+
+  .answearBlockRight::-webkit-scrollbar {
+    width: 0;
+  }
+
+  .answearBlockRight::-webkit-scrollbar-thumb {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .0);
+  }
+
+  .answearBlockRight .mapSliderContacts {
+    width: 980px;
+    padding: 0;
+    margin: 0;
+  }
+
+  .answearIn {
+    max-width: 100%;
+  }
+
+  .answearBlock {
+    padding-left: 80px;
+  }
+
+  .answearBlock .mapSliderContactsNavIn {
+    left: 0;
+  }
 }
 
 @media (max-width: 990px) {
@@ -4713,6 +4921,16 @@ Start responsive
   .mapPopup {
     left: 200px;
   }
+
+  .itemsDocuments {
+    max-width: 700px;
+    margin-left: 50px;
+    margin-top: 40px;
+  }
+
+  .itemDoc .clientLeft {
+    max-width: 95%;
+  }
 }
 
 @media (max-width: 895px) {
@@ -4835,6 +5053,10 @@ Start responsive
     max-width: 100%;
     width: 100%;
   }
+
+  .answearBlockRight .mapSliderContacts {
+    display: block !important;
+  }
 }
 
 @media (max-width: 830px) {
@@ -4872,6 +5094,10 @@ Start responsive
   .contact .clientLeft {
     margin-left: 40px;
     max-width: 44%;
+  }
+
+  .itemsDocuments {
+    max-width: 700px;
   }
 }
 
@@ -5110,6 +5336,22 @@ Start responsive
   .itemSelection {
     max-width: 97%;
   }
+
+  .itemsDocuments {
+    padding-left: 0;
+  }
+
+  .answearBlock .mapSliderContactsNavIn {
+    bottom: 420px;
+  }
+
+  .answearBlockRight .mapSliderContacts {
+    margin: 55px 0 0 0;
+  }
+
+  .answearBlock {
+    padding-left: 65px;
+  }
 }
 
 @media (max-width: 700px) {
@@ -5191,6 +5433,10 @@ Start responsive
   .mapPopup {
     left: 150px;
   }
+
+  .mapSliderContactsNavInBtn {
+    margin-right: 5px;
+  }
 }
 
 @media (max-width: 670px) {
@@ -5266,6 +5512,13 @@ Start responsive
 
   .serviceItemBottom {
     margin: 35px 0 0 0;
+  }
+
+  .itemsLeft,
+  .itemsLeftSlider,
+  .itemsLeft:before,
+  .itemsLeftSliderImg {
+    height: 640px;
   }
 }
 
@@ -5540,6 +5793,38 @@ Start responsive
   .mapSliderContactsMobileBlockIn:last-of-type {
     display: none;
   }
+
+  .itemsLeftSliderImg img {
+    height: 400px;
+  }
+
+  .itemsLeft,
+  .itemsLeftSlider,
+  .itemsLeft:before,
+  .itemsLeftSliderImg {
+    height: 540px;
+  }
+
+  .itemsRightFasovkaBlock {
+    margin-bottom: 15px;
+  }
+
+  .itemsRightFasovkaBtn__btn {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .itemsRightFasovkaBtn__btn2 {
+    max-width: 75%;
+  }
+
+  .itemsRightFasovkaBtn__btn3 {
+    max-width: 18%;
+  }
+
+  .itemsDocumentsList li {
+    max-width: 100%;
+  }
 }
 
 @media (max-width: 460px) {
@@ -5606,6 +5891,11 @@ Start responsive
 
   .mapFormInput input {
     max-width: 79%;
+  }
+
+  .itemsDocuments {
+    padding-left: 0 !important;
+    margin-left: 28px;
   }
 }
 
