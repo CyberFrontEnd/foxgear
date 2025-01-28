@@ -879,7 +879,7 @@ Start clients
 .clients {
   max-width: 1600px;
   width: 100%;
-  margin: 80px auto;
+  margin: 80px auto 0;
   padding-top: 0;
   position: relative;
 }
@@ -1317,6 +1317,11 @@ Start items
   height: 372px;
 }
 
+.itemBlock:hover img {
+  -webkit-filter: blur(4px);
+  filter: blur(4px);
+}
+
 .itemBlockBottom {
   max-width: 346px;
   width: 100%;
@@ -1557,7 +1562,7 @@ End popupCabinet
 }
 
 .topSliderIn__3 {
-  min-width: 856px;
+  min-width: 820px;
 }
 
 .topSliderIn__3 .topSliderInBlock {
@@ -1570,6 +1575,8 @@ End popupCabinet
 
 .topSliderIn__4 .topSliderInBlock {
   max-width: 790px;
+  position: relative;
+  left: -20px;
 }
 
 video.qualityPlanshet__img,
@@ -1579,8 +1586,6 @@ img.qualityPlanshet__img {
 
 .qualityLeft__text {
   color: #fff;
-  font: normal 500 26px 'Inter', sans-serif;
-  line-height: 32px;
 }
 
 .qualityLeft__modif.qualityLeft {
@@ -1592,7 +1597,7 @@ img.qualityPlanshet__img {
 }
 
 .bread {
-  max-width: 1618px;
+  max-width: 1600px;
   width: 100%;
   margin: 0 auto;
 }
@@ -1630,6 +1635,10 @@ img.qualityPlanshet__img {
 .clientsBlueBg {
   background: #0D38A6;
   padding-top: 80px;
+}
+
+.clientsBlueBg .clients {
+  margin: 0 auto;
 }
 
 .clientsBlueBg .clientRight,
@@ -1766,7 +1775,7 @@ Start documents
 .documentsIn {
   max-width: 1470px;
   width: 100%;
-  margin-left: 134px;
+  margin-left: 115px;
 }
 
 .documentItem__title {
@@ -1795,6 +1804,7 @@ Start liveCompany
   max-width: 1600px;
   width: 100%;
   margin: 0 auto;
+  overflow: hidden;
 }
 
 .liveCompanySlider {
@@ -1842,7 +1852,7 @@ End liveCompany
 .catalogHeader {
   max-width: 1920px;
   width: 100%;
-  margin: 0 auto;
+  margin: 0 auto 16px;
   position: relative;
 }
 
@@ -1870,7 +1880,7 @@ End liveCompany
 .catalogMain {
   max-width: 1600px;
   width: 100%;
-  margin: 0 auto 70px;
+  margin: 40px auto 70px;
 }
 
 .catalogMain .itemBlock {
@@ -2113,6 +2123,12 @@ End liveCompany
 
 .bigProizvodstvoModif {
   padding: 0;
+  margin: 22px auto 0;
+  align-items: flex-start;
+}
+
+.bigProizvodstvoModif .bigProizvodstvoRight {
+  padding-top: 0;
 }
 
 .bigProizvodstvoModif .stepParthnersBlock__title span {
@@ -3626,7 +3642,7 @@ End liveCompany
 }
 
 .clientsBlueBg .client__text {
-  margin-left: -65px;
+  margin-left: -39px;
 }
 
 .mapSliderContacts.mapSliderContactsMobile {
@@ -3641,6 +3657,372 @@ End liveCompany
   margin-left: -58px;
 }
 
+.liveCompanySliderNav {
+
+}
+
+.liveCompanySliderNav .swiper-pagination-bullets {
+  position: absolute;
+  bottom: 20px !important;
+  z-index: 999;
+  max-width: 533px;
+  width: 100%;
+  left: 0;
+  right: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+}
+
+.liveCompanySliderNav .swiper-pagination-bullet {
+  background: #989FAC !important;
+  opacity: 1 !important;
+}
+
+.liveCompanySliderNav .swiper-pagination-bullet-active {
+  background: #ffffff !important;
+}
+
+.liveCompanySliderNavBlock {
+  max-width: 700px;
+  width: 100%;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 15px;
+  right: 105px;
+}
+
+.liveCompanySliderNavBlock .swiper-button-prev:after,
+.liveCompanySliderNavBlock .swiper-button-next:after {
+  display: none;
+}
+
+.liveCompanySliderNavBlock .swiper-button-next,
+.liveCompanySliderNavBlock .swiper-button-prev {
+  max-width: 250px;
+  width: 100%;
+  height: 48px;
+}
+
+.liveCompanySliderNavBlock .swiper-button-next span,
+.liveCompanySliderNavBlock .swiper-button-prev span {
+  text-transform: uppercase;
+  position: relative;
+  color: #000 !important;
+}
+
+.liveCompanySliderNavBlock .swiper-button-prev {
+  position: absolute;
+  left: 0;
+}
+
+.liveCompanySliderNavBlock .swiper-pagination-fraction {
+  max-width: 50px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.liveCompanySliderNavBlock .swiper-button-next:before,
+.liveCompanySliderNavBlock .swiper-button-prev:before {
+  content: '';
+  display: block;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: #fff;
+  transform: skewX(-10deg);
+  -webkit-transition: all, 0.5s;
+  -moz-transition: all, 0.5s;
+  -o-transition: all, 0.5s;
+  transition: all, 0.5s;
+}
+
+.liveCompanySliderNavBlock .swiper-button-next:after,
+.liveCompanySliderNavBlock .swiper-button-prev:after {
+  content: '';
+  display: block;
+  background: url('../images/icon24.svg') no-repeat center;
+  width: 10px;
+  height: 15px;
+  position: absolute;
+  left: 20px;
+  transform: rotate(5deg);
+}
+
+.liveCompanySliderNavBlock .swiper-button-next:after {
+  left: auto;
+  right: 25px;
+  transform: rotate(-177deg);
+  top: 15px;
+}
+
+.metismenu3 {
+  max-width: 361px;
+  width: 100%;
+}
+
+.catalogBlock {
+  justify-content: space-between;
+}
+
+.metismenu3 .metismenu__href {
+  text-transform: uppercase;
+}
+
+.metismenu3 > li {
+  border-bottom: none;
+}
+
+.metismenu3 .has-arrow::after {
+  background: url('../images/icon25.svg') no-repeat center !important;
+}
+
+.metismenu3 .mm-active > .has-arrow::after, .metismenu3 .has-arrow[aria-expanded=true]::after {
+  background: url('../images/icon26.svg') no-repeat center !important;
+}
+
+.metismenu3 > li {
+  padding: 0;
+}
+
+.metismenu3 .mm-active .metismenu__href {
+  background-color: #02295C;
+  color: #ffffff;
+}
+
+.metismenu3 .metismenu__href {
+  padding: 24px 0 24px 20px;
+}
+
+.metisMenu3InList {
+  max-width: 100%;
+  width: 100%;
+}
+
+.metisMenu3InList .input-row {
+  border-bottom: 1px solid #CDCED5;
+  height: 46px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  padding-left: 20px;
+  text-transform: uppercase;
+  color: #000E32;
+}
+
+.metisMenu3InList .input-helper {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 5px;
+  cursor: pointer;
+  padding-top: 3px;
+  max-width: 100%;
+  width: 100%;
+  text-transform: uppercase;
+}
+
+.metisMenu3InList .input-helper:before {
+  content: '';
+  display: block;
+  position: absolute;
+  background: transparent;
+  right: 26px;
+  left: auto;
+  width: 20px;
+  height: 20px;
+}
+
+.metisMenu3InList input[type="checkbox"] {
+  display: none;
+}
+
+.metisMenu3InList input[type="checkbox"]:checked + label:before {
+  background: url('../images/icon27.svg') no-repeat center !important;
+}
+
+.metisMenu3InList .input-row {
+  max-width: 395px;
+  width: 100%;
+}
+
+/*
+Start brends
+###########*/
+.brends {
+  max-width: 100%;
+  width: 100%;
+  position: relative;
+  margin-top: 55px;
+}
+
+.brendsScroll {
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px 0;
+  max-width: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.brendsScroll li {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+}
+
+.wrapper {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.flexic {
+  display: flex;
+  white-space: nowrap;
+  animation: scroll 20s linear infinite;
+}
+
+.flexic li {
+  flex-shrink: 0;
+  margin-right: 110px;
+  justify-content: flex-start;
+  position: relative;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%); /* Двигается на 100% ширины контейнера */
+  }
+}
+
+@keyframes scroll-reverse {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.flexic li span {
+  text-transform: uppercase;
+  color: rgb(75, 85, 111);
+}
+
+.flexic li:after {
+  content: '';
+  width: 4px;
+  height: 4px;
+  background: rgb(75, 85, 111);
+  border-radius: 100%;
+  position: absolute;
+  right: -60px;
+}
+
+
+/*
+End brends
+##########*/
+
+.itemBlock__href {
+  max-width: 170px;
+  width: 100%;
+  position: absolute;
+  top: 180px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.itemBlock:hover .itemBlock__href {
+  opacity: 1;
+}
+
+.itemBlock__href span {
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.itemBlock__href span:after {
+  margin-top: -3px;
+  border: 2px solid #fff;
+  border-top: none;
+  border-left: none;
+}
+
+.itemBlock__href:before {
+  background: #0D38A6;
+}
+
+.liveCompanySliderNav .swiper-pagination-fraction {
+  color: #000E32;
+  font: normal 500 12px 'Inter', sans-serif;
+  line-height: 16px;
+  letter-spacing: 1px;
+}
+
+.liveCompanyIn .client__text {
+  margin-left: -60px;
+  margin-top: 60px;
+}
+
+.imageScroll {
+  max-width: 1920px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.imageScrollBlock {
+  justify-content: space-between;
+}
+
+.imageScrollBlock li img {
+  max-width: 376px;
+  width: 100%;
+  height: 460px;
+  object-fit: cover;
+}
+
+.clientsBlueBgModif .client__text {
+  margin-top: 60px;
+  margin-left: -70px;
+}
+
 /*
 Start responsive
 ################*/
@@ -3650,7 +4032,12 @@ Start responsive
   }
 
   .topSliderNav {
-    max-width: 90%;
+    max-width: 87%;
+  }
+
+  .imageScrollBlock li {
+    max-width: 19.5%;
+    width: 100%;
   }
 }
 
@@ -3668,9 +4055,16 @@ Start responsive
   .map {
     max-width: 92%;
   }
+
+  .topSliderNav {
+    max-width: 90%;
+  }
 }
 
 @media (max-width: 1800px) {
+  .preessCenterBlock .newsItem {
+    max-width: 24%;
+  }
   .headerRight {
     max-width: 77%;
   }
@@ -3754,9 +4148,33 @@ Start responsive
     max-width: 46%;
   }
 
+  .catalogMain {
+    max-width: 87%;
+  }
+
+  .catalogHeaderTitle {
+    max-width: 87%;
+  }
+
   .itemDoc,
   .answearIn {
     max-width: 90%;
+  }
+
+  .catalogContent {
+    max-width: 75%;
+  }
+
+  .catalogMain .itemBlock {
+    max-width: 32.5%;
+  }
+
+  .aside {
+    max-width: 23%;
+  }
+
+  .metismenu3 {
+    max-width: 100%;
   }
 }
 
@@ -3869,6 +4287,14 @@ Start responsive
   .itemSlider2 .itemBlock {
     max-width: 24.6%;
   }
+
+  .itemBlockBottom {
+    max-width: 90%;
+  }
+
+  .imageScrollBlock li img {
+    height: 400px;
+  }
 }
 
 @media (max-width: 1660px) {
@@ -3876,6 +4302,7 @@ Start responsive
     max-width: 22%;
   }
 
+  .liveCompanyIn,
   .itemsSlider,
   .companyItems,
   .answearIn,
@@ -3905,7 +4332,7 @@ Start responsive
   }
 
   .footerTopLeft {
-    max-width: 25%;
+    max-width: 26%;
   }
 
   .clientLeft {
@@ -3991,11 +4418,23 @@ Start responsive
   .itemsSlider .client__text {
     margin-left: -50px;
   }
+
+  .qualityRight {
+    max-width: 50%;
+  }
+
+  .catalogHeaderTitle {
+    max-width: 93.6%;
+  }
+
+  .catalogMain {
+    max-width: 95%;
+  }
 }
 
 @media (max-width: 1550px) {
   .qualityRight {
-    max-width: 52%;
+    max-width: 47%;
   }
 
   .qualityLeft {
@@ -4044,15 +4483,23 @@ Start responsive
 
   .documents .newsScroll {
     margin-left: 130px;
-    max-width: 90%;
+    max-width: 92%;
   }
 
   .simbol .client__text {
-    margin-top: 65px;
+    margin-top: 45px;
+  }
+
+  .qualityIn .client__text {
+    margin-top: 62px;
   }
 
   .metismenu__href {
     max-width: 85%;
+  }
+
+  .metismenu3 .metismenu__href {
+    max-width: 100% !important;
   }
 
   .contactsRight {
@@ -4066,9 +4513,34 @@ Start responsive
   .itemSelection .itemBlock {
     max-width: 24.3%;
   }
+
+  .liveCompanySlider {
+    max-width: 90%;
+  }
+
+  .liveCompanySliderRight {
+    max-width: 48%;
+  }
+
+  .liveCompanySliderNavBlock {
+    max-width: 48%;
+    right: 14px;
+  }
+
+  .liveCompanySliderImg {
+    max-width: 41%;
+  }
+
+  .clientsBlueBgModif .client__text {
+    margin-top: 65px;
+  }
 }
 
 @media (max-width: 1500px) {
+  .imageScrollBlock li img{
+    height: 320px;
+  }
+
   .parthnerItem__paragraf {
     font-size: 14px;
   }
@@ -4092,6 +4564,22 @@ Start responsive
 }
 
 @media (max-width: 1460px) {
+  .imageScrollBlock {
+    width: 1920px;
+  }
+
+  .imageScrollBlock li img {
+    height: 460px;
+  }
+
+  .imageScrollBlock li {
+    max-width: 375px;
+  }
+
+  .aboutQuality .qualityRight {
+    max-width: 46%;
+  }
+
   .topSliderNav {
     max-width: 88%;
   }
@@ -4124,7 +4612,7 @@ Start responsive
     max-width: 500px;
   }
 
-  .itemSlider2{
+  .itemSlider2 {
     width: 1505px;
   }
 
@@ -4139,6 +4627,31 @@ Start responsive
 
   .itemSlider2 .itemBlock {
     max-width: 365px;
+  }
+
+  .catalogMain .itemBlock {
+    max-width: 32.3%;
+  }
+
+  .catalogHeaderTitle {
+    top: 120px;
+  }
+
+  .liveCompanySliderRight {
+    margin-left: 70px;
+  }
+
+  .footerTopLeft {
+    max-width: 28%;
+  }
+
+  .liveCompanySliderNavBlock {
+    max-width: 50%;
+    right: 40px;
+  }
+
+  .liveCompanySlider {
+    margin-left: 128px !important;
   }
 }
 
@@ -4219,9 +4732,29 @@ Start responsive
     max-width: 19.4%;
     height: 96px;
   }
+
+  .catalogHeaderTitle {
+    top: 100px;
+  }
+
+  .h1_caps {
+    font-size: 50px;
+  }
+
+  .qualityLeft__modif.qualityLeft {
+    max-width: 37%;
+  }
 }
 
 @media (max-width: 1340px) {
+  .qualityRight {
+    max-width: 40%;
+  }
+
+  .qualityLeft__modif.qualityLeft {
+    max-width: 38%;
+  }
+
   .h2_caps {
     font-size: 35px;
   }
@@ -4245,6 +4778,41 @@ Start responsive
   .itemSelection .itemBlock {
     max-width: 24%;
   }
+
+  .documents .newsScroll {
+    margin-left: 100px;
+    max-width: 94%;
+  }
+
+  .liveCompanySlider {
+    margin-left: 100px !important;
+  }
+
+  .qualityLeft,
+  .clientLeft {
+    margin-left: 100px;
+  }
+
+  .h2_caps {
+    font-size: 34px;
+  }
+
+  .liveCompanySliderNavBlock .swiper-button-next, .liveCompanySliderNavBlock .swiper-button-prev {
+    max-width: 220px;
+  }
+
+  .liveCompanySliderNavBlock .swiper-button-prev:after {
+    left: 10px;
+    top: 15px;
+  }
+
+  .liveCompanySliderNavBlock .swiper-button-next:after {
+    right: 15px;
+  }
+
+  .footerTopLeft__vertical {
+    margin-left: -45px;
+  }
 }
 
 @media (max-width: 1300px) {
@@ -4263,11 +4831,6 @@ Start responsive
   .preessCenter .newsContent {
     max-width: 100%;
     width: 100%;
-    justify-content: space-between;
-  }
-
-  .preessCenterBlock .newsItem:nth-of-type(3n+3) {
-    margin-right: 0;
   }
 
   .preessCenterBlock .newsItem:nth-of-type(4n+4) {
@@ -4313,6 +4876,28 @@ Start responsive
 
   .itemSlider2 {
     margin-left: 95px !important;
+  }
+
+  .liveCompanySliderRight__paragraf {
+    margin-top: 15px;
+  }
+
+  .liveCompanySliderNav .swiper-pagination-bullets {
+    max-width: 39%;
+  }
+
+  .qualityLeft,
+  .clientLeft,
+  .documents .newsScroll {
+    margin-left: 80px;
+  }
+
+  .liveCompanySlider {
+    margin-left: 80px !important;
+  }
+
+  .documents .newsScroll {
+    max-width: 96%;
   }
 }
 
@@ -4389,13 +4974,22 @@ Start responsive
   .mapPopup {
     left: 390px;
   }
+
+  .clientLeft,
+  .qualityLeft {
+    margin-left: 80px;
+  }
+
+  .liveCompanySliderRight {
+    margin-left: 40px;
+    max-width: 53%;
+  }
 }
 
 @media (max-width: 1195px) {
-  .answearBlockItem{
+  .answearBlockItem {
     padding: 40px 20px;
   }
-
 
 
   .clientRight {
@@ -4417,11 +5011,19 @@ Start responsive
   .itemsRightFasovkaBlock {
     margin-right: 15px;
   }
+
+  .h1_caps {
+    font-size: 48px;
+  }
+
+  .clientsBlueBg .clientRightBlock {
+    max-width: 47%;
+  }
 }
 
 @media (max-width: 1160px) {
   .documents .newsScroll {
-    max-width: 90%;
+    max-width: 95%;
     margin-left: 70px;
   }
 
@@ -4546,6 +5148,99 @@ Start responsive
 
   .itemSlider2 {
     margin-left: 33px !important;
+  }
+
+  .catalogMain .itemBlock {
+    max-width: 48.5%;
+  }
+
+  .catalogMain .itemBlock:nth-of-type(3n+3) {
+    margin-right: 12px;
+  }
+
+  .aboutQuality .qualityRight {
+    max-width: 46%;
+  }
+
+  .clientsBlueBg .clientLeft {
+    margin-left: 50px;
+  }
+
+  .liveCompanySliderRight {
+    max-width: 100%;
+    margin-left: 0;
+    margin-top: 40px;
+  }
+
+  .liveCompany {
+    height: auto
+  }
+
+  .liveCompanySliderNavBlock {
+    position: relative;
+    top: 0;
+    margin-top: 90px;
+    max-width: 70%;
+  }
+
+  .liveCompanySliderImg {
+    max-width: 50%;
+  }
+
+  .liveCompanySliderNavBlock .swiper-button-next, .liveCompanySliderNavBlock .swiper-button-prev {
+    max-width: 250px;
+    margin-top: -53px;
+  }
+
+  .liveCompanySliderNavBlock .swiper-button-next:after {
+    top: 17px;
+  }
+
+  .liveCompanySliderNavBlock .swiper-button-prev {
+    left: 54px;
+  }
+
+  .liveCompanySliderNav .swiper-pagination-fraction {
+    text-align: center;
+    margin-top: -30px;
+    position: relative;
+    left: 15px;
+  }
+
+  .liveCompanySliderNav .swiper-pagination-bullets {
+    bottom: auto !important;
+    top: 550px !important;
+    max-width: 49%;
+  }
+
+  .liveCompanySliderNavBlock .swiper-button-prev:after {
+    left: 20px;
+  }
+
+  .liveCompanySliderNavBlock .swiper-button-next:after {
+    right: 25px;
+  }
+
+  .liveCompanySliderNavBlock .swiper-button-prev {
+    left: 40px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .catalogMain .itemBlock {
+    max-width: 48%;
+  }
+
+  .aside {
+    max-width: 27%;
+  }
+
+  .catalogContent {
+    max-width: 70%;
+  }
+
+  .catalogHeaderTitle {
+    top: 65px;
   }
 }
 
@@ -4682,11 +5377,6 @@ Start responsive
     max-width: 100%;
   }
 
-  .clientsBlueBg {
-    margin-top: 50px;
-    padding-top: 50px;
-  }
-
   .preessCenterBlockList {
     right: 0;
   }
@@ -4783,6 +5473,14 @@ Start responsive
   .answearBlock .mapSliderContactsNavIn {
     left: 0;
   }
+
+  .bigProizvodstvoModif {
+    margin-bottom: 40px;
+  }
+
+  .preessCenterBlock .newsItem:nth-child(3n+3) {
+    margin-right: 0;
+  }
 }
 
 @media (max-width: 990px) {
@@ -4803,7 +5501,7 @@ Start responsive
   }
 
   .header {
-    max-width: 92%;
+    max-width: 97%;
   }
 
   .headerRightInfo {
@@ -4931,6 +5629,54 @@ Start responsive
   .itemDoc .clientLeft {
     max-width: 95%;
   }
+
+  .metismenu3 .metismenu__href {
+    font-size: 16px;
+  }
+
+  .aside {
+    max-width: 29%;
+  }
+
+  .liveCompanySliderImg {
+    max-width: 60%;
+  }
+
+  .liveCompanySliderNav .swiper-pagination-bullets {
+    max-width: 60%;
+    top: 560px !important;
+  }
+
+  .liveCompanySliderNavBlock .swiper-button-next, .liveCompanySliderNavBlock .swiper-button-prev {
+    max-width: 210px;
+  }
+
+  .liveCompanySliderNavBlock .swiper-button-next:after {
+    right: 10px;
+  }
+
+  .liveCompanySliderNavBlock .swiper-button-prev:after {
+    left: 5px;
+  }
+}
+
+@media (max-width: 910px) {
+  .catalogMain .itemBlock {
+    max-width: 47%;
+  }
+
+  .catalogHeader {
+    height: 200px;
+  }
+
+  .catalogHeader img {
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .catalogHeaderTitle {
+    top: 75px;
+  }
 }
 
 @media (max-width: 895px) {
@@ -4999,16 +5745,8 @@ Start responsive
     max-width: 100%;
   }
 
-  .clientsBlueBg .clientLeft {
-    margin-left: 40px;
-  }
-
   .documents .newsScroll {
     margin-left: 40px;
-  }
-
-  .clientsBlueBg {
-    padding-top: 5px;
   }
 
   .mapSliderContacts {
@@ -5057,6 +5795,28 @@ Start responsive
   .answearBlockRight .mapSliderContacts {
     display: block !important;
   }
+
+  .documents .newsScroll {
+    max-width: 97%;
+  }
+
+  .footerLogo {
+    position: relative;
+    left: -24px;
+  }
+
+  .footerTopRight {
+    padding-left: 49px;
+  }
+
+  .liveCompanySlider {
+    margin-left: 40px !important;
+  }
+
+  .clientLeft,
+  .qualityLeft {
+    margin-left: 40px;
+  }
 }
 
 @media (max-width: 830px) {
@@ -5098,6 +5858,54 @@ Start responsive
 
   .itemsDocuments {
     max-width: 700px;
+  }
+
+  .aside {
+    display: none;
+  }
+
+  .catalogContent {
+    max-width: 100%;
+  }
+
+  .catalogMain .itemBlock {
+    max-width: 32%;
+  }
+
+  .catalogMain .itemBlock:nth-of-type(3n+3) {
+    margin-right: 0;
+  }
+
+  .catalogHeaderTitle {
+    top: 80px;
+  }
+
+  .aboutQuality .qualityRight {
+    max-width: 45%;
+  }
+
+  .clientsBlueBg .clientLeft {
+    max-width: 45%;
+  }
+
+  .liveCompanySliderNavBlock {
+    max-width: 90%;
+  }
+
+  .liveCompanySliderNavBlock .swiper-button-next, .liveCompanySliderNavBlock .swiper-button-prev {
+    max-width: 240px;
+  }
+
+  .liveCompanySliderNavBlock .swiper-button-next:after {
+    right: 18px;
+  }
+
+  .liveCompanySliderNavBlock .swiper-button-prev:after {
+    left: 16px;
+  }
+
+  .preessCenter .newsContent {
+    justify-content: space-between;
   }
 }
 
@@ -5195,6 +6003,7 @@ Start responsive
 
   .clientRightBlock {
     padding-left: 50px;
+    padding-top: 25px;
   }
 
   .h2_caps {
@@ -5216,11 +6025,13 @@ Start responsive
   .qualityVideo,
   .qualityVideo video,
   .qualityVideo img {
-    height: 800px;
+    height: auto;
+    margin-bottom: 100px;
   }
 
   .qualityIn {
     padding-top: 80px;
+    max-width: 100%;
   }
 
   .qualityLeft {
@@ -5241,6 +6052,7 @@ Start responsive
   video.qualityPlanshet__img,
   img.qualityPlanshet__img {
     display: block;
+    width: 100%;
   }
 
   .clientRight {
@@ -5275,7 +6087,7 @@ Start responsive
   }
 
   .quality {
-    height: 800px;
+    height: auto;
   }
 
   .tab-btn div {
@@ -5351,6 +6163,64 @@ Start responsive
 
   .answearBlock {
     padding-left: 65px;
+  }
+
+  .aboutQuality .qualityRight,
+  .qualityLeft__modif.qualityLeft {
+    max-width: 90%;
+  }
+
+  .aboutQuality .qualityLeft {
+    margin-left: 65px;
+  }
+
+  .aboutQuality .qualityRight {
+    padding-left: 65px;
+  }
+
+  .qualityIn .client__text {
+    margin-left: -30px;
+  }
+
+  .h3 {
+    font-size: 22px;
+  }
+
+  .documents .newsScroll {
+    max-width: 95%;
+  }
+
+  .liveCompanySliderImg {
+    max-width: 335px;
+    height: 400px;
+  }
+
+  .liveCompanySliderNav .swiper-pagination-bullets {
+    max-width: 330px;
+    top: 365px !important;
+  }
+
+  .preessCenter {
+    margin: 30px auto;
+  }
+}
+
+@media (max-width: 740px) {
+  .catalogMain .itemBlock {
+    max-width: 49%;
+  }
+
+  .catalogContent {
+    justify-content: space-between;
+  }
+
+  .catalogMain .itemBlock:nth-of-type(3n+3),
+  .catalogMain .itemBlock:nth-child(2n+2) {
+    margin-right: 0;
+  }
+
+  .liveCompanySliderNavBlock {
+    max-width: 100%;
   }
 }
 
@@ -5468,6 +6338,19 @@ Start responsive
   .footerBottomLeft {
     max-width: 440px;
   }
+
+  .liveCompanySliderNavBlock {
+    right: 0;
+    width: 100%;
+  }
+
+  .liveCompanySliderNavBlock .swiper-button-prev {
+    left: 0;
+  }
+
+  .liveCompanySliderNav .swiper-pagination-fraction {
+    left: -4px;
+  }
 }
 
 @media (max-width: 620px) {
@@ -5519,6 +6402,22 @@ Start responsive
   .itemsLeft:before,
   .itemsLeftSliderImg {
     height: 640px;
+  }
+
+  .catalogMain .itemBlock {
+    max-width: 48%;
+  }
+
+  .liveCompanySliderNavBlock .swiper-button-next, .liveCompanySliderNavBlock .swiper-button-prev {
+    max-width: 205px;
+  }
+
+  .liveCompanySliderNavBlock .swiper-button-next:after {
+    right: 8px;
+  }
+
+  .liveCompanySliderNavBlock .swiper-button-prev:after {
+    left: 6px;
   }
 }
 
@@ -5579,10 +6478,6 @@ Start responsive
     margin-top: 45px;
   }
 
-  .simbol .client__text {
-    margin-top: 43px;
-  }
-
   .stepParthnersBlock {
     max-width: 100%;
   }
@@ -5616,7 +6511,7 @@ Start responsive
   }
 
   .simbol .client__text {
-    margin-top: 67px;
+    margin-top: 37px;
   }
 
   .preessCenterContent {
@@ -5634,9 +6529,25 @@ Start responsive
   .mapPopup {
     left: 50px;
   }
+
+  .imageScrollBlock {
+    width: 1580px;
+  }
+
+  .imageScrollBlock li img {
+    height: 380px;
+  }
+
+  .imageScrollBlock li {
+    max-width: 305px;
+  }
 }
 
 @media (max-width: 550px) {
+  .preessCenter {
+    margin: 20px auto;
+  }
+
   .preessCenterContent {
     margin-left: 30px;
   }
@@ -5824,6 +6735,65 @@ Start responsive
 
   .itemsDocumentsList li {
     max-width: 100%;
+  }
+
+  .itemBlockList li {
+    margin-right: 20px;
+  }
+
+  .catalogMain .itemBlock {
+    max-width: 48.7%;
+  }
+
+  .documents .newsScroll {
+    max-width: 92%;
+  }
+
+  .liveCompanySliderNavBlock .swiper-button-next span, .liveCompanySliderNavBlock .swiper-button-prev span  {
+    display: none;
+  }
+
+  .liveCompanySliderNavBlock .swiper-button-next, .liveCompanySliderNavBlock .swiper-button-prev {
+    max-width: 70px;
+  }
+
+  .liveCompanySliderNavBlock {
+    max-width: 235px;
+  }
+
+  .liveCompanySliderNavBlock .swiper-button-next:after {
+    right: 29px;
+  }
+
+  .liveCompanySliderNavBlock .swiper-button-prev:after {
+    left: 29px;
+  }
+}
+
+@media (max-width: 480px) {
+  .catalogMain .itemBlock {
+    max-width: 47.9%;
+  }
+
+  .itemBlock__link {
+    height: 291px;
+  }
+
+  .qualityVideo,
+  .qualityVideo video,
+  .qualityVideo img,
+  .quality {
+    height: 800px;
+  }
+
+  .liveCompanySliderImg {
+    max-width: 284px;
+    height: 350px;
+  }
+
+  .liveCompanySliderNav .swiper-pagination-bullets {
+    max-width: 284px;
+    top: 320px !important;
   }
 }
 

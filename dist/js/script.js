@@ -74,7 +74,7 @@ $(document).ready(function () {
 
 $(document).ready(function () {
   const swiper = new Swiper(".liveCompanySlider", {
-    loop: true,
+    loop: true, // Включено зацикливание
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
@@ -97,10 +97,15 @@ $(document).ready(function () {
 
   function updateFractionPagination(swiper) {
     const currentSlide = swiper.realIndex + 1;
-    const totalSlides = swiper.slides.length - 2;
+    const totalSlides = swiper.slides.length / 1;
     const fractionContainer = document.querySelector(".swiper-pagination-fraction");
+
+
     fractionContainer.textContent = `${currentSlide} / ${totalSlides}`;
   }
+
+
+
 });
 
 $(document).ready(function () {
@@ -111,6 +116,7 @@ $(document).ready(function () {
 
   $("#menu1").metisMenu();
   $("#menu2").metisMenu();
+  $("#menu3").metisMenu();
 });
 
 
@@ -135,4 +141,35 @@ $(document).ready(function () {
       prevEl: ".swiper-button-prev",
     },
   });
+});
+
+
+$(document).ready(function () {
+  // Start brand
+  const $ul = $('.flexic');
+  const wrapperHeight = $('.wrapper').height();
+
+
+  $ul.children().clone().appendTo($ul);
+
+
+  function checkScrollDirection() {
+    const wrapperOffsetTop = $('.wrapper').offset().top;
+    const windowHeight = $(window).height();
+    const scrollPosition = $(window).scrollTop();
+
+
+    if (scrollPosition > (wrapperOffsetTop + wrapperHeight - windowHeight / 2)) {
+      $ul.css('animation', 'scroll-reverse 20s linear infinite');
+    } else {
+      $ul.css('animation', 'scroll 20s linear infinite');
+    }
+  }
+
+  checkScrollDirection();
+  $(window).on('scroll', checkScrollDirection);
+});
+
+$(document).ready(function () {
+  $(".phone_mask").inputmask("+7 (999) 999-99-99");
 });
