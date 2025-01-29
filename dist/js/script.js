@@ -37,7 +37,6 @@ $(document).ready(function () {
   });
 
 
-
   $('.itemTabs .cnt_1').css("visibility", "visible");
 
   $('.itemTabs .tab_1').click(function () {
@@ -183,5 +182,19 @@ $(document).ready(function () {
 
     toggleMenu(); // Запуск при загрузке
     $(window).resize(toggleMenu); // Запуск при изменении размера окна
+  });
+});
+
+$(document).ready(function () {
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > 400) {
+      $('#scrollTop').fadeIn();
+    } else {
+      $('#scrollTop').fadeOut();
+    }
+  });
+
+  $('#scrollTop').click(function () {
+    $('html, body').animate({scrollTop: 0}, 50);
   });
 });

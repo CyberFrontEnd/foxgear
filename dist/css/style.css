@@ -2200,6 +2200,8 @@ End liveCompany
   max-width: 890px;
   width: 100%;
   flex-direction: column;
+  position: relative;
+  z-index: 9;
 }
 
 .mistake__title {
@@ -2905,7 +2907,7 @@ End liveCompany
 .itemSelection {
   max-width: 1613px;
   width: 100%;
-  margin: -140px auto 110px;
+  margin: -120px auto 110px;
 }
 
 .itemSelection .itemBlock {
@@ -4312,6 +4314,57 @@ End brends
 
 .tab-container .newsContent {
   margin-top: 60px;
+}
+
+.foxGearGroupSearchList {
+   max-width: 1000px;
+   width: 100%;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.foxGearGroupSearchList li {
+  margin-right: 8px;
+}
+
+.foxGearGroupSearchList li:nth-child(4n+4) {
+  margin-right: 0;
+}
+
+.foxGearGroupSearchList li a {
+  text-transform: uppercase;
+  color: #CDCED5;
+  padding: 16px 24px 14px 24px;
+  border: 1px solid #CDCED5;
+}
+
+.foxGearGroupSearchList li a:after {
+  content: '';
+  display: block;
+  background: url('../images/icon30.svg') no-repeat center;
+  width: 14px;
+  height: 14px;
+  margin-left: 5px;
+  position: relative;
+  right: -5px;
+}
+
+#scrollTop {
+  display: none;
+  position: fixed;
+  bottom: 450px;
+  right: 20px;
+  width: 61px;
+  height: 61px;
+  background: #F1F3F4;
+  color: #000E32;
+  text-align: center;
+  line-height: 50px;
+  font-size: 24px;
+  border-radius: 100%;
+  cursor: pointer;
+  z-index: 999999;
+  padding-top: 7px;
 }
 
 /*
@@ -6017,7 +6070,7 @@ Start responsive
   }
 
   .itemSelection .itemBlock {
-    max-width: 31.5%;
+    max-width: 32.4%;
   }
 
   .mapFormInput input {
@@ -6082,6 +6135,19 @@ Start responsive
   .headerMenu {
     height: 135px;
   }
+
+  .foxGearGroupSearchList {
+    max-width: 731px;
+    margin: 40px auto 0;
+  }
+
+  .foxGearGroupSearchList li {
+    margin-bottom: 10px;
+  }
+
+  .itemSelection {
+    margin: -80px auto 110px;
+  }
 }
 
 @media (max-width: 945px) {
@@ -6144,6 +6210,10 @@ Start responsive
 }
 
 @media (max-width: 895px) {
+  .itemSelection .itemBlock {
+    max-width: 31.9%;
+  }
+
   .headerMenu {
     height: 115px;
   }
@@ -6755,9 +6825,24 @@ Start responsive
     height: 700px;
     overflow: scroll;
   }
+
+  .foxGearGroupSearchList {
+    max-width: 520px;
+  }
+
+  .foxGearGroupSearch__btn {
+    margin: 20px auto 0;
+  }
+
+  .foxGearGroup {
+    padding-top: 40px;
+  }
 }
 
 @media (max-width: 740px) {
+  .foxGearGroupIn {
+    padding: 0 20px;
+  }
   .catalogMain .itemBlock {
     max-width: 49%;
   }
@@ -7391,6 +7476,14 @@ Start responsive
   .popupCabinetBottom li a {
     font-size: 12px;
   }
+
+  .foxGearGroupSearchList {
+    max-width: 300px;
+  }
+
+  .foxGearGroup {
+    height: 600px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -7517,6 +7610,10 @@ Start responsive
 
   .answearIn .client__text {
     margin-left: 5px;
+  }
+
+  .foxGearGroup {
+    height: 630px;
   }
 }
 
@@ -7686,15 +7783,47 @@ Start responsive
 /*
 Start responsive height
 #######################*/
+@media (max-height: 1040px) {
+  .mistakeContent {
+    margin-top: -150px;
+  }
+}
+
+@media (max-height: 940px) {
+  .mistakeContent {
+    margin-top: -250px;
+  }
+}
+
+@media (max-height: 840px) {
+  .mistakeContent {
+    margin-top: -350px;
+  }
+}
+
 @media (max-height: 770px) {
   .mobileMenuBlockScroll {
     height: 600px;
+  }
+
+  .mistakeContent {
+    margin-top: -400px;
   }
 }
 
 @media (max-height: 700px) {
   .mobileMenuBlockScroll {
     height: 500px;
+  }
+}
+
+@media (max-height: 650px) {
+  .mistakeContent {
+    margin-top: -100px;
+  }
+
+  .mistakeBottomList {
+    display: none;
   }
 }
 

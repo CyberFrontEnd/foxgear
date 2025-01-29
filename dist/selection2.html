@@ -17,6 +17,8 @@
 </head>
 <body>
 
+<div id="scrollTop">↑</div>
+
 <!--Start header-->
 <header class="header flex">
     <div class="headerLeft flex">
@@ -61,7 +63,7 @@
         </ul>
 
         <div class="headerRightInfo flex">
-            <a href="#" class="headerRightInfo__search"></a>
+            <a href="#" class="headerRightInfo__search" data-fancybox="" data-src="#search"></a>
 
             <a href="tel:+7 923 800 79 09" class="headerRightInfo__tel btn"><span class="text_12_caps">+7 923 800 79 09</span></a>
 
@@ -115,7 +117,6 @@
         </div>
     </div>
 </header>
-<!--End header-->
 
 <div class="headerMenu">
     <div class="headerMenuIn flex">
@@ -175,6 +176,326 @@
     </div>
 </div>
 
+<div class="mobileMenuBlock">
+    <div class="mobileMenuBlockScroll">
+        <ul class="mobileMenuBlockMenu">
+            <li>
+                <a href="#" class="h4_caps">о компании</a>
+            </li>
+
+            <li>
+                <a href="#" class="h4_caps">Производство</a>
+            </li>
+
+            <li>
+                <a href="#" class="h4_caps">Каталог</a>
+            </li>
+
+            <li>
+                <a href="#" class="h4_caps">Партнерам</a>
+            </li>
+
+            <li>
+                <a href="#" class="h4_caps">Подбор продукта</a>
+            </li>
+
+            <li>
+                <a href="#" class="h4_caps">Где купить</a>
+            </li>
+
+            <li>
+                <a href="#" class="h4_caps">Контакты</a>
+            </li>
+
+
+            <li>
+                <a href="#" class="h4_caps">о компании</a>
+            </li>
+
+            <li>
+                <a href="#" class="h4_caps">Производство</a>
+            </li>
+
+            <li>
+                <a href="#" class="h4_caps">Каталог</a>
+            </li>
+
+            <li>
+                <a href="#" class="h4_caps">Партнерам</a>
+            </li>
+
+            <li>
+                <a href="#" class="h4_caps">Подбор продукта</a>
+            </li>
+
+            <li>
+                <a href="#" class="h4_caps">Где купить</a>
+            </li>
+
+            <li>
+                <a href="#" class="h4_caps">Контакты</a>
+            </li>
+        </ul>
+    </div>
+
+    <form action="" class="mobileMenuBlockForm">
+        <div class="flex mobileMenuBlockFormInput">
+            <input placeholder="Поиск" required type="text">
+            <a href="#" class="mobileMenuBlockFormInput__btn"></a>
+        </div>
+
+        <div class="mobileMenuBlockPhone">
+            <a href="tel:+7 923 800 79 09" class="flex">
+                <span class="text_12_caps">позвонить </span> <span class="text_12_caps"> +7 923 800 79 09</span>
+            </a>
+        </div>
+    </form>
+</div>
+
+<div class="popupSearch" style="display: none;" id="search">
+    <h4 class="h4_caps popupSearch__title">поиск</h4>
+
+    <div id="tab-container" class="tab-container">
+        <ul class='etabs flex'>
+            <li class='tab'>
+                <a href="#question" class="text_12_caps"><span>По продукту</span></a>
+            </li>
+
+            <li class='tab'>
+                <a href="#answear" class="text_12_caps"><span>по блогу</span></a>
+            </li>
+        </ul>
+
+        <div id="question">
+            <form action="" class="popupSearchForm">
+                <input placeholder="Поиск по продукту" type="text">
+            </form>
+
+            <div class="itemSliderContent flex">
+                <div class="itemBlock">
+                    <div class="itemBlockTop flex">
+                        <div class="itemBlockTop__text text_12_caps">лучший выбор</div>
+                        <div class="itemBlockTop__text2 text_12_caps">new</div>
+                    </div>
+
+                    <div class="itemBlock__link">
+                        <img src="images/item.png" alt="" loading="lazy">
+                    </div>
+
+                    <a href="" class="btn itemBlock__href">
+                        <span class="text_12_caps">подробнее</span>
+                    </a>
+
+                    <div class="itemBlockBottom">
+                        <div class="text_14">Гидравлические масла</div>
+                        <a href="" class="itemBlockBottom__name">RENOLIN XTREME TEMP 32</a>
+                        <p class="text_14">Деэмульгирующие гидравлические и смазочные масла рекомендуются</p>
+
+                        <div class="itemBlockBottomBottom">
+                            <div class="text_14">Канистра</div>
+                        </div>
+
+                        <ul class="itemBlockList flex">
+                            <li>
+                                <span class="text_16">1 л</span>
+                            </li>
+
+                            <li class="itemBlockList__active flex">
+                                <span class="text_16">4 л</span>
+                            </li>
+
+                            <li>
+                                <span class="text_16">5 л</span>
+                            </li>
+
+                            <li>
+                                <span class="text_16">20 л</span>
+                            </li>
+
+                            <li>
+                                <span class="text_16">+ еще 2</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="itemBlock">
+                    <div class="itemBlock__link">
+                        <img src="images/item2.png" alt="" loading="lazy">
+                    </div>
+
+                    <a href="" class="btn itemBlock__href">
+                        <span class="text_12_caps">подробнее</span>
+                    </a>
+
+                    <div class="itemBlockBottom">
+                        <div class="text_14">Гидравлические масла</div>
+                        <a href="" class="itemBlockBottom__name">RENOLIN XTREME TEMP 32</a>
+                        <p class="text_14">Деэмульгирующие гидравлические и смазочные масла рекомендуются</p>
+
+                        <div class="itemBlockBottomBottom">
+                            <div class="text_14">Бочка</div>
+                            <ul class="itemBlockList flex">
+                                <li>
+                                    <span class="text_16">1 л</span>
+                                </li>
+
+                                <li>
+                                    <span class="text_16">4 л</span>
+                                </li>
+
+                                <li>
+                                    <span class="text_16">5 л</span>
+                                </li>
+
+                                <li class="itemBlockList__active flex">
+                                    <span class="text_16">20 л</span>
+                                </li>
+
+                                <li>
+                                    <span class="text_16">+ еще 2</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="itemBlock">
+                    <div class="itemBlockTop flex">
+                        <div class="itemBlockTop__text2 text_12_caps">new</div>
+                    </div>
+
+                    <div class="itemBlock__link">
+                        <img src="images/item.png" alt="" loading="lazy">
+                    </div>
+
+                    <a href="" class="btn itemBlock__href">
+                        <span class="text_12_caps">подробнее</span>
+                    </a>
+
+                    <div class="itemBlockBottom">
+                        <div class="text_14">Гидравлические масла</div>
+                        <a href="" class="itemBlockBottom__name">RENOLIN XTREME TEMP 32</a>
+                        <p class="text_14">Деэмульгирующие гидравлические и смазочные масла рекомендуются</p>
+
+                        <div class="itemBlockBottomBottom">
+                            <div class="text_14">Канистра</div>
+
+                            <ul class="itemBlockList flex">
+                                <li>
+                                    <span class="text_16">1 л</span>
+                                </li>
+
+                                <li class="itemBlockList__active flex">
+                                    <span class="text_16">4 л</span>
+                                </li>
+
+                                <li>
+                                    <span class="text_16">5 л</span>
+                                </li>
+
+                                <li>
+                                    <span class="text_16">20 л</span>
+                                </li>
+
+                                <li>
+                                    <span class="text_16">+ еще 2</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="itemBlock">
+                    <div class="itemBlock__link">
+                        <img src="images/item2.png" alt="" loading="lazy">
+                    </div>
+
+                    <a href="" class="btn itemBlock__href">
+                        <span class="text_12_caps">подробнее</span>
+                    </a>
+
+                    <div class="itemBlockBottom">
+                        <div class="text_14">Гидравлические масла</div>
+                        <a href="" class="itemBlockBottom__name">RENOLIN XTREME TEMP 32</a>
+                        <p class="text_14">Деэмульгирующие гидравлические и смазочные масла рекомендуются</p>
+
+                        <div class="itemBlockBottomBottom">
+                            <div class="text_14">Бочка</div>
+                            <ul class="itemBlockList flex">
+                                <li>
+                                    <span class="text_16">1 л</span>
+                                </li>
+
+                                <li class="itemBlockList__active flex">
+                                    <span class="text_16">4 л</span>
+                                </li>
+
+                                <li>
+                                    <span class="text_16">5 л</span>
+                                </li>
+
+                                <li>
+                                    <span class="text_16">20 л</span>
+                                </li>
+
+                                <li>
+                                    <span class="text_16">+ еще 2</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="answear">
+            <form action="" class="popupSearchForm">
+                <input placeholder="Поиск по блогу" type="text">
+            </form>
+
+            <div class="newsContent flex">
+                <div class="newsItem">
+                    <a href="#"><img src="images/news.jpg" alt="" loading="lazy"></a>
+
+                    <div class="newsItem__date text_14">14.09.2024</div>
+
+                    <h4 class="newsItem__title"><a href="#" class="h4_caps">Заголовок новости</a></h4>
+                    <p class="newsItem__paragraf text_14">Деэмульгирующие гидравлические и смазочные масла рекомендуются</p>
+                </div>
+
+                <div class="newsItem">
+                    <a href="#"><img src="images/news2.jpg" alt="" loading="lazy"></a>
+
+                    <div class="newsItem__date text_14">14.09.2024</div>
+
+                    <h4 class="newsItem__title"><a href="#" class="h4_caps">Заголовок новости</a></h4>
+                    <p class="newsItem__paragraf text_14">Деэмульгирующие гидравлические и смазочные масла рекомендуются</p>
+                </div>
+
+                <div class="newsItem">
+                    <a href="#"><img src="images/news3.jpg" alt="" loading="lazy"></a>
+
+                    <div class="newsItem__date text_14">14.09.2024</div>
+
+                    <h4 class="newsItem__title"><a href="#" class="h4_caps">Заголовок новости</a></h4>
+                    <p class="newsItem__paragraf text_14">Деэмульгирующие гидравлические и смазочные масла рекомендуются</p>
+                </div>
+
+                <div class="newsItem">
+                    <a href="#"><img src="images/news4.jpg" alt="" loading="lazy"></a>
+
+                    <div class="newsItem__date text_14">14.09.2024</div>
+
+                    <h4 class="newsItem__title"><a href="#" class="h4_caps">Заголовок новости</a></h4>
+                    <p class="newsItem__paragraf text_14">Деэмульгирующие гидравлические и смазочные масла рекомендуются</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--End header-->
+
 <!--Start bread-->
 <div class="newsScroll">
     <ul class="bread flex">
@@ -195,10 +516,25 @@
         <div class="foxGearGroup__title text_12_caps">foxgear group</div>
         <h2 class="h2_caps foxGearGroup__h2">Поможем подобрать продукт под ваши потребности</h2>
 
-        <div class="foxGearGroupSearch flex">
-            <div class="foxGearGroupSearch__title text_12_caps">Запрос поиска:</div>
-            <div class="foxGearGroupSearch__text text_12_caps_bold">Моторное масло RENOLIN XTREME TEMP 32 </div>
-        </div>
+
+        <ul class="foxGearGroupSearchList flex">
+            <li>
+                <a href="" class="flex text_12_caps">название Категории</a>
+            </li>
+
+            <li>
+                <a href="" class="flex text_12_caps">название производителя</a>
+            </li>
+
+            <li>
+                <a href="" class="flex text_12_caps">Объем двигателя</a>
+            </li>
+
+            <li>
+                <a href="" class="flex text_12_caps">название Модели</a>
+            </li>
+        </ul>
+
 
         <a href="#" class="foxGearGroupSearch__btn text_12_caps flex">новый поиск</a>
     </div>
@@ -213,7 +549,7 @@
                 <div class="itemBlockTop__text2 text_12_caps">new</div>
             </div>
 
-            <div  class="itemBlock__link">
+            <div class="itemBlock__link">
                 <img src="images/item.png" alt="" loading="lazy">
             </div>
 
