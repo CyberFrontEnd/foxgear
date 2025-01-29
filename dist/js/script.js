@@ -199,7 +199,6 @@ $(document).ready(function () {
   });
 });
 
-
 $(document).ready(function () {
   // Start select custom
   $('.select-selected').on('click', function () {
@@ -217,5 +216,36 @@ $(document).ready(function () {
     let value = $(this).text();
     $(this).parents('.custom-select').children('.select-items').slideUp();
     $(this).parents('.custom-select').children('.select-selected').text(value);
+  });
+});
+
+$(document).ready(function () {
+  $('.catalogAdaptive li a').on('click', function (event) {
+    event.preventDefault();
+
+    let $this = $(this);
+    let $menu = $this.parents('.catalogAdaptive li').children('.metisMenu3InList');
+
+
+    if ($this.hasClass('active')) {
+      $this.removeClass('active');
+      $menu.slideUp();
+    } else {
+
+      $('.catalogAdaptive li a').removeClass('active');
+      $('.catalogAdaptive .metisMenu3InList').slideUp();
+
+
+      $this.addClass('active');
+      $menu.slideDown();
+    }
+  });
+
+
+  $(document).on('click', function (event) {
+    if (!$(event.target).closest('.catalogAdaptive').length) {
+      $('.catalogAdaptive li a').removeClass('active');
+      $('.catalogAdaptive .metisMenu3InList').slideUp();
+    }
   });
 });

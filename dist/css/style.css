@@ -1931,11 +1931,11 @@ End liveCompany
 .catalogMain {
   max-width: 1600px;
   width: 100%;
-  margin: 40px auto 70px;
+  margin: 15px auto 70px;
 }
 
 .catalogMain .itemBlock {
-  margin-bottom: 24px;
+  margin-bottom: 15px;
   margin-right: 12px;
   max-width: 390px;
 }
@@ -3823,6 +3823,7 @@ End liveCompany
 
 .catalogBlock {
   justify-content: space-between;
+  margin-top: 10px;
 }
 
 .metismenu3 .metismenu__href {
@@ -4369,6 +4370,7 @@ End brends
 
 .catalogMainTop {
   justify-content: flex-end;
+  height: 46px;
 }
 
 .custom-select {
@@ -4383,11 +4385,6 @@ End brends
   align-items: center;
   color: #000E32;
   text-transform: uppercase;
-}
-
-.select-selected:before {
-  content: url("../images/icon6.svg");
-  margin: 4px 7px 0 0;
 }
 
 .select-selected:after {
@@ -4430,19 +4427,228 @@ End brends
   overflow: auto;
 }
 
-/*.select-itemsIn::-webkit-scrollbar-track {*/
-/*  border-radius: 0;*/
-/*  background: rgba(128, 128, 128, 1);*/
-/*}*/
 
-/*.select-itemsIn::-webkit-scrollbar {*/
-/*  width: 4px;*/
-/*  background: rgba(128, 128, 128, 1);*/
-/*}*/
+.btnCatalog {
+  justify-content: center;
+  max-width: 100%;
+  width: 100%;
+}
 
-/*.select-itemsIn::-webkit-scrollbar-thumb {*/
-/*  background-color: #ffffff;*/
-/*}*/
+.catalogAdaptive {
+  width: 100%;
+  margin-bottom: 24px;
+  margin-top: 14px;
+}
+
+.catalogAdaptive li a {
+  padding: 16px 33px;
+  border: 1px solid #CDCED5;
+  border-right: none;
+  color: #000E32;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  text-transform: uppercase;
+}
+
+.catalogAdaptive li:last-of-type a {
+  border-right: 1px solid #CDCED5;
+}
+
+.catalogAdaptive li a:after {
+  content: '';
+  display: block;
+  background: url('../images/icon32.svg') no-repeat center;
+  width: 16px;
+  height: 16px;
+  margin: 2px 0 0 10px;
+}
+
+.catalogAdaptiveItem .metisMenu3InList {
+  max-width: 200px;
+  width: 100%;
+  position: absolute;
+  z-index: 9;
+  background: #fff;
+  display: none;
+}
+
+.catalogAdaptiveItem .metisMenu3InList .input-row {
+  padding-left: 28px;
+}
+
+.catalogAdaptive li a.active:after {
+  transform: rotate(88deg);
+}
+
+.catalogAdaptive .metisMenu3InList .input-helper span {
+  width: 120px;
+  display: block;
+}
+
+.catalogAdaptiveMobil {
+  display: none;
+}
+
+/*
+New slider
+*/
+
+.slider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.slider__titleContainer {
+  position: absolute;
+  top: 150px;
+  left: 250px;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  transition: all 2s;
+}
+
+.slider__title {
+  width: 500px;
+  font-size: 60px;
+  line-height: 70px;
+  font-weight: 600;
+  color: #ffffff;
+  text-transform: uppercase;
+  opacity: 0.3;
+  transition: opacity 0.3s;
+}
+
+.slider__titleLink {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: fit-content;
+  margin: 0;
+  padding: 15px 25px;
+  background: #ffffff;
+  transform: skew(-15deg);
+  text-decoration: none;
+}
+
+.slider__titleLink svg {
+  stroke: #000000;
+  transform: skew(12deg);
+}
+
+.slider__titleLinkText {
+  display: flex;
+  color: #000000;
+  font-size: 12px;
+  font-weight: 500;
+  transform: skew(15deg);
+  text-transform: uppercase;
+}
+
+.slider__subtitle {
+  position: absolute;
+  top: 250px;
+  left: 50px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #ffffff;
+  transform: rotate(-90deg);
+  text-transform: uppercase;
+  z-index: 10;
+}
+
+.slides {
+  position: relative;
+  width: 100%;
+  height: 920px;
+  display: flex;
+}
+
+.slide {
+  position: absolute;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  clip-path: polygon(43% 0%, 73% 0%, 65% 110%, 36% 100%);
+  transition: all 0.5s linear;
+  cursor: pointer;
+}
+
+.slide_last {
+  clip-path: polygon(43% 0%, 100% 0%, 100% 110%, 36% 100%);
+}
+
+.slide_current {
+  clip-path: none;
+}
+
+.slide_current {
+  width: 100%;
+  flex-grow: 1;
+}
+
+.slide_hidden {
+  width: 0%;
+}
+
+.slide img {
+  position: absolute;
+  max-height: 100%;
+  min-width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.nav-buttons {
+  position: absolute;
+  left: 300px;
+  bottom: 100px;
+  display: flex;
+  align-items: center;
+  z-index: 10;
+}
+
+.nav-button {
+  display: flex;
+  background: none;
+  border: none;
+  cursor: pointer;
+  stroke: #ffffff;
+}
+
+.nav-button_current svg {
+  fill: #ffffff;
+}
+
+.nav-button:hover svg {
+  stroke: #000e32;
+}
+
+.mask {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0.4;
+  background: linear-gradient(to right, #02295c, 30%, transparent);
+}
 
 
 /*
@@ -5747,9 +5953,19 @@ Start responsive
   }
 }
 
+@media (max-width: 1125px) {
+  .catalogMain .itemBlock {
+    max-width: 49%;
+  }
+
+  .catalogMain .itemBlock:nth-child(2n+2) {
+    margin-right: 0;
+  }
+}
+
 @media (max-width: 1100px) {
   .catalogMain .itemBlock {
-    max-width: 48%;
+    max-width: 49%;
   }
 
   .aside {
@@ -6261,7 +6477,7 @@ Start responsive
 
 @media (max-width: 910px) {
   .catalogMain .itemBlock {
-    max-width: 47%;
+    max-width: 48%;
   }
 
   .catalogHeader {
@@ -6556,6 +6772,18 @@ Start responsive
 
   .popupCabinetBottom li a {
     font-size: 12px;
+  }
+
+  .catalogAdaptiveMobil {
+    display: block;
+  }
+
+  .catalogAdaptive {
+    width: 900px;
+  }
+
+  .catalogMain .itemBlock:nth-child(2n+2) {
+    margin-right: 8px;
   }
 }
 
@@ -6915,6 +7143,10 @@ Start responsive
   .foxGearGroup {
     padding-top: 40px;
   }
+
+  .catalogAdaptive {
+    width: 760px;
+  }
 }
 
 @media (max-width: 740px) {
@@ -6933,6 +7165,10 @@ Start responsive
   .catalogMain .itemBlock:nth-of-type(3n+3),
   .catalogMain .itemBlock:nth-child(2n+2) {
     margin-right: 0;
+  }
+
+  .catalogContentBlock{
+    justify-content: space-between;
   }
 
   .liveCompanySliderNavBlock {
@@ -6955,6 +7191,8 @@ Start responsive
   .popupCabinetBottom li a {
     font-size: 11px;
   }
+
+
 }
 
 @media (max-width: 700px) {
