@@ -4304,7 +4304,7 @@ End brends
   object-fit: cover;
 }
 
-.popupDocImg{
+.popupDocImg {
   max-width: 100%;
   width: 100%;
   justify-content: center;
@@ -4317,8 +4317,8 @@ End brends
 }
 
 .foxGearGroupSearchList {
-   max-width: 1000px;
-   width: 100%;
+  max-width: 1000px;
+  width: 100%;
   justify-content: center;
   margin-top: 40px;
 }
@@ -4366,6 +4366,84 @@ End brends
   z-index: 999999;
   padding-top: 7px;
 }
+
+.catalogMainTop {
+  justify-content: flex-end;
+}
+
+.custom-select {
+  position: relative;
+  display: inline-block;
+  padding: 0 10px;
+}
+
+.select-selected {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  color: #000E32;
+  text-transform: uppercase;
+}
+
+.select-selected:before {
+  content: url("../images/icon6.svg");
+  margin: 4px 7px 0 0;
+}
+
+.select-selected:after {
+  content: url("../images/icon31.svg");
+  margin: 4px 0 0 7px;
+}
+
+.select-itemsForm {
+  max-width: 90%;
+  width: 100%;
+  margin: 0 auto;
+  z-index: 1;
+}
+
+.select-items {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  width: 240px;
+  background: #fff;
+  top: 65px;
+  right: 8px;
+  border: 1px solid #CDCED5;
+}
+
+.select-itemsIn__name {
+  display: block;
+  padding: 15px 24px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  text-transform: uppercase;
+  border-bottom: 1px solid #CDCED5;
+}
+
+.select-itemsIn__name:last-of-type {
+  border-bottom: none;
+}
+
+.select-itemsIn {
+  overflow: auto;
+}
+
+/*.select-itemsIn::-webkit-scrollbar-track {*/
+/*  border-radius: 0;*/
+/*  background: rgba(128, 128, 128, 1);*/
+/*}*/
+
+/*.select-itemsIn::-webkit-scrollbar {*/
+/*  width: 4px;*/
+/*  background: rgba(128, 128, 128, 1);*/
+/*}*/
+
+/*.select-itemsIn::-webkit-scrollbar-thumb {*/
+/*  background-color: #ffffff;*/
+/*}*/
+
 
 /*
 Start responsive
@@ -6843,6 +6921,7 @@ Start responsive
   .foxGearGroupIn {
     padding: 0 20px;
   }
+
   .catalogMain .itemBlock {
     max-width: 49%;
   }
@@ -7726,7 +7805,7 @@ Start responsive
     text-align: center;
   }
 
-  .popupCabinetBottom{
+  .popupCabinetBottom {
     justify-content: center;
   }
 }
