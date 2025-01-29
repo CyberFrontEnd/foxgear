@@ -103,9 +103,6 @@ $(document).ready(function () {
 
     fractionContainer.textContent = `${currentSlide} / ${totalSlides}`;
   }
-
-
-
 });
 
 $(document).ready(function () {
@@ -118,7 +115,6 @@ $(document).ready(function () {
   $("#menu2").metisMenu();
   $("#menu3").metisMenu();
 });
-
 
 $(document).ready(function () {
   const swiper = new Swiper(".mapSliderContacts", {
@@ -133,7 +129,6 @@ $(document).ready(function () {
   });
 });
 
-
 $(document).ready(function () {
   const itemsLeftSlider = new Swiper(".itemsLeftSlider", {
     navigation: {
@@ -142,7 +137,6 @@ $(document).ready(function () {
     },
   });
 });
-
 
 $(document).ready(function () {
   // Start brand
@@ -172,4 +166,22 @@ $(document).ready(function () {
 
 $(document).ready(function () {
   $(".phone_mask").inputmask("+7 (999) 999-99-99");
+});
+
+$(document).ready(function () {
+  $(document).ready(function () {
+    function toggleMenu() {
+      if ($(window).width() <= 770) {
+        $('.headerBtn').off('click').on('click', function (event) {
+          event.preventDefault();
+          $(this).toggleClass('active');
+          $('.mobileMenuBlock').toggleClass('active');
+          $('body').toggleClass('hide');
+        });
+      }
+    }
+
+    toggleMenu(); // Запуск при загрузке
+    $(window).resize(toggleMenu); // Запуск при изменении размера окна
+  });
 });
