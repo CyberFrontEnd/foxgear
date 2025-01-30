@@ -110,6 +110,11 @@ $(document).ready(function () {
     updateHash: false
   });
 
+  $('#tab-container2').easytabs({
+    animationSpeed: 'fast',
+    updateHash: false
+  });
+
   $("#menu1").metisMenu();
   $("#menu2").metisMenu();
   $("#menu3").metisMenu();
@@ -248,4 +253,35 @@ $(document).ready(function () {
       $('.catalogAdaptive .metisMenu3InList').slideUp();
     }
   });
+});
+
+
+$(document).ready(function () {
+  $('.mobileMenuBlockFormBtn').on('click', function () {
+    $('.mobilSarch').toggleClass('active');
+  });
+
+  $('.mobilSarch__btn').on('click', function () {
+    $('.mobilSarch').removeClass('active');
+  });
+
+
+  let inputField = $('.mobileMenuBlockFormInput input');
+  let clearButton = $('.select-itemsForm__clear');
+
+
+  inputField.on('input', function () {
+    if ($(this).val().trim().length > 0) {
+      clearButton.show();
+    } else {
+      clearButton.hide();
+    }
+  });
+
+
+  clearButton.on('click', function () {
+    inputField.val('');
+    $(this).hide();
+  });
+
 });
