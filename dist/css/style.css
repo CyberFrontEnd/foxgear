@@ -4235,6 +4235,7 @@ End brends
   margin: 24px auto 0;
 }
 
+.smazkaFormInput input,
 .popupSearchForm input {
   height: 56px;
   max-width: 100%;
@@ -4248,18 +4249,21 @@ End brends
   border: none;
 }
 
+.smazkaFormInput input::-moz-placeholder,
 .popupSearchForm input::-moz-placeholder {
   color: #000E32;
   font: normal normal 16px 'Inter', sans-serif;
   line-height: 24px;
 }
 
+.smazkaFormInput input::-webkit-input-placeholder,
 .popupSearchForm input::-webkit-input-placeholder {
   color: #000E32;
   font: normal normal 16px 'Inter', sans-serif;
   line-height: 24px;
 }
 
+.smazkaFormInput input:-ms-input-placeholder,
 .popupSearchForm input:-ms-input-placeholder {
   color: #000E32;
   font: normal normal 16px 'Inter', sans-serif;
@@ -4727,6 +4731,228 @@ New slider
   display: none;
 }
 
+.smazkaRight {
+  max-width: 1600px;
+  width: 100%;
+  margin: 0 auto;
+  justify-content: flex-end;
+  padding-top: 30px;
+}
+
+.smazkaRightBlock {
+  max-width: 800px;
+  width: 100%;
+}
+
+.smazkaContent {
+  max-width: 1920px;
+  width: 100%;
+  position: relative;
+  margin: 0 auto;
+  min-height: 1200px;
+}
+
+.smazkaImg {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.smazkaRightBlock .clientLeft__title {
+  max-width: 100%;
+  padding: 20px 0;
+}
+
+.smazkaRightBlock__title {
+  text-transform: uppercase;
+  color: #4B556F;
+}
+
+.smazkaRightBlock__text {
+  max-width: 500px;
+  width: 100%;
+  margin-bottom: 70px;
+}
+
+.smazkaRightBlock .tab-container {
+  max-width: 100%;
+}
+
+.smazkaForm {
+  margin-top: 20px;
+}
+
+.smazkaFormInput {
+  justify-content: space-between;
+}
+
+.smazkaFormInput input {
+  max-width: 620px;
+  width: 100%;
+}
+
+.smazkaFormInput__send {
+  text-transform: uppercase;
+  color: #fff;
+  height: 56px;
+  max-width: 172px;
+  width: 100%;
+  background: #000E32;
+  justify-content: center;
+  align-items: center;
+}
+
+.smazkaFormInput .smazkaRightBlock__text {
+  margin-top: 20px;
+}
+
+.mainBlock {
+  margin-top: 30px;
+}
+
+.mainBlockNav {
+  max-width: 180px;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.mainBlockNav li span {
+  width: 54px;
+  height: 56px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  color: #000E32;
+  border-radius: 2px;
+}
+
+.mainBlockNav li span.mainBlockNavActive {
+  background: #F1F3F4;
+}
+
+.blockBtn {
+  max-width: 227px;
+  width: 100%;
+  height: 56px;
+  background: #000E32;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-top: 30px;
+}
+
+.blockBtn:after {
+  content: '';
+  display: block;
+  background: url('../images/icon35.svg') no-repeat center;
+  width: 24px;
+  height: 24px;
+  margin-left: 5px;
+}
+
+
+.blockIn .input-row {
+  max-width: 194px;
+  width: 100%;
+  height: 180px;
+  position: relative;
+  margin-right: 8px;
+  margin-bottom: 8px;
+  cursor: pointer;
+}
+
+.blockIn .input-row:nth-child(4n+4) {
+  margin-right: 0;
+}
+
+.blockIn .input-helper {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+.blockIn .input-helper:before {
+  content: '';
+  display: block;
+  position: absolute;
+}
+
+.blockIn .input-helper--radio {
+  max-width: 194px;
+  width: 100%;
+  height: 180px;
+}
+
+.blockIn .input-helper--radio img {
+  max-width: 194px;
+  width: 100%;
+  height: 180px;
+  display: block;
+  object-fit: cover;
+}
+
+.blockIn .input-helper--radio:before {
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #F1F3F4;
+  -webkit-transition: all, 0.5s;
+  -moz-transition: all, 0.5s;
+  -o-transition: all, 0.5s;
+  transition: all, 0.5s;
+}
+
+.blockIn .input-row input[type="radio"] {
+  display: none;
+}
+
+.blockIn input[type="radio"]:checked + label:before {
+  opacity: 0;
+}
+
+.blockIn input[type="radio"]:checked + label .blockText {
+  color: #ffffff;
+}
+
+.blockIn .input-helper--radio:hover:before {
+  opacity: 0;
+}
+
+.blockIn .input-helper--radio:hover span {
+  color: #fff;
+}
+
+.blockText {
+  text-transform: uppercase;
+  color: #000E32;
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  -webkit-transition: all, 0.5s;
+  -moz-transition: all, 0.5s;
+  -o-transition: all, 0.5s;
+  transition: all, 0.5s;
+  width: 150px;
+}
+
+.block__title {
+  margin: 40px 0 20px;
+  text-transform: uppercase;
+}
+
 /*
 Start responsive
 ################*/
@@ -4888,6 +5114,16 @@ Start responsive
 }
 
 @media (max-width: 1750px) {
+  .blockIn .input-row {
+    max-width: 24%;
+  }
+
+  .blockText {
+    left: 7px;
+    word-break: break-all;
+  }
+
+  .smazkaRight,
   .headerMenuIn {
     max-width: 95%;
   }
@@ -5015,6 +5251,27 @@ Start responsive
 
   .imageScrollBlock li img {
     height: 400px;
+  }
+
+  .smazkaRightBlock {
+    max-width: 50%;
+  }
+
+  .smazkaImg {
+    object-fit: cover;
+    height: 90%;
+  }
+
+  .smazkaContent {
+    min-height: 1100px;
+  }
+
+  .smazkaFormInput input {
+    max-width: 77.5%;
+  }
+
+  .smazkaFormInput__send {
+    max-width: 21%;
   }
 }
 
@@ -5291,6 +5548,16 @@ Start responsive
   .clientsBlueBgModif .client__text {
     margin-top: 65px;
   }
+
+  .smazkaImg {
+    width: 45%;
+  }
+
+  .blockIn .input-row,
+  .blockIn .input-helper--radio,
+  .blockIn .input-helper--radio img {
+    height: 170px;
+  }
 }
 
 @media (max-width: 1500px) {
@@ -5510,6 +5777,28 @@ Start responsive
     max-width: 20%;
     width: 100%;
     object-fit: cover;
+  }
+
+  .blockIn .input-row,
+  .blockIn .input-helper--radio,
+  .blockIn .input-helper--radio img {
+    height: 180px;
+  }
+
+  .blockIn .input-row {
+    max-width: 194px;
+  }
+
+  .blockIn .input-row:nth-child(4n+4) {
+    margin-right: 8px;
+  }
+
+  .blockText {
+    left: 16px;
+  }
+
+  .smazkaContent {
+    margin-bottom: 80px;
   }
 }
 
@@ -5776,6 +6065,14 @@ Start responsive
   .liveCompanySliderRight {
     margin-left: 40px;
     max-width: 53%;
+  }
+
+  .blockIn .input-row, .blockIn .input-helper--radio, .blockIn .input-helper--radio img {
+    height: 160px;
+  }
+
+  .blockIn .input-row {
+    max-width: 31%;
   }
 }
 
@@ -6063,6 +6360,10 @@ Start responsive
 }
 
 @media (max-width: 1125px) {
+  .blockText {
+    left: 8px;
+  }
+
   .popupSearch .itemSliderContent .itemBlock {
     max-width: 32.5%;
   }
@@ -6077,6 +6378,10 @@ Start responsive
 }
 
 @media (max-width: 1100px) {
+  .blockIn .input-row {
+    max-width: 29%;
+  }
+
   .catalogMain .itemBlock {
     max-width: 49%;
   }
@@ -6113,6 +6418,14 @@ Start responsive
 
   .newsItem img {
     height: 170px;
+  }
+
+  .smazkaRightBlock {
+    max-width: 63%;
+  }
+
+  .smazkaImg {
+    width: 33%;
   }
 }
 
@@ -6598,6 +6911,21 @@ Start responsive
     display: block;
     object-fit: cover;
   }
+
+  .blockText {
+    left: 10px;
+    color: #fff;
+  }
+
+  .blockIn .input-helper--radio:before {
+    background: transparent;
+  }
+
+  .blockIn input[type="radio"]:checked + label:before {
+    opacity: 1;
+    background: url('../images/icon36.svg') no-repeat center;
+    transition: all, 0s;
+  }
 }
 
 @media (max-width: 910px) {
@@ -6625,6 +6953,14 @@ Start responsive
 
   .headerMenuList {
     max-width: 80%;
+  }
+
+  .smazkaImg {
+    display: none;
+  }
+
+  .smazkaRightBlock {
+    max-width: 100%;
   }
 }
 
@@ -6677,6 +7013,18 @@ Start responsive
   .headerMenuListMenu {
     padding-right: 3%;
     padding-left: 3%;
+  }
+
+  .blockIn .input-row {
+    max-width: 24%;
+  }
+
+  .blockIn .input-row, .blockIn .input-helper--radio, .blockIn .input-helper--radio img {
+    height: 170px;
+  }
+
+  .blockIn .input-row:nth-child(4n+4) {
+    margin-right: 0;
   }
 }
 
@@ -7676,6 +8024,14 @@ Start responsive
   #tab-container2 .etabs {
     max-width: 245px;
   }
+
+  .blockIn .input-row {
+    max-width: 31%;
+  }
+
+  .blockIn .input-row:nth-child(4n+4) {
+    margin-right: 8px;
+  }
 }
 
 @media (max-width: 590px) {
@@ -8093,6 +8449,12 @@ Start responsive
   #answear2 .newsContent {
     justify-content: space-between;
   }
+
+  .blockIn .input-row {
+    max-width: 170px;
+    height: 180px;
+    margin-bottom: 0;
+  }
 }
 
 @media (max-width: 480px) {
@@ -8321,7 +8683,7 @@ Start responsive
     max-width: 81%;
   }
 
-  #tab-container2 .mobileMenuBlockFormInput__btn{
+  #tab-container2 .mobileMenuBlockFormInput__btn {
     width: 18%;
   }
 
@@ -8409,6 +8771,16 @@ Start responsive
   .itemBlockList li {
     margin-right: 10px;
   }
+
+  .blockIn .input-row {
+    max-width: 158px;
+    height: 176px;
+    margin-bottom: 5px;
+  }
+
+  .blockIn .input-row:nth-child(2n+2) {
+    margin-right: 0;
+  }
 }
 
 @media (max-width: 360px) {
@@ -8426,6 +8798,12 @@ Start responsive
 }
 
 @media (max-width: 350px) {
+  .blockIn .input-row {
+    max-width: 150px;
+    height: 170px;
+    margin-bottom: 5px;
+  }
+
   .h1_caps {
     font-size: 24px;
     line-height: 28px;

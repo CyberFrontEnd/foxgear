@@ -115,6 +115,11 @@ $(document).ready(function () {
     updateHash: false
   });
 
+  $('#tab-containerBlock').easytabs({
+    animationSpeed: 'fast',
+    updateHash: false
+  });
+
   $("#menu1").metisMenu();
   $("#menu2").metisMenu();
   $("#menu3").metisMenu();
