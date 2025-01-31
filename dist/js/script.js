@@ -230,6 +230,29 @@ $(document).ready(function () {
 });
 
 $(document).ready(function () {
+  $('.blockTopIn .select-selected').on('click', function () {
+    //$(this).parents('.blockTopIn').children('.select-items').slideToggle();
+    $(this).parents('.blockTopIn').children('.select-items').slideDown();
+    $(this).toggleClass('active');
+  });
+
+  $(document).click(function (e) {
+    var container = $(".blockTopIn .custom-select");
+    if (!container.is(e.target) && container.has(e.target).length === 0) {
+      $(".blockTopIn .select-items").slideUp();
+      $('.blockTopIn .select-selected').removeClass('active');
+    }
+  });
+
+  $('.blockTopIn .select-itemsIn__name').on('click', function () {
+    let value = $(this).text();
+    $(this).parents('.blockTopIn').children('.select-items').slideUp();
+    $(this).parents('.blockTopIn').children('.select-selected').text(value);
+    $('.blockTopIn .select-selected').removeClass('active');
+  });
+});
+
+$(document).ready(function () {
   $('.catalogAdaptive li a').on('click', function (event) {
     event.preventDefault();
 
@@ -289,4 +312,65 @@ $(document).ready(function () {
     $(this).hide();
   });
 
+});
+
+
+$(document).ready(function () {
+  $('.blockBtnNext').on('click', function () {
+    $(this).parents('.block').slideUp();
+    $('.block2').slideDown()
+  });
+
+  $('.backBtn').on('click', function () {
+    $(this).parents('.block2').slideUp();
+    $('.block1').slideDown();
+  });
+
+  $('.neextBtn').on('click', function () {
+    $(this).parents('.block2').slideUp();
+    $('.block3').slideDown();
+  });
+
+  $('.backBtn3').on('click', function () {
+    $(this).parents('.block3').slideUp();
+    $('.block2').slideDown();
+  });
+});
+
+
+$(document).ready(function () {
+  $('.blockTopInMobilPopup').on('click', function (event) {
+    event.preventDefault();
+    $(this).parents('.blockTopIn').children('.blockTopInMobilPopupBlockFix').addClass('active');
+  });
+
+  $('.blockTopInMobilPopupBlockFix__closed').on('click', function (event) {
+    event.preventDefault();
+    $(this).parents('.blockTopIn').children('.blockTopInMobilPopupBlockFix').removeClass('active')
+  });
+
+  $('.blockTopInMobilPopupBlockFixBottom__btn').on('click', function (event) {
+    event.preventDefault();
+    $(this).parents('.blockTopIn').children('.blockTopInMobilPopupBlockFix').removeClass('active')
+  });
+});
+
+
+$(document).ready(function() {
+  $("#tab-containerBlock2 .tab a").click(function(e) {
+    e.preventDefault();
+
+    var target = $(this).attr("href");
+
+
+    $("#tab-containerBlock2 .tab").removeClass("active");
+    $(this).parent().addClass("active");
+
+    // Скрываем все контент-блоки и показываем только нужный
+    $("#question3, #answear3").hide();
+    $(target).show();
+  });
+
+
+  $("#question3").show();
 });
