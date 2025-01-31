@@ -374,3 +374,8 @@ $(document).ready(function() {
 
   $("#question3").show();
 });
+
+
+$(document).ready(function () {
+  const swiper = new Swiper(".client3Imgslider", {});
+});

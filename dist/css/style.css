@@ -965,7 +965,7 @@ Start news
 
 .simbol .client__text {
   margin-top: 48px;
-  margin-left: -34px;
+  margin-left: -41px;
 }
 
 .news .client__text {
@@ -2037,6 +2037,7 @@ End liveCompany
 
 .parthnerIn {
   justify-content: space-between;
+  align-items: stretch;
 }
 
 .stepParthners {
@@ -5276,6 +5277,34 @@ Start responsive
   .metismenu3 {
     max-width: 100%;
   }
+
+  .simbol {
+    max-width: 87%;
+  }
+
+  .qualityIn {
+    max-width: 87%;
+  }
+
+  .qualityRight {
+    max-width: 650px;
+  }
+
+  .liveCompanyIn{
+    max-width: 86.5%;
+  }
+
+  .whenParthners {
+    max-width: 87%;
+  }
+
+  .parthnerItem {
+    max-width: 24.5%;
+  }
+
+  .stepParthners {
+    max-width: 87%;
+  }
 }
 
 @media (max-width: 1750px) {
@@ -5608,6 +5637,30 @@ Start responsive
 
   .popupSearch .newsItem {
     max-width: 24.5%;
+  }
+
+  .simbol {
+    max-width: 93%;
+  }
+
+   .qualityIn {
+    max-width: 93%;
+  }
+
+  .client__text {
+    margin-left: -47px;
+  }
+
+  .liveCompanyIn .client__text {
+    margin-left: -35px;
+  }
+
+  .topSliderIn__4 .topSliderInBlock {
+    left: 5px;
+  }
+
+  .whenParthners {
+    max-width: 93%;
   }
 }
 
@@ -6054,6 +6107,10 @@ Start responsive
 }
 
 @media (max-width: 1300px) {
+  .liveCompanyIn .client__text {
+    margin-left: -43px;
+  }
+
   .blockIn .input-row {
     max-width: 31.8%;
   }
@@ -6317,6 +6374,10 @@ Start responsive
 }
 
 @media (max-width: 1160px) {
+  .topSliderInBlock {
+    margin: 0 0 0 45px;
+  }
+
   .headerMenu {
     height: 205px;
   }
@@ -6340,7 +6401,7 @@ Start responsive
   }
 
   .topSliderNav {
-    max-width: 93%;
+    max-width: 94%;
   }
 
   .footerTopLeft {
@@ -6864,8 +6925,12 @@ Start responsive
 }
 
 @media (max-width: 990px) {
+  .topSliderInBlock {
+    margin: 0 0 0 40px;
+  }
+
   .topSliderNav {
-    max-width: 93%;
+    max-width: 95%;
   }
 
   .footerBottomLeft {
@@ -7226,7 +7291,7 @@ Start responsive
 
 @media (max-width: 870px) {
   .topSliderNav {
-    max-width: 93%;
+    max-width: 96%;
   }
 
   .topSliderInBlock .topSliderInBlock__title {
@@ -7235,7 +7300,7 @@ Start responsive
   }
 
   .topSliderInBlock {
-    margin: 0 0 0 42px;
+    margin: 0 0 0 29px;
   }
 
   .topSliderIn__2 .topSliderInBlock {
@@ -7324,7 +7389,7 @@ Start responsive
   }
 
   .liveCompanySlider {
-    margin-left: 40px !important;
+    margin-left: 60px !important;
   }
 
   .clientLeft,
@@ -7457,6 +7522,18 @@ Start responsive
 
   .catalogMain .itemBlock:nth-child(2n+2) {
     margin-right: 8px;
+  }
+
+  #answear  .newsItem {
+    max-width: 32.4%;
+  }
+
+  #answear .newsItem:nth-of-type(4n+4) {
+    margin-right: 8px;
+  }
+
+  #answear .newsItem:nth-of-type(3n+3) {
+    margin-right: 0;
   }
 }
 
@@ -7901,6 +7978,11 @@ Start responsive
 }
 
 @media (max-width: 740px) {
+  #answear2 .newsContent .newsItem {
+    max-width: 31.5%;
+  }
+
+
   .foxGearGroupIn {
     padding: 0 20px;
   }
@@ -8147,7 +8229,7 @@ Start responsive
   }
 
   .topSliderNav {
-    max-width: 89%;
+    max-width: 95%;
   }
 
   .headerRightInfoMobil__cabinet {
@@ -8335,7 +8417,8 @@ Start responsive
     display: block;
     max-width: 100%;
     width: 100%;
-    object-fit: contain;
+    object-fit: cover;
+    height: 290px;
   }
 
   .clientRightBlock__title {
@@ -8489,6 +8572,10 @@ Start responsive
     display: none;
   }
 
+  .catalogMain .catalogMainTop .custom-select {
+    display: block;
+  }
+
   .blockTopInMobilPopup {
     display: -webkit-box;
     display: -webkit-flex;
@@ -8507,6 +8594,22 @@ Start responsive
 
   #tab-containerBlock2 .etabs {
     width: 510px;
+  }
+
+  #answear2 .newsContent .newsItem {
+    max-width: 49.1%;
+  }
+
+  #answear2 .newsContent .newsItem:nth-child(3n+3) {
+    margin-right: 8px;
+  }
+
+  #answear2 .newsContent .newsItem:nth-child(2n+2) {
+    margin-right: 0;
+  }
+
+  #answear2 .newsContent .newsItem img {
+    height: auto;
   }
 }
 
@@ -8771,7 +8874,6 @@ Start responsive
   }
 
   #answear2 .newsContent .newsItem {
-    max-width: 48%;
     margin-right: 0 !important;
   }
 
@@ -9076,6 +9178,7 @@ Start responsive
   .blockIn .input-row {
     max-width: 155px;
   }
+
   .footerTopRightCatalog {
     max-width: 56%;
   }

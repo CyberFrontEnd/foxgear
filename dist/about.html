@@ -19,8 +19,6 @@
 
 <div id="scrollTop">↑</div>
 
-<div id="scrollTop">↑</div>
-
 <!--Start header-->
 <header class="header flex">
     <div class="headerLeft flex">
@@ -776,7 +774,7 @@
             </div>
             <div class="swiper-slide">
                 <div class="topSliderContent flex">
-                    <img src="images/client2.jpg" alt="" loading="lazy" class="topSlider__img">
+                    <img src="images/topSlider.jpg" alt="" loading="lazy" class="topSlider__img">
 
                     <div class="topSliderIn">
                         <div class="topSliderInBlock">
@@ -790,7 +788,7 @@
             </div>
             <div class="swiper-slide">
                 <div class="topSliderContent flex">
-                    <img src="images/client2.jpg" alt="" loading="lazy" class="topSlider__img">
+                    <img src="images/proizvodsta.jpg" alt="" loading="lazy" class="topSlider__img">
 
                     <div class="topSliderIn topSliderIn__3">
                         <div class="topSliderInBlock">
@@ -805,7 +803,7 @@
             </div>
             <div class="swiper-slide">
                 <div class="topSliderContent flex">
-                    <img src="images/client2.jpg" alt="" loading="lazy" class="topSlider__img">
+                    <img src="images/profi.png" alt="" loading="lazy" class="topSlider__img">
 
                     <div class="topSliderIn topSliderIn__4">
                         <div class="topSliderInBlock">
@@ -820,7 +818,7 @@
             </div>
             <div class="swiper-slide">
                 <div class="topSliderContent flex">
-                    <img src="images/client2.jpg" alt="" loading="lazy" class="topSlider__img">
+                    <img src="images/strong.jpg" alt="" loading="lazy" class="topSlider__img">
 
                     <div class="topSliderIn">
                         <div class="topSliderInBlock">
@@ -957,8 +955,37 @@
 <!--End clients-->
 
 <!--Start client3Img-->
-<img src="images/client3.jpg" alt="" class="client3Img" loading="lazy">
-<img src="images/aboutMobil.jpg" alt="" class="client3ImgMobil" loading="lazy">
+<div class="swiper client3Imgslider">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
+            <div class="client3ImgsliderBlock">
+                <img src="images/client3.jpg" alt="" class="client3Img" loading="lazy">
+                <img src="images/aboutMobil.jpg" alt="" class="client3ImgMobil" loading="lazy">
+            </div>
+        </div>
+
+        <div class="swiper-slide">
+            <div class="client3ImgsliderBlock">
+                <img src="images/img.jpg" alt="" class="client3Img" loading="lazy">
+                <img src="images/img2.jpg" alt="" class="client3ImgMobil" loading="lazy">
+            </div>
+        </div>
+
+        <div class="swiper-slide">
+            <div class="client3ImgsliderBlock">
+                <img src="images/client2.jpg" alt="" class="client3Img" loading="lazy">
+                <img src="images/client2.jpg" alt="" class="client3ImgMobil" loading="lazy">
+            </div>
+        </div>
+
+        <div class="swiper-slide">
+            <div class="client3ImgsliderBlock">
+                <img src="images/slider.jpg" alt="" class="client3Img" loading="lazy">
+                <img src="images/sliderMobil.jpg" alt="" class="client3ImgMobil" loading="lazy">
+            </div>
+        </div>
+    </div>
+</div>
 <!--End client3Img-->
 
 <!--Start liveCompany-->
@@ -1097,16 +1124,21 @@
             <div class="documentItem flex" data-fancybox="" data-src="#doc">
                 <img src="images/doc.jpg" alt="" loading="lazy">
 
-                <div class="documentItem flex" data-fancybox="" data-src="#doc">
-                    <div class="documentItem__title text_12_caps">Название документа</div>
+
+                <div class="popupDoc" style="display: none;" id="doc">
+                    <div class="flex popupDocImg">
+                        <img src="images/doc.jpg" alt="" loading="lazy">
+                    </div>
                 </div>
             </div>
 
             <div class="documentItem flex" data-fancybox="" data-src="#doc2">
                 <div class="documentItem__title text_12_caps">Название документа</div>
 
-                <div class="documentItem flex" data-fancybox="" data-src="#doc2">
-                    <div class="documentItem__title text_12_caps">Название документа</div>
+                <div class="popupDoc" style="display: none;" id="doc2">
+                    <div class="flex popupDocImg">
+                        <img src="images/doc.jpg" alt="" loading="lazy">
+                    </div>
                 </div>
             </div>
 
@@ -1114,7 +1146,6 @@
                 <div class="documentItem__title text_12_caps">Название документа</div>
 
                 <div class="popupDoc" style="display: none;" id="doc3">
-
                     <div class="flex popupDocImg">
                         <img src="images/doc.jpg" alt="" loading="lazy">
                     </div>
