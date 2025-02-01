@@ -794,6 +794,11 @@ Start footer
   margin-left: -51px;
 }
 
+.footerTopLeft__vertical {
+  margin-top: 47px;
+}
+
+
 .footerTopRight {
   max-width: 1130px;
   width: 100%;
@@ -838,6 +843,7 @@ Start footer
 
 .footerTopRightCompany li a {
   text-transform: uppercase;
+  color: #000E32;
 }
 
 .footerTopRightCompany li {
@@ -855,6 +861,7 @@ Start footer
 
 .footerTopRightCatalog__title {
   text-transform: uppercase;
+  color: #000E32;
 }
 
 .footerTopRightList {
@@ -1986,13 +1993,15 @@ End liveCompany
 .parthnerItem {
   max-width: 388px;
   width: 100%;
-  height: 530px;
+  min-height: 530px;
+  max-height: 600px;
   background-color: #F1F3F4;
   padding: 60px 32px;
 }
 
 .parthnerItem__paragraf {
   padding-bottom: 20px;
+  color: #4B556F;
 }
 
 .parthnerItem__title {
@@ -2024,6 +2033,7 @@ End liveCompany
 .parthnerItem__title span {
   max-width: 82%;
   width: 100%;
+  color: #4B556F;
 }
 
 .parthnerItemImg {
@@ -2059,9 +2069,14 @@ End liveCompany
   padding: 40px 50px;
 }
 
+.stepParthnersRightBottom p {
+  color: #4B556F;
+}
+
 .stepParthnersRightBottom__title {
   text-transform: uppercase;
   margin-bottom: 15px;
+  color: #4B556F;
 }
 
 .stepParthnersLeft {
@@ -2090,6 +2105,7 @@ End liveCompany
   flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   -webkit-flex-wrap: wrap;
+  color: #4B556F;
 }
 
 .stepParthnersBlock__title:before {
@@ -2136,7 +2152,9 @@ End liveCompany
 
 .proizvodsto .parthnerItem {
   max-width: 354px;
-  height: 388px;
+  min-height: 368px;
+  max-height: 600px;
+  padding: 60px 32px 10px;
 }
 
 .proizvodsto .parthnerIn {
@@ -4071,7 +4089,7 @@ End brends
 }
 
 .clientsBlueBgModif .client__text {
-  margin-top: 60px;
+  margin-top: 70px;
   margin-left: -70px;
 }
 
@@ -5138,6 +5156,10 @@ Start responsive
 }
 
 @media (max-width: 1830px) {
+  .imageScrollBlock li img {
+    height: auto;
+  }
+
   .topSliderInBlock {
     margin: 0 0 0 100px;
   }
@@ -5290,7 +5312,7 @@ Start responsive
     max-width: 650px;
   }
 
-  .liveCompanyIn{
+  .liveCompanyIn {
     max-width: 86.5%;
   }
 
@@ -5304,6 +5326,31 @@ Start responsive
 
   .stepParthners {
     max-width: 87%;
+  }
+
+  .proizvodsto {
+    max-width: 87%;
+  }
+
+  .proizvodsto .parthnerItem {
+    max-width: 24.6%;
+  }
+
+  .bigProizvodstvo {
+    max-width: 87%;
+  }
+
+  .bigProizvodstvoRight {
+    max-width: 46.5%;
+  }
+
+  .bigProizvodstvoModif img {
+    max-width: 51%;
+    width: 100%;
+  }
+
+  .documents {
+    max-width: 86%;
   }
 }
 
@@ -5447,10 +5494,6 @@ Start responsive
     max-width: 90%;
   }
 
-  .imageScrollBlock li img {
-    height: 400px;
-  }
-
   .smazkaRightBlock {
     max-width: 50%;
   }
@@ -5470,6 +5513,22 @@ Start responsive
 
   .smazkaFormInput__send {
     max-width: 21%;
+  }
+
+  .stepParthnersLeft {
+    margin-right: 5%;
+  }
+
+  .bigProizvodstvo {
+    align-items: flex-start;
+  }
+
+  .bigProizvodstvo img {
+    margin-top: 30px;
+  }
+
+  .stepParthnersBlock {
+    max-width: 45%;
   }
 }
 
@@ -5643,7 +5702,7 @@ Start responsive
     max-width: 93%;
   }
 
-   .qualityIn {
+  .qualityIn {
     max-width: 93%;
   }
 
@@ -5661,6 +5720,35 @@ Start responsive
 
   .whenParthners {
     max-width: 93%;
+  }
+
+  .stepParthners {
+    max-width: 93%;
+  }
+
+  .answerIn {
+    max-width: 93%;
+  }
+
+  .footerBottom,
+  .footerTop {
+    max-width: 90%;
+  }
+
+  .proizvodsto {
+    max-width: 93%;
+  }
+
+  .proizvodsto .parthnerItem {
+    max-width: 24.6%;
+  }
+
+  .bigProizvodstvo {
+    max-width: 93%;
+  }
+
+  .documents {
+    max-width: 92.6%;
   }
 }
 
@@ -6033,7 +6121,11 @@ Start responsive
   }
 }
 
-@media (max-width: 1340px) {
+@media (max-width: 1345px) {
+  .proizvodsto {
+    max-width: 96%;
+  }
+
   .matrialImg {
     margin-left: -10px;
   }
@@ -6104,9 +6196,21 @@ Start responsive
   .footerTopLeft__vertical {
     margin-left: -45px;
   }
+
+  .bigProizvodstvo {
+    max-width: 95%;
+  }
+
+  .bigProizvodstvo.bigProizvodstvoModif {
+    max-width: 92%;
+  }
 }
 
 @media (max-width: 1300px) {
+  .proizvodsto {
+    max-width: 99%;
+  }
+
   .liveCompanyIn .client__text {
     margin-left: -43px;
   }
@@ -6216,9 +6320,37 @@ Start responsive
   .popupSearch .newsItem {
     max-width: 24.4%;
   }
+
+  .footerTopLeft__vertical {
+    margin-left: -64px;
+  }
+
+  .bigProizvodstvo {
+    max-width: 98%;
+  }
 }
 
 @media (max-width: 1260px) {
+  .stepParthners {
+    margin: 0 auto 20px;
+  }
+
+  .answerLeft {
+    max-width: 40%;
+  }
+
+  .answer__title {
+    margin-left: 70px;
+  }
+
+  .answer__paragraf {
+    padding-left: 76px;
+  }
+
+  .answerRight {
+    max-width: 44%;
+  }
+
   .topSliderNav {
     max-width: 93%;
   }
@@ -6430,6 +6562,7 @@ Start responsive
 
   .proizvodsto {
     padding-left: 50px;
+    max-width: 92%;
   }
 
   .bigProizvodstvo {
@@ -6600,6 +6733,10 @@ Start responsive
   .popupForm {
     max-width: 565px;
   }
+
+  .bigProizvodstvo {
+    max-width: 83%;
+  }
 }
 
 @media (max-width: 1125px) {
@@ -6617,6 +6754,10 @@ Start responsive
 
   .catalogMain .itemBlock:nth-child(2n+2) {
     margin-right: 0;
+  }
+
+  .bigProizvodstvoModif {
+    max-width: 95%;
   }
 }
 
@@ -6921,6 +7062,22 @@ Start responsive
 
   .headerMenu {
     height: 180px;
+  }
+
+  .answerFormBlockBottom .input-row {
+    max-width: 55%;
+  }
+
+  .bigProizvodstvo {
+    max-width: 81%;
+  }
+
+  .bigProizvodstvoModif {
+    max-width: 95% !important;
+  }
+
+  .bigProizvodstvo.bigProizvodstvoModif {
+    max-width: 92% !important;
   }
 }
 
@@ -7290,6 +7447,10 @@ Start responsive
 }
 
 @media (max-width: 870px) {
+  .proizvodsto {
+    max-width: 95%;
+  }
+
   .topSliderNav {
     max-width: 96%;
   }
@@ -7404,6 +7565,10 @@ Start responsive
 
   .popupSearch .itemSliderContent .itemBlock {
     max-width: 32.4%;
+  }
+
+  .bigProizvodstvo {
+    max-width: 83%;
   }
 }
 
@@ -7524,7 +7689,7 @@ Start responsive
     margin-right: 8px;
   }
 
-  #answear  .newsItem {
+  #answear .newsItem {
     max-width: 32.4%;
   }
 
@@ -7651,7 +7816,7 @@ Start responsive
   }
 
   .clientRightBlock {
-    padding-left: 50px;
+    padding-left: 45px;
     padding-top: 25px;
   }
 
@@ -8028,6 +8193,10 @@ Start responsive
   .popupSearch .newsItem {
     max-width: 32.4%;
   }
+
+  .bigProizvodstvo {
+    max-width: 80%;
+  }
 }
 
 @media (max-width: 700px) {
@@ -8326,9 +8495,18 @@ Start responsive
   .blockIn .input-row:nth-child(4n+4) {
     margin-right: 8px;
   }
+
+  .bigProizvodstvo {
+    max-width: 93%;
+    margin-top: 25px;
+  }
 }
 
 @media (max-width: 590px) {
+  .clientRightBlock {
+    padding-left: 41px;
+  }
+
   #answear2 .newsContent .newsItem img {
     height: 130px;
   }
@@ -8406,7 +8584,7 @@ Start responsive
   }
 
   .proizvodsto {
-    padding-left: 10px;
+    padding-left: 0px;
   }
 
   .client3Img {
