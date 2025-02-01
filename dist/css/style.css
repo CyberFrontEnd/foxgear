@@ -136,6 +136,18 @@ input:focus:-ms-input-placeholder {
 /*
 Start setting
 #############*/
+.line {
+  position: absolute;
+  top: 0;
+  left: 10%;
+  width: 3px;
+  height: 1000vh;
+  background-color: red;
+  cursor: grab;
+  user-select: none;
+  z-index: 9999;
+}
+
 .flex {
   display: -webkit-box;
   display: -webkit-flex;
@@ -757,6 +769,17 @@ Start footer
   -webkit-flex-wrap: wrap;
 }
 
+.footerBottomList li a {
+  -webkit-transition: all, 0.5s;
+  -moz-transition: all, 0.5s;
+  -o-transition: all, 0.5s;
+  transition: all, 0.5s;
+}
+
+.footerBottomList li a:hover {
+  color: rgba(57, 129, 204);
+}
+
 .footerBottomList li:before {
   content: '';
   display: block;
@@ -844,6 +867,14 @@ Start footer
 .footerTopRightCompany li a {
   text-transform: uppercase;
   color: #000E32;
+  -webkit-transition: all, 0.5s;
+  -moz-transition: all, 0.5s;
+  -o-transition: all, 0.5s;
+  transition: all, 0.5s;
+}
+
+.footerTopRightCompany li a:hover {
+  color: rgba(57, 129, 204);
 }
 
 .footerTopRightCompany li {
@@ -852,6 +883,17 @@ Start footer
 
 .footerTopRightList li {
   margin-bottom: 5px;
+}
+
+.footerTopRightList li a {
+  -webkit-transition: all, 0.5s;
+  -moz-transition: all, 0.5s;
+  -o-transition: all, 0.5s;
+  transition: all, 0.5s;
+}
+
+.footerTopRightList li a:hover {
+  color: rgba(57, 129, 204);
 }
 
 .footerTopRightCatalog {
@@ -875,6 +917,14 @@ Start footer
 
 .footerTopRightAddressBottom {
   margin-top: 30px;
+}
+
+.footerTopRightAddressBottom a {
+  transition: all, 0.5s;
+}
+
+.footerTopRightAddressBottom a:hover {
+  color: rgba(57, 129, 204);
 }
 
 .footerTopRightAddress__title {
@@ -1355,6 +1405,11 @@ Start items
   padding-top: 24px;
 }
 
+.itemBlockBottom > p,
+.itemBlockBottom > div {
+  color: #4B556F;
+}
+
 .itemBlockBottom__name {
   text-transform: uppercase;
   color: #000E32;
@@ -1370,6 +1425,10 @@ Start items
 
 .itemBlockBottomBottom {
   margin-top: 16px;
+}
+
+.itemBlockBottomBottom > div {
+  color: #4B556F;
 }
 
 .itemBlockTop {
@@ -5132,6 +5191,7 @@ Start filter
 
 /*End filter*/
 
+.tab-container .etabs li.active a,
 .tab-container2 .etabs li.active a {
   color: #000E32;
   border-bottom: 1px solid #000E32;
@@ -5162,16 +5222,6 @@ Start responsive
 
   .topSliderInBlock {
     margin: 0 0 0 100px;
-  }
-
-  .map .itemTabs {
-    max-width: 92%;
-    margin: -50px auto 0;
-  }
-
-  .mapForm,
-  .map {
-    max-width: 92%;
   }
 
   .topSliderNav {
@@ -5352,6 +5402,25 @@ Start responsive
   .documents {
     max-width: 86%;
   }
+
+  .map,
+  .mapTop {
+    max-width: 87%;
+  }
+
+  .mapSliderBlockContent a {
+    max-width: 19.5%;
+  }
+
+  .footerBottom,
+  .footerTop,
+  .answerIn {
+    max-width: 88%;
+  }
+
+  .footerTopLeft__vertical {
+    margin-left: -46px;
+  }
 }
 
 @media (max-width: 1750px) {
@@ -5382,7 +5451,7 @@ Start responsive
   }
 
   .itemSelection {
-    max-width: 95%;
+    max-width: 93.5%;
   }
 
   .itemSelection .itemBlock {
@@ -5439,20 +5508,12 @@ Start responsive
     max-width: 450px;
   }
 
-  .mapForm, .map {
-    max-width: 94.5%;
-  }
-
-  .map .itemTabs {
-    max-width: 94%;
-  }
-
   .mapSliderBlock .mapSliderBlockContent a {
     max-width: 19.5%;
   }
 
   .mapSliderBlock {
-    max-width: 89%;
+    max-width: 87%;
   }
 
   .itemsContentIn {
@@ -5750,6 +5811,18 @@ Start responsive
   .documents {
     max-width: 92.6%;
   }
+
+  .itemSelection .itemBlock {
+    max-width: 24.2%;
+  }
+
+  .map, .mapTop {
+    max-width: 93%;
+  }
+
+  .footerBottom, .footerTop {
+    max-width: 93%;
+  }
 }
 
 @media (max-width: 1550px) {
@@ -5991,6 +6064,10 @@ Start responsive
   .headerMenuList {
     max-width: 79%;
   }
+
+  .itemSelection .itemBlock {
+    max-width: 24.25%;
+  }
 }
 
 @media (max-width: 1395px) {
@@ -6143,7 +6220,7 @@ Start responsive
   }
 
   .answerRight {
-    max-width: 42%;
+    max-width: 41.1%;
   }
 
   .stepParthnersBlock {
@@ -6322,11 +6399,15 @@ Start responsive
   }
 
   .footerTopLeft__vertical {
-    margin-left: -64px;
+    margin-left: -47px;
   }
 
   .bigProizvodstvo {
     max-width: 98%;
+  }
+
+  .footerTopLeft__vertical {
+
   }
 }
 
@@ -6441,6 +6522,14 @@ Start responsive
   .blockIn .input-row, .blockIn .input-helper--radio, .blockIn .input-helper--radio img {
     height: 160px;
   }
+
+  .contact .client__text {
+    margin-left: -64px;
+  }
+
+  .itemBlockList li:after {
+    right: -8px;
+  }
 }
 
 @media (max-width: 1210px) {
@@ -6459,6 +6548,10 @@ Start responsive
 }
 
 @media (max-width: 1195px) {
+  .contact .client__text {
+    margin-left: -59px;
+  }
+
   .answearBlockItem {
     padding: 40px 20px;
   }
@@ -6737,6 +6830,30 @@ Start responsive
   .bigProizvodstvo {
     max-width: 83%;
   }
+
+  .itemBlockList li {
+    padding: 0 9px;
+  }
+
+  .itemBlockList li:first-of-type {
+    padding: 0;
+  }
+
+  .itemBlockBottom {
+    padding-top: 15px;
+  }
+
+  .itemBlockList li:first-of-type:after {
+    right: -14px;
+  }
+
+  .map .itemTabs {
+    height: 840px;
+  }
+
+  .map .itemTabs .mapSliderContactsNav {
+    margin-top: -50px;
+  }
 }
 
 @media (max-width: 1125px) {
@@ -6806,6 +6923,10 @@ Start responsive
     height: 170px;
   }
 
+  .newsScroll .newsItem img {
+    height: auto;
+  }
+
   .smazkaRightBlock {
     max-width: 63%;
   }
@@ -6816,6 +6937,10 @@ Start responsive
 }
 
 @media (max-width: 1060px) {
+  .itemSelection {
+    max-width: 92.5%;
+  }
+
   .serviceItemLeft {
     margin-left: 0;
     max-width: 62%;
@@ -6846,7 +6971,17 @@ Start responsive
     max-width: 340px;
   }
 
+  .itemSelection .itemBlock {
+    max-width: 32.4%;
+  }
 
+  .itemBlockList li {
+    padding: 0 13px;
+  }
+
+  .itemBlockList li:after {
+    right: -17px;
+  }
 }
 
 @media (max-width: 1030px) {
@@ -6962,7 +7097,11 @@ Start responsive
   .contactsRight,
   .contactMap {
     max-width: 100%;
-    padding-left: 0;
+    padding-left: 7px;
+  }
+
+  .footerBottomLeft {
+    max-width: 660px;
   }
 
   .map .tab-btn {
@@ -7082,6 +7221,10 @@ Start responsive
 }
 
 @media (max-width: 990px) {
+  .itemSelection {
+    max-width: 94.5%;
+  }
+
   .topSliderInBlock {
     margin: 0 0 0 40px;
   }
@@ -7167,7 +7310,7 @@ Start responsive
   }
 
   .preessCenterContent {
-    margin-left: 40px;
+    margin-left: 35px;
   }
 
   .pressSlider img {
@@ -7200,7 +7343,8 @@ Start responsive
   .matrialContent {
     flex-direction: column-reverse;
     padding-left: 0;
-    margin-left: 30px;
+    margin-left: 40px;
+    max-width: 92%;
   }
 
   .tab-container {
@@ -7286,6 +7430,26 @@ Start responsive
   .itemSelection {
     margin: -80px auto 110px;
   }
+
+  .bread, .preessCenter {
+    max-width: 94%;
+  }
+
+  .contact .client__text {
+    margin-left: -64px;
+  }
+
+  .contactsRight, .contactMap {
+    padding-left: 0;
+  }
+
+  .material .client__text {
+    margin-top: 46px;
+  }
+
+  .map .contactsRightBlockIn {
+    margin-bottom: 25px;
+  }
 }
 
 @media (max-width: 945px) {
@@ -7331,6 +7495,18 @@ Start responsive
     opacity: 1;
     background: url('../images/icon36.svg') no-repeat center;
     transition: all, 0s;
+  }
+
+  .contact .client__text {
+    margin-left: -65px;
+  }
+
+  .itemSelection .itemBlock {
+    max-width: 32.2%;
+  }
+
+  .itemBlockList li:after {
+    right: -8px;
   }
 }
 
@@ -7444,9 +7620,21 @@ Start responsive
   .blockIn .input-row:nth-child(4n+4) {
     margin-right: 0;
   }
+
+  .mapSliderBlock {
+    margin-top: 50px;
+  }
+
+  .map .cnt_2 {
+    margin-top: 100px;
+  }
 }
 
 @media (max-width: 870px) {
+  .contact .client__text {
+    margin-left: -59px;
+  }
+
   .proizvodsto {
     max-width: 95%;
   }
@@ -7569,6 +7757,22 @@ Start responsive
 
   .bigProizvodstvo {
     max-width: 83%;
+  }
+
+  .newsPress .clientLeft {
+    margin-left: 40px;
+  }
+
+  .mapSliderContactsMobileBlockIn .mapSliderContactsBlock {
+    margin-bottom: 25px;
+  }
+
+  .map .itemTabs .mapSliderContactsNav {
+    margin-top: 0;
+  }
+
+  .mapSliderBlock {
+    margin-top: 0;
   }
 }
 
@@ -7727,7 +7931,15 @@ Start responsive
   .bread {
     width: 600px;
     max-width: 600px;
-    margin-left: 20px;
+    margin-left: 25px;
+  }
+
+  .contact .client__text {
+    margin-left: -56px;
+  }
+
+  .contactsRight, .contactMap {
+    padding-left: 4px;
   }
 
   .headerRightInfo__intro {
@@ -7960,7 +8172,7 @@ Start responsive
   }
 
   .itemSelection {
-    max-width: 97%;
+    max-width: 93.5%;
   }
 
   .itemsDocuments {
@@ -8083,18 +8295,15 @@ Start responsive
   .mobilSarch .itemSliderContent {
     justify-content: space-between;
     margin-top: 50px;
+    min-height: 750px;
+    max-height: 750px;
+    overflow-y: auto;
   }
 
   .mobilSarch .itemSliderContent .itemBlock {
     max-width: 49%;
     margin-right: 0 !important;
     margin-bottom: 20px;
-  }
-
-  .mobilSarch .itemSliderContent {
-    min-height: 550px;
-    max-height: 550px;
-    overflow-y: auto;
   }
 
   .popupSearch .newsItem {
@@ -8112,6 +8321,9 @@ Start responsive
   #answear2 .newsContent {
     max-width: 100%;
     width: 100%;
+    min-height: 750px;
+    max-height: 750px;
+    overflow-y: auto;
   }
 
   #answear2 .newsContent .newsItem {
@@ -8126,12 +8338,6 @@ Start responsive
     margin-right: 8px;
   }
 
-  #answear2 .newsContent {
-    min-height: 550px;
-    max-height: 550px;
-    overflow-y: auto;
-  }
-
   #question2 .mobileMenuBlockFormInput,
   #answear2 .mobileMenuBlockFormInput {
     max-width: 100%;
@@ -8139,6 +8345,43 @@ Start responsive
 
   .blockIn .input-helper--radio img {
     opacity: 1;
+  }
+
+  .itemSelection .itemBlock {
+    max-width: 32.1%;
+    height: 441px;
+    padding-top: 20px;
+  }
+
+  .itemSelection .itemBlock__link {
+    height: 263px;
+  }
+
+  .itemSelection .itemBlock__link img {
+    display: block;
+    object-fit: cover;
+    height: 100%;
+  }
+
+  .itemBlockBottom p {
+    display: none;
+  }
+
+  .itemBlockList li {
+    padding: 0 5px;
+  }
+
+  .itemBlockTop__text2, .itemBlockTop__text {
+    font-size: 9px;
+    padding: 6px 8px;
+  }
+
+  .itemBlockBottom__name {
+    margin-bottom: 10px;
+  }
+
+  .itemBlockBottomBottom {
+    margin-top: 0;
   }
 }
 
@@ -8196,6 +8439,14 @@ Start responsive
 
   .bigProizvodstvo {
     max-width: 80%;
+  }
+
+  .itemSelection .itemBlock {
+    max-width: 31.9%;
+  }
+
+  .itemBlockList li:first-of-type:after {
+    right: -8px;
   }
 }
 
@@ -8384,9 +8635,25 @@ Start responsive
   #answear2 .newsContent .newsItem {
     max-width: 32.1%;
   }
+
+  .matrialContent {
+    margin-left: 25px;
+  }
+
+  .mapSliderBlock.map {
+    margin-top: 50px;
+  }
 }
 
 @media (max-width: 620px) {
+  .contact .client__text {
+    margin-left: -51px;
+  }
+
+  .bread {
+    margin-left: 20px;
+  }
+
   .parthnerImg {
     display: none;
   }
@@ -8789,6 +9056,18 @@ Start responsive
   #answear2 .newsContent .newsItem img {
     height: auto;
   }
+
+  .itemSelection {
+    max-width: 91.5%;
+  }
+
+  .itemBlockList li {
+    margin-right: 10px;
+  }
+
+  .mapSliderBlock.map {
+    margin-top: 150px;
+  }
 }
 
 @media (max-width: 550px) {
@@ -8821,7 +9100,7 @@ Start responsive
     width: 100px;
     text-align: right;
     margin-top: 30px;
-    margin-left: -30px;
+    margin-left: -37px;
   }
 
   .footerTopRight {
@@ -8914,7 +9193,7 @@ Start responsive
   }
 
   .matrialContent .etabs li {
-    margin-right: 10px;
+    margin-right: 20px;
   }
 
   .matrialContent .etabs li:last-of-type {
@@ -8979,10 +9258,6 @@ Start responsive
 
   .itemsDocumentsList li {
     max-width: 100%;
-  }
-
-  .itemBlockList li {
-    margin-right: 20px;
   }
 
   .catalogMain .itemBlock {
@@ -9067,6 +9342,10 @@ Start responsive
 
   .blockIn .input-row:nth-child(3n+3) {
     margin-right: 8px;
+  }
+
+  .mapSliderBlock.map {
+    margin-top: 0;
   }
 }
 
@@ -9223,6 +9502,24 @@ Start responsive
 
   .foxGearGroup {
     height: 630px;
+  }
+
+  .itemSelection .itemBlock__link {
+    height: 190px;
+  }
+
+  .itemSelection .itemBlock {
+    min-height: 365px;
+    max-height: 390px;
+  }
+
+  .itemBlockTop {
+    right: 0;
+  }
+
+  .itemBlockTop__text2, .itemBlockTop__text {
+    padding: 5px 7px;
+    margin: -4px 2px 0;
   }
 }
 
@@ -9385,6 +9682,14 @@ Start responsive
 
   .blockIn .input-row:nth-child(2n+2) {
     margin-right: 0;
+  }
+
+  .itemBlockList li {
+    margin-right: 1px;
+  }
+
+  .itemBlockList li:first-of-type:after {
+    right: -18px;
   }
 }
 

@@ -379,3 +379,37 @@ $(document).ready(function() {
 $(document).ready(function () {
   const swiper = new Swiper(".client3Imgslider", {});
 });
+
+
+//Start line
+
+$(document).ready(function () {
+  const line = document.querySelector('.line');
+
+  let isDragging = false;
+  let startX = 0;
+  let startLeft = 0;
+
+  line.addEventListener('mousedown', (e) => {
+    isDragging = true;
+    startX = e.clientX; // Запоминаем начальную позицию курсора
+    startLeft = parseInt(window.getComputedStyle(line).left, 10); // Запоминаем текущий left
+
+    document.body.style.userSelect = 'none'; // Отключаем выделение текста
+    line.style.cursor = "grabbing"; // Меняем курсор
+  });
+
+  document.addEventListener('mousemove', (e) => {
+    if (!isDragging) return;
+
+    let newX = startLeft + (e.clientX - startX); // Рассчитываем новое положение
+    line.style.left = `${newX}px`;
+  });
+
+  document.addEventListener('mouseup', () => {
+    isDragging = false;
+    document.body.style.userSelect = 'auto'; // Включаем выделение текста
+    line.style.cursor = "grab"; // Возвращаем курсор
+  });
+
+});
