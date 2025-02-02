@@ -1,4 +1,6 @@
 $(document).ready(function () {
+  new WOW().init();
+
   $('[data-fancybox]').fancybox({
     autoFocus: false,
   });
