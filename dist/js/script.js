@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  new WOW().init();
+   new WOW().init();
 
   $('[data-fancybox]').fancybox({
     autoFocus: false,
@@ -415,3 +415,35 @@ $(document).ready(function () {
   });
 
 });
+
+
+
+  document.addEventListener("DOMContentLoaded", function () {
+    let elements = document.querySelectorAll(".step");
+
+    function showElement(index) {
+      if (index >= elements.length) return;
+      elements[index].classList.add("fadeIn");
+
+
+      setTimeout(() => showElement(index + 1), 1000);
+    }
+
+
+    let observer = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            showElement(0);
+            observer.disconnect();
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
+
+    observer.observe(elements[0]);
+  });
+
+
+

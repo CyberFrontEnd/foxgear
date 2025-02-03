@@ -5366,36 +5366,27 @@ Start filter
   margin-top: -108px;
 }
 
-@-webkit-keyframes fadeInDown {
-  0% {
-    opacity: 0;
-    -webkit-transform: translate3d(0, -20%, 0);
-    transform: translate3d(0, -20%, 0)
-  }
-  to {
-    opacity: 1;
-    -webkit-transform: none;
-    transform: none
-  }
+.step {
+  opacity: 0;
+  transform: translateY(-20px);
+}
+
+.fadeIn {
+  animation: fadeInDown 1s forwards;
 }
 
 @keyframes fadeInDown {
-  0% {
+  from {
     opacity: 0;
-    -webkit-transform: translate3d(0, -20%, 0);
-    transform: translate3d(0, -20%, 0)
+    transform: translateY(-20px);
   }
   to {
     opacity: 1;
-    -webkit-transform: none;
-    transform: none
+    transform: translateY(0);
   }
 }
 
-.fadeInDown {
-  -webkit-animation-name: fadeInDown;
-  animation-name: fadeInDown
-}
+
 
 @keyframes borderExpand {
   from {
