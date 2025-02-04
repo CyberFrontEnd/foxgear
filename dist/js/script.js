@@ -383,41 +383,8 @@ $(document).ready(function () {
 });
 
 
-//Start line
 
-$(document).ready(function () {
-  const line = document.querySelector('.line');
-
-  let isDragging = false;
-  let startX = 0;
-  let startLeft = 0;
-
-  line.addEventListener('mousedown', (e) => {
-    isDragging = true;
-    startX = e.clientX; // Запоминаем начальную позицию курсора
-    startLeft = parseInt(window.getComputedStyle(line).left, 10); // Запоминаем текущий left
-
-    document.body.style.userSelect = 'none'; // Отключаем выделение текста
-    line.style.cursor = "grabbing"; // Меняем курсор
-  });
-
-  document.addEventListener('mousemove', (e) => {
-    if (!isDragging) return;
-
-    let newX = startLeft + (e.clientX - startX); // Рассчитываем новое положение
-    line.style.left = `${newX}px`;
-  });
-
-  document.addEventListener('mouseup', () => {
-    isDragging = false;
-    document.body.style.userSelect = 'auto'; // Включаем выделение текста
-    line.style.cursor = "grab"; // Возвращаем курсор
-  });
-
-});
-
-
-
+// Start animation
   document.addEventListener("DOMContentLoaded", function () {
     let elements = document.querySelectorAll(".step");
 
@@ -444,6 +411,100 @@ $(document).ready(function () {
 
     observer.observe(elements[0]);
   });
+
+  // End animation
+
+
+// Start historySlider
+$(document).ready(function () {
+  const swiper = new Swiper(".historySlider", {
+    direction: "horizontal",
+    slidesPerView: 2,
+    speed: 650,
+
+    breakpoints: {
+      860: {
+        spaceBetween: 65,
+      },
+
+      760: {
+        spaceBetween: 30,
+      },
+    },
+
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+
+  const points = document.querySelectorAll(".timeline-item");
+  const timeline = document.querySelectorAll(".timeline");
+  const timelineWidth = timeline[0].clientWidth;
+  const slidesCount = swiper.slides.length;
+  const firstHiddenX = 35;
+  const mainX = 120; // это точка над основным слайдером
+  let secondaryX = 950; // это точка над вторым (мелким) слайдером
+
+  const getPosition = (x) => {
+    return `${x}px`;
+  };
+
+  const setPointsPosition = () => {
+    let hiddenPointsCounter = 0;
+
+    points[0].style.left = 0;
+    points[slidesCount].style.right = 0;
+
+    for (let i = 1; i <= slidesCount - 1; i++) {
+      if (i < swiper.activeIndex + 1) {
+        hiddenPointsCounter += 1;
+        points[i].style.left = getPosition(firstHiddenX + i * 14);
+        points[i].classList.add("timeline-item_hidden");
+      } else {
+        if (i === swiper.activeIndex + 1)
+          points[i].style.left = getPosition(mainX);
+        if (i === swiper.activeIndex + 2)
+          points[i].style.left = getPosition(secondaryX);
+        if (i > swiper.activeIndex + 2) {
+          points[i].style.left = getPosition(
+            timelineWidth - (slidesCount - 1 - i) * 60
+          );
+        }
+        points[i].classList.remove("timeline-item_hidden");
+      }
+    }
+  };
+
+  swiper.on("slideChange", function () {
+    setPointsPosition();
+  });
+
+// в этой функции просто меняем нужные точки в зависимости от экрана
+  const updateWidth = () => {
+    if (window.innerWidth < 1800) secondaryX = 920;
+    if (window.innerWidth < 1750) secondaryX = 900;
+    if (window.innerWidth <= 1700) secondaryX = 900;
+    if (window.innerWidth <= 1660) secondaryX = 1020;
+    if (window.innerWidth <= 1650) secondaryX = 1015;
+    if (window.innerWidth <= 1600) secondaryX = 970;
+    if (window.innerWidth <= 1550) secondaryX = 945;
+    if (window.innerWidth <= 1500) secondaryX = 875;
+    if (window.innerWidth <= 1300) secondaryX = 800;
+    if (window.innerWidth <= 1195) secondaryX = 700;
+    if (window.innerWidth <= 1125) secondaryX = 680;
+    if (window.innerWidth <= 895) secondaryX = 610;
+    if (window.innerWidth <= 870) secondaryX = 550;
+    if (window.innerWidth <= 770) secondaryX = 500;
+
+    setPointsPosition();
+  };
+
+  setPointsPosition();
+  updateWidth();
+
+  window.addEventListener("resize", updateWidth);
+});
 
 
 
