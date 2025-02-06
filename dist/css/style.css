@@ -397,16 +397,16 @@ Start header
   height: 20px;
   z-index: 9;
   position: relative;
-  left: 10px;
+  left: 15px;
 }
 
 .headerRightInfo__search:before {
   content: '';
   display: block;
   height: 46px;
-  width: 46px;
+  width: 50px;
   position: absolute;
-  transform: skewX(-12deg);
+  transform: skewX(350deg);
   top: -13px;
   transition: opacity, 0.5s;
   opacity: 0;
@@ -727,6 +727,11 @@ Start answer
 .answerFormBlockBottom__btn span {
   color: #000000;
   position: relative;
+  text-transform: uppercase;
+}
+
+.answerFormBlockBottom__btn span:after {
+  margin-top: -2px;
 }
 
 .answerFormBlockBottom__btn:hover:before {
