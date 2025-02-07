@@ -137,6 +137,29 @@ input:focus:-ms-input-placeholder {
 /*
 Start setting
 #############*/
+#width-display {
+  position: fixed;
+  left: 50%;
+  top: 75%;
+  margin: 5px;
+  font-weight: bold;
+  color: yellow;
+  z-index: 999999;
+  font-size: 40px;
+}
+
+.line {
+  position: absolute;
+  top: 0;
+  left: 10%;
+  width: 3px;
+  height: 1000vh;
+  background-color: red;
+  cursor: grab;
+  user-select: none;
+  z-index: 9999;
+}
+
 
 .flex {
   display: -webkit-box;
@@ -1060,6 +1083,15 @@ Start clients
   margin-bottom: 30px;
 }
 
+.contact .clientRightBlock {
+  max-width: 693px;
+}
+
+.mapTop .clientRightBlock {
+  max-width: 690px;
+
+}
+
 /*
 End clients
 ############*/
@@ -1741,7 +1773,7 @@ img.qualityPlanshet__img {
 .bread li span,
 .bread li a {
   color: #000E32;
-  font: normal 500 12px 'Inter', sans-serif;
+  font: normal 400 12px 'Inter', sans-serif;
   line-height: 16px;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1978,7 +2010,7 @@ Start liveCompany
 .liveCompanySlider {
   max-width: 1470px;
   width: 100%;
-  margin-left: 138px !important;
+  margin-left: 117px !important;
 }
 
 .liveCompanySliderImg {
@@ -2312,12 +2344,12 @@ End liveCompany
 
 .bigProizvodstvoModif {
   padding: 0;
-  margin: 22px auto 0;
+  margin: 65px auto 0;
   align-items: flex-start;
 }
 
 .bigProizvodstvoModif .bigProizvodstvoRight {
-  padding-top: 0;
+  padding-top: 40px;
 }
 
 .bigProizvodstvoModif .stepParthnersBlock__title span {
@@ -2340,6 +2372,7 @@ End liveCompany
   flex-direction: column;
   position: relative;
   z-index: 9;
+  margin-top: 100px;
 }
 
 .mistake__title {
@@ -2583,6 +2616,7 @@ End liveCompany
 
 .newsPress {
   padding-top: 70px;
+  padding-bottom: 30px;
 }
 
 .serviceInfo {
@@ -2791,6 +2825,7 @@ End liveCompany
   max-width: 1600px;
   width: 100%;
   margin: 20px auto;
+  position: relative;
 }
 
 .mapForm {
@@ -2851,6 +2886,14 @@ End liveCompany
   margin-left: 8px;
   position: relative;
   z-index: 1;
+  -webkit-transition: all, 0.5s;
+  -moz-transition: all, 0.5s;
+  -o-transition: all, 0.5s;
+  transition: all, 0.5s;
+}
+
+.mapFormInput__btn:hover {
+  background: #02295C;
 }
 
 .mapContent {
@@ -2944,12 +2987,13 @@ End liveCompany
   max-width: 1600px;
   width: 100%;
   margin: 0 auto 100px;
+  justify-content: space-between;
 }
 
 .contactMap {
-  max-width: 667px;
+  max-width: 760px;
   width: 100%;
-  padding-left: 120px;
+  padding-left: 117px;
 }
 
 .contactsRight {
@@ -3250,11 +3294,11 @@ End liveCompany
 }
 
 .itemsDocuments {
-  max-width: 667px;
+  max-width: 658px;
 }
 
 .itemsDocumentsList li {
-  max-width: 331px;
+  max-width: 327px;
   width: 100%;
   height: 54px;
   margin-right: 4px;
@@ -3492,12 +3536,32 @@ End liveCompany
   margin-top: 20px;
 }
 
+.itemsRightInfo {
+  justify-content: space-between;
+  position: relative;
+}
+
+.itemsRightInfo:after {
+  content: '';
+  display: block;
+  height: 60px;
+  width: 1px;
+  background-color: rgba(0, 0, 0, 0.08);
+  position: absolute;
+  top: 40px;
+  left: -30px;
+  right: 0;
+  margin: 0 auto;
+}
+
 .itemsRightList {
   margin-top: 35px;
+  max-width: 47%;
+  width: 100%;
 }
 
 .itemsRightList li {
-  max-width: 50%;
+  max-width: 100%;
   width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -3766,27 +3830,35 @@ End liveCompany
   width: 100%;
 }
 
-.itemsLeftSliderNav {
+.itemsLeftSlider .itemsLeftSliderNav {
   position: absolute;
   bottom: 40px;
   left: -4px;
-  width: 103px;
+  width: 88px;
+  z-index: 9;
+  justify-content: space-between;
 }
 
-.itemsLeftSliderNav .swiper-button-prev,
-.itemsLeftSliderNav .swiper-button-next {
+.itemsLeftSlider .itemsLeftSliderNav .swiper-button-prev2,
+.itemsLeftSlider .itemsLeftSliderNav .swiper-button-next2 {
   background: url('../images/icon22.svg') no-repeat center;
   width: 40px;
   height: 40px;
   display: block;
+  cursor: pointer;
 }
 
-.itemsLeftSliderNav .swiper-button-prev {
+.itemsLeftSlider .itemsLeftSliderNav .swiper-button-prev2 {
   transform: rotate(180deg);
+  margin-left: 6px;
 }
 
-.itemsLeftSliderNav .swiper-button-next:after,
-.itemsLeftSliderNav .swiper-button-prev:after {
+.swiper-button-disabled {
+  opacity: .5 !important;
+}
+
+.itemsLeftSlider .itemsLeftSliderNav .swiper-button-next2:after,
+.itemsLeftSlider .itemsLeftSliderNav .swiper-button-prev2:after {
   display: none;
 }
 
@@ -4022,7 +4094,7 @@ End liveCompany
   left: auto;
   right: 25px;
   transform: rotate(-177deg);
-  top: 16px;
+  top: 15px;
 }
 
 .metismenu3 {
@@ -4037,6 +4109,14 @@ End liveCompany
 
 .metismenu3 .metismenu__href {
   text-transform: uppercase;
+  -webkit-transition: all, 0.5s;
+  -moz-transition: all, 0.5s;
+  -o-transition: all, 0.5s;
+  transition: all, 0.5s;
+}
+
+.metismenu3 .metismenu__href:hover {
+  background: #F1F3F4;
 }
 
 .metismenu3 > li {
@@ -4566,7 +4646,7 @@ End brends
 #scrollTop {
   display: none;
   position: fixed;
-  bottom: 450px;
+  bottom: 30px;
   right: 20px;
   width: 61px;
   height: 61px;
@@ -5200,6 +5280,7 @@ New slider
   -o-transition: all, 0.5s;
   transition: all, 0.5s;
   width: 150px;
+  word-break: break-word;
 }
 
 .block__title {
@@ -5616,10 +5697,46 @@ Start history
   content: "" !important;
 }
 
-
 /*
 End history
 ############*/
+
+.fancybox-slide {
+
+}
+
+.fancybox-slide::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.0);
+  border-radius: 1px;
+  background-color: transparent;
+}
+
+.fancybox-slide::-webkit-scrollbar {
+  width: 1px;
+  background-color: transparent;
+}
+
+.fancybox-slide::-webkit-scrollbar-thumb {
+  border-radius: 1px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .0);
+  background-color: transparent;
+}
+
+#menu1 .metismenu__href {
+  margin-bottom: 10px;
+}
+
+.mistake .flexic li:after {
+  display: none;
+}
+
+.mistake .brendsScroll {
+  padding: 0 0 ;
+}
+
+.mistake .brends {
+  margin-top: 0;
+}
 
 /*
 Start responsive
@@ -5728,7 +5845,7 @@ Start responsive
   }
 
   .matrialContent {
-    max-width: 85%;
+    max-width: 87%;
   }
 
   .matrialImg {
@@ -5755,6 +5872,15 @@ Start responsive
 
   .contactsRight {
     max-width: 46%;
+  }
+
+  .contactBlock .contactsRight {
+    max-width: 45%;
+    margin-left: 0;
+  }
+
+  .contactMap {
+    max-width: 48%;
   }
 
   .catalogMain {
@@ -5830,7 +5956,16 @@ Start responsive
   }
 
   .bigProizvodstvoRight {
-    max-width: 46.5%;
+    max-width: 43.5%;
+  }
+
+  .stepParthnersBlock {
+    max-width: 49%;
+  }
+
+  .bigProizvodstvo img {
+    max-width: 50%;
+    width: 100%;
   }
 
   .bigProizvodstvoModif img {
@@ -5842,6 +5977,22 @@ Start responsive
     max-width: 86%;
   }
 
+  .documents .newsScroll {
+    overflow-x: auto;
+  }
+
+  .documentsIn {
+    max-width: 100%;
+  }
+
+  .liveCompanySlider {
+    margin-left: 115px !important;
+  }
+
+  .documents .documentItem {
+    max-width: 18.15%;
+  }
+
   .map,
   .mapTop {
     max-width: 87%;
@@ -5849,6 +6000,12 @@ Start responsive
 
   .mapSliderBlockContent a {
     max-width: 19.5%;
+    height: 100%;
+    margin-bottom: 3px;
+  }
+
+  .mapTop .clientRightBlock {
+    max-width: 685px;
   }
 
   .footerBottom,
@@ -5896,6 +6053,11 @@ Start responsive
   .timeline {
     width: 104%;
   }
+
+  .contactBlock {
+    max-width: 90%;
+    width: 100%;
+  }
 }
 
 @media (max-width: 1750px) {
@@ -5920,7 +6082,6 @@ Start responsive
   }
 
   .blockText {
-    left: 7px;
     word-break: break-all;
   }
 
@@ -5976,7 +6137,7 @@ Start responsive
   }
 
   .matrialContent {
-    max-width: 85%;
+    max-width: 86.5%;
   }
 
   .tab-container {
@@ -5996,7 +6157,11 @@ Start responsive
   }
 
   .map .tab-btn {
-    max-width: 450px;
+    max-width: 610px;
+  }
+
+  .mapTop .clientRightBlock {
+    max-width: 610px;
   }
 
   .mapSliderBlock .mapSliderBlockContent a {
@@ -6011,12 +6176,12 @@ Start responsive
     right: 45px;
   }
 
-  .itemsRightList li {
-    max-width: 33%;
+  .itemsRightList__text {
+    max-width: 57%;
   }
 
   .itemsDocuments {
-    max-width: 45%;
+    max-width: 43%;
     width: 100%;
   }
 
@@ -6083,6 +6248,11 @@ Start responsive
     margin-top: 30px;
   }
 
+  .bigProizvodstvoModif img {
+    margin-top: 0;
+    padding-top: 0;
+  }
+
   .stepParthnersBlock {
     max-width: 45%;
   }
@@ -6102,6 +6272,18 @@ Start responsive
   .footerTopRight {
     max-width: 71%;
   }
+
+  .contactMap {
+    max-width: 47%;
+  }
+
+  .contactBlock .contactsRight {
+    max-width: 47%;
+  }
+
+  .contact .clientRightBlock {
+    max-width: 47%;
+  }
 }
 
 @media (max-width: 1700px) {
@@ -6111,6 +6293,10 @@ Start responsive
 }
 
 @media (max-width: 1660px) {
+  .contactMap {
+    padding-left: 112px;
+  }
+
   .history {
     max-width: 100%;
     padding-left: 57px;
@@ -6187,7 +6373,6 @@ Start responsive
 
   .bigProizvodstvoRight {
     max-width: 48%;
-    padding-top: 40px;
   }
 
   .bigProizvodstvo img {
@@ -6225,7 +6410,7 @@ Start responsive
   }
 
   .matrialContent {
-    max-width: 90%;
+    max-width: 89.8%;
   }
 
   .itemsRight {
@@ -6393,9 +6578,21 @@ Start responsive
   .clientsBlueBgModif .client__text {
     margin-left: -68px;
   }
+
+  .itemsDocuments {
+    max-width: 44%;
+  }
 }
 
 @media (max-width: 1600px) {
+  .contactsRight .contactsRightBlockIn {
+    max-width: 50%;
+  }
+
+  .blockText {
+    padding-right: 10px;
+  }
+
   .historySlider .swiper-slide-next .slide-image-container {
     margin-left: 63px;
   }
@@ -6410,7 +6607,25 @@ Start responsive
   }
 }
 
+@media (max-width: 1570px) {
+  .itemsRightInfo:after {
+    left: -12px;
+  }
+
+  .map .tab-btn {
+    max-width: 38%;
+  }
+
+  .mapTop .clientRightBlock {
+    max-width: 38%;
+  }
+}
+
 @media (max-width: 1550px) {
+  .itemsRightList__title {
+    max-width: 42%;
+  }
+
   .headerMenuListMenu {
     padding-right: 35px;
   }
@@ -6464,7 +6679,7 @@ Start responsive
   }
 
   .documents .newsScroll {
-    margin-left: 130px;
+    margin-left: 114px;
     max-width: 99%;
   }
 
@@ -6537,6 +6752,14 @@ Start responsive
 }
 
 @media (max-width: 1500px) {
+  .liveCompanySliderImg {
+    max-width: 40.5%;
+  }
+
+  .liveCompanySliderNav .swiper-pagination-bullets {
+    max-width: 487px;
+  }
+
   .history {
     padding-left: 46px;
   }
@@ -6577,9 +6800,24 @@ Start responsive
   .historySlider .swiper-button-container {
     right: 8%;
   }
+
+  .itemsRightList__text {
+    max-width: 58%;
+  }
+
+  .itemsRightInfo:after {
+    left: -5px;
+  }
 }
 
 @media (max-width: 1460px) {
+  .itemsRightList {
+    max-width: 49%;
+  }
+  .matrialContent {
+    max-width: 89.4%;
+  }
+
   .contactsRight {
     margin-left: 100px;
   }
@@ -6675,7 +6913,7 @@ Start responsive
   }
 
   .liveCompanySlider {
-    margin-left: 128px !important;
+    margin-left: 118px !important;
   }
 
   .headerMenuList {
@@ -6704,6 +6942,42 @@ Start responsive
 }
 
 @media (max-width: 1395px) {
+  .itemsRightList {
+    max-width: 100%;
+  }
+
+  .itemsRightList:last-of-type {
+    margin-top: 0;
+  }
+
+  .itemsRightInfo:after {
+    display: none;
+  }
+
+  .documents .documentItem {
+    height: 274px;
+  }
+
+  .liveCompanySliderNav .swiper-pagination-fraction {
+    text-align: center;
+  }
+
+  .liveCompanySliderNavBlock .swiper-button-next, .liveCompanySliderNavBlock .swiper-button-prev {
+    max-width: 230px;
+  }
+
+  .liveCompanySliderNavBlock .swiper-button-next:after {
+    right: 15px;
+  }
+
+  .liveCompanySliderNavBlock .swiper-button-prev span {
+    padding-left: 15px;
+  }
+
+  .liveCompanySliderRight__paragraf {
+    margin-top: 10px;
+  }
+
   .history .timeline {
     width: 1300px;
   }
@@ -6790,7 +7064,6 @@ Start responsive
 
   .mapSliderBlock .mapSliderBlockContent a {
     max-width: 19.4%;
-    height: 96px;
   }
 
   .catalogHeaderTitle {
@@ -6852,6 +7125,10 @@ Start responsive
 }
 
 @media (max-width: 1345px) {
+  .matrialContent {
+    max-width: 90.4%;
+  }
+
   .history .swiper-wrapper {
     margin-left: 97px;
   }
@@ -7046,7 +7323,7 @@ Start responsive
   }
 
   .matrialContent {
-    max-width: 94%;
+    max-width: 93.5%;
   }
 
   .footerTopRight {
@@ -7165,6 +7442,10 @@ Start responsive
 
   .mapSliderContactsNavInBtn {
     margin-right: 50px;
+  }
+
+  .mapSliderContactsNav .mapSliderContactsNavInBtn {
+    margin-right: 0;
   }
 
   .answer__title {
@@ -7370,6 +7651,27 @@ Start responsive
 }
 
 @media (max-width: 1195px) {
+  .contactBlock .contactMap {
+    padding-left: 108px;
+  }
+
+  .documents .documentItem {
+    height: 240px;
+  }
+
+  .documents {
+    height: 370px;
+  }
+
+  .liveCompanySliderNavBlock {
+    max-width: 56%;
+    right: 0;
+  }
+
+  .documentItem__title {
+    left: 10px;
+  }
+
   .history .swiper-wrapper {
     margin-left: 43px;
   }
@@ -7461,6 +7763,12 @@ Start responsive
 
   .popupSearch .itemSliderContent .itemBlock:nth-child(3n+3) {
     margin-right: 0;
+  }
+}
+
+@media (max-width: 1170px) {
+  .liveCompanySliderRight__title {
+    font-size: 30px;
   }
 }
 
@@ -7572,10 +7880,6 @@ Start responsive
 
   .serviceItemRevers .serviceItemLeft {
     margin-right: 50px;
-  }
-
-  .matrialContent {
-    padding-left: 50px;
   }
 
   .contact .clientLeft {
@@ -7715,7 +8019,8 @@ Start responsive
   }
 
   .matrialContent {
-    margin-left: 57px;
+    margin-left: 0;
+    padding-left: 103px;
   }
 
   .popupCabinet {
@@ -7762,9 +8067,29 @@ Start responsive
   .historySlider .swiper-slide-next .slide-image-container {
     margin-left: -28px;
   }
+
+  .itemDoc .clientLeft {
+    max-width: 45%;
+  }
+
+  .itemsDocuments {
+    max-width: 50%;
+  }
 }
 
 @media (max-width: 1125px) {
+  .liveCompanySliderNavBlock .swiper-button-prev {
+    left: 0;
+  }
+
+  .liveCompanySliderNav .swiper-pagination-fraction {
+    left: 0;
+  }
+
+  .documentItem__title {
+    left: 5px;
+  }
+
   .blockText {
     left: 8px;
   }
@@ -7788,6 +8113,10 @@ Start responsive
 
   .bigProizvodstvoModif {
     max-width: 95%;
+  }
+
+  .itemDoc .clientLeft {
+    max-width: 40%;
   }
 }
 
@@ -7923,6 +8252,45 @@ Start responsive
 }
 
 @media (max-width: 1030px) {
+  .contactBlock .contactsRight {
+    max-width: 100%;
+  }
+
+  .contactBlock .contactMap {
+    padding-left: 0;
+  }
+
+  .contactBlock .contactMap img {
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .matrialContent {
+    padding-left: 101px;
+  }
+
+  .documents .documentItem {
+    max-width: 280px;
+    height: 320px;
+  }
+
+  .documentsIn {
+    width: 1800px;
+    max-width: 1470px;
+  }
+
+  .documentItem__title {
+    left: 20px;
+  }
+
+  .documents {
+    height: 440px;
+  }
+
+  .documents .newsScroll {
+    overflow-x: scroll;
+  }
+
   .history .title {
     margin-left: 50px;
   }
@@ -8078,7 +8446,6 @@ Start responsive
 
   .mapSliderBlock .mapSliderBlockContent a {
     max-width: 19.2%;
-    height: 65px;
   }
 
   .itemsRight {
@@ -8167,6 +8534,7 @@ Start responsive
 
   .bigProizvodstvo.bigProizvodstvoModif {
     max-width: 92% !important;
+    margin-top: 0;
   }
 
   .itemDoc .clientLeft {
@@ -8191,6 +8559,23 @@ Start responsive
 
   .itemTabs {
     height: 709px;
+  }
+
+  .itemsRightList {
+    max-width: 50%;
+  }
+
+  .itemsRightList li {
+    max-width: 100%;
+  }
+
+  .itemsRightList:last-of-type {
+    margin-top: 35px;
+  }
+
+  .itemsRightInfo:after {
+    display: block;
+    left: -167px;
   }
 }
 
@@ -8506,6 +8891,10 @@ Start responsive
   .itemBlockList li:after {
     right: -8px;
   }
+
+  .itemsRightInfo:after {
+    left: -133px;
+  }
 }
 
 @media (max-width: 910px) {
@@ -8633,7 +9022,6 @@ Start responsive
 
   .mapSliderBlock .mapSliderBlockContent a {
     max-width: 19%;
-    height: 60px;
   }
 
   .headerMenuIn img {
@@ -8693,6 +9081,10 @@ Start responsive
 }
 
 @media (max-width: 870px) {
+  .itemsRightInfo:after {
+    left: -112px;
+  }
+
   .history .title {
     max-width: 75%;
     width: 100%;
@@ -8791,6 +9183,7 @@ Start responsive
   .mapSliderContactsMobileBlock {
     max-width: 100%;
     width: 100%;
+    justify-content: space-between;
   }
 
   .mapSliderContactsMobileBlockIn {
@@ -8888,6 +9281,10 @@ Start responsive
 
   .itemTabs .tab-btn {
     left: 35px;
+  }
+
+  .map .itemTabs .tab-btn {
+    left: 0;
   }
 
   .clientsBlueBgModif .client__text {
@@ -9038,6 +9435,14 @@ Start responsive
 }
 
 @media (max-width: 810px) {
+  .itemsRightInfo:after {
+    left: -90px;
+  }
+
+  .mapTop .clientRightBlock {
+    max-width: 45%;
+  }
+
   .history .timeline {
     width: 900px;
   }
@@ -9094,6 +9499,14 @@ Start responsive
 }
 
 @media (max-width: 770px) {
+  .itemsRightInfo:after {
+    left: -60px;
+  }
+
+  .contact .clientRightBlock {
+    max-width: 100%;
+  }
+
   .history .title {
     margin-left: 45px;
   }
@@ -9632,9 +10045,17 @@ Start responsive
   .history .slide-info-container {
     bottom: 120px;
   }
+
+  .mapTop .clientRightBlock {
+    max-width: 100%;
+  }
 }
 
 @media (max-width: 740px) {
+  .itemsRightInfo:after {
+    left: -43px;
+  }
+
   #answear2 .newsContent .newsItem {
     max-width: 31.5%;
   }
@@ -9722,6 +10143,10 @@ Start responsive
 }
 
 @media (max-width: 700px) {
+  .itemsRightInfo:after {
+    left: -34px;
+  }
+
   .itemSlider {
     width: 1300px;
   }
@@ -9835,6 +10260,18 @@ Start responsive
 }
 
 @media (max-width: 670px) {
+  .itemsRightInfo:after {
+    display: none;
+  }
+
+  .itemsRightList {
+    max-width: 100%;
+  }
+
+  .itemsRightList:last-of-type {
+    margin-top: 0;
+  }
+
   .history .title {
     max-width: 70%;
   }
@@ -9955,6 +10392,19 @@ Start responsive
 }
 
 @media (max-width: 620px) {
+  .map .mapContent {
+    margin-top: 120px;
+  }
+
+  .map .cnt_2 {
+    margin-top: 80px;
+  }
+
+  .map .itemTabs .tab-btn {
+    margin-top: 110px;
+    z-index: 9;
+  }
+
   .history .title {
     max-width: 100%;
   }
@@ -11232,7 +11682,7 @@ Start responsive height
 #######################*/
 @media (max-height: 1040px) {
   .mistakeContent {
-    margin-top: -150px;
+    margin-top: 0;
   }
 
   .mobilCheckboxScroll {
@@ -11243,7 +11693,7 @@ Start responsive height
 
 @media (max-height: 940px) {
   .mistakeContent {
-    margin-top: -250px;
+    margin-top: 0;
   }
 
   .mobilCheckboxScroll {
@@ -11254,7 +11704,7 @@ Start responsive height
 
 @media (max-height: 840px) {
   .mistakeContent {
-    margin-top: -350px;
+    margin-top: 0;
   }
 
   .mobilCheckboxScroll {
@@ -11274,7 +11724,7 @@ Start responsive height
   }
 
   .mistakeContent {
-    margin-top: -400px;
+    margin-top: 0;
   }
 }
 
@@ -11292,7 +11742,7 @@ Start responsive height
 
 @media (max-height: 650px) {
   .mistakeContent {
-    margin-top: -100px;
+    margin-top: 0;
   }
 
   .mistakeBottomList {

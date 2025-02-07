@@ -143,8 +143,8 @@ $(document).ready(function () {
 $(document).ready(function () {
   const itemsLeftSlider = new Swiper(".itemsLeftSlider", {
     navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
+      nextEl: ".swiper-button-next2",
+      prevEl: ".swiper-button-prev2",
     },
   });
 });
@@ -212,9 +212,11 @@ $(document).ready(function () {
 });
 
 $(document).ready(function () {
-  // Start select custom
-  $('.select-selected').on('click', function () {
-    $(this).parents('.custom-select').children('.select-items').slideDown();
+  $('.select-selected').on('click', function (e) {
+    let $selectItems = $(this).siblings('.select-items');
+    $('.select-items').not($selectItems).slideUp();
+    $selectItems.slideToggle();
+    e.stopPropagation();
   });
 
   $(document).click(function (e) {
@@ -226,9 +228,11 @@ $(document).ready(function () {
 
   $('.select-itemsIn__name').on('click', function () {
     let value = $(this).text();
-    $(this).parents('.custom-select').children('.select-items').slideUp();
-    $(this).parents('.custom-select').children('.select-selected').text(value);
+    let $customSelect = $(this).closest('.custom-select');
+    $customSelect.find('.select-items').slideUp();
+    $customSelect.find('.select-selected').text(value);
   });
+
 });
 
 $(document).ready(function () {
@@ -507,4 +511,44 @@ $(document).ready(function () {
 });
 
 
+$(document).ready(function () {
+  const line = document.querySelector('.line');
 
+  let isDragging = false;
+  let startX = 0;
+  let startLeft = 0;
+
+  line.addEventListener('mousedown', (e) => {
+    isDragging = true;
+    startX = e.clientX; // Запоминаем начальную позицию курсора
+    startLeft = parseInt(window.getComputedStyle(line).left, 10); // Запоминаем текущий left
+
+    document.body.style.userSelect = 'none'; // Отключаем выделение текста
+    line.style.cursor = "grabbing"; // Меняем курсор
+  });
+
+  document.addEventListener('mousemove', (e) => {
+    if (!isDragging) return;
+
+    let newX = startLeft + (e.clientX - startX);
+    line.style.left = `${newX}px`;
+  });
+
+  document.addEventListener('mouseup', () => {
+    isDragging = false;
+    document.body.style.userSelect = 'auto';
+    line.style.cursor = "grab";
+  });
+
+  function updateWidth() {
+    document.getElementById('width-display').innerText = ' ' + window.innerWidth + 'px';
+  }
+
+
+  window.addEventListener('resize', updateWidth);
+
+  // Первоначальный вызов
+  updateWidth();
+});
+
+// End tools
