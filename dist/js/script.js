@@ -149,8 +149,8 @@ $(document).ready(function () {
   });
 });
 
+// Start бегущая строка
 $(document).ready(function () {
-  // Start brand
   const $ul = $('.flexic');
   const wrapperHeight = $('.wrapper').height();
 
@@ -509,46 +509,3 @@ $(document).ready(function () {
 
   window.addEventListener("resize", updateWidth);
 });
-
-
-$(document).ready(function () {
-  const line = document.querySelector('.line');
-
-  let isDragging = false;
-  let startX = 0;
-  let startLeft = 0;
-
-  line.addEventListener('mousedown', (e) => {
-    isDragging = true;
-    startX = e.clientX; // Запоминаем начальную позицию курсора
-    startLeft = parseInt(window.getComputedStyle(line).left, 10); // Запоминаем текущий left
-
-    document.body.style.userSelect = 'none'; // Отключаем выделение текста
-    line.style.cursor = "grabbing"; // Меняем курсор
-  });
-
-  document.addEventListener('mousemove', (e) => {
-    if (!isDragging) return;
-
-    let newX = startLeft + (e.clientX - startX);
-    line.style.left = `${newX}px`;
-  });
-
-  document.addEventListener('mouseup', () => {
-    isDragging = false;
-    document.body.style.userSelect = 'auto';
-    line.style.cursor = "grab";
-  });
-
-  function updateWidth() {
-    document.getElementById('width-display').innerText = ' ' + window.innerWidth + 'px';
-  }
-
-
-  window.addEventListener('resize', updateWidth);
-
-  // Первоначальный вызов
-  updateWidth();
-});
-
-// End tools

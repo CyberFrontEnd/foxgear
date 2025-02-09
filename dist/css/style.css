@@ -137,30 +137,6 @@ input:focus:-ms-input-placeholder {
 /*
 Start setting
 #############*/
-#width-display {
-  position: fixed;
-  left: 50%;
-  top: 75%;
-  margin: 5px;
-  font-weight: bold;
-  color: yellow;
-  z-index: 999999;
-  font-size: 40px;
-}
-
-.line {
-  position: absolute;
-  top: 0;
-  left: 10%;
-  width: 3px;
-  height: 1000vh;
-  background-color: red;
-  cursor: grab;
-  user-select: none;
-  z-index: 9999;
-}
-
-
 .flex {
   display: -webkit-box;
   display: -webkit-flex;
