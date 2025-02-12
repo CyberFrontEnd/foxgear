@@ -137,6 +137,28 @@ input:focus:-ms-input-placeholder {
 /*
 Start setting
 #############*/
+#width-display {
+  position: fixed;
+  left: 50%;
+  top: 25%;
+  margin: 5px;
+  font-weight: bold;
+  color: red;
+  z-index: 999999;
+}
+
+.line {
+  position: absolute;
+  top: 0;
+  left: 10%;
+  width: 3px;
+  height: 1000vh;
+  background-color: red;
+  cursor: grab;
+  user-select: none;
+  z-index: 9999;
+}
+
 .flex {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1311,7 +1333,6 @@ Start topSlider
   min-width: 800px;
   height: 100%;
   position: relative;
-  background: url('../images/bg3.png') no-repeat top left;
   background-size: cover;
   display: flex;
   align-items: center;
@@ -1321,6 +1342,18 @@ Start topSlider
   max-width: 500px;
   width: 100%;
   margin: 0 auto;
+  position: relative;
+}
+
+.topSliderIn:before {
+  content: '';
+  background: rgba(2, 41, 92, 0.9);
+  mix-blend-mode: hard-light;
+  clip-path: polygon(0 0, 100% 0, 80% 100%, 0 100%);
+  height: 100%;
+  max-width: 100%;
+  width: 100%;
+  position: absolute;
 }
 
 .topSliderNavIn .swiper-pagination {
@@ -2100,7 +2133,7 @@ End liveCompany
 }
 
 .whenParthners {
-  padding-top: 50px;
+  padding-top: 70px;
   max-width: 1600px;
   width: 100%;
   margin: 0 auto;
@@ -2368,9 +2401,9 @@ End liveCompany
 }
 
 .mistakeBtn {
-  max-width: 350px;
+  max-width: 370px;
   width: 100%;
-  justify-content: space-between;
+  justify-content: center;
   margin: 40px auto 0;
 }
 
@@ -2397,6 +2430,7 @@ End liveCompany
 .mistakeBtn__question.btn {
   max-width: 182px;
   width: 100%;
+  margin-right: 10px;
 }
 
 .mistakeBtn__main.btn span,
@@ -2760,6 +2794,7 @@ End liveCompany
   display: block !important;
   transform: rotate(0) translate(0, -50%) !important;
   border: none !important;
+  right: 0 !important;
 }
 
 .metismenu .mm-active > .has-arrow::after, .metismenu .has-arrow[aria-expanded=true]::after {
@@ -3035,8 +3070,9 @@ End liveCompany
   max-width: 100%;
   width: 100%;
   background: #000E32;
-  padding: 76px 0 0 0;
-  height: 540px;
+  padding: 76px 0 100px 0;
+  min-height: 340px;
+  max-height: 540px;
 }
 
 .foxGearGroupIn {
@@ -3094,7 +3130,7 @@ End liveCompany
 .itemSelection {
   max-width: 1613px;
   width: 100%;
-  margin: -120px auto 110px;
+  margin: -60px auto 110px;
 }
 
 .itemSelection .itemBlock {
@@ -3476,7 +3512,7 @@ End liveCompany
 .itemsContent {
   max-width: 100%;
   width: 100%;
-  margin-top: 40px;
+  margin-top: 20px;
   position: relative;
 }
 
@@ -3808,7 +3844,7 @@ End liveCompany
 
 .itemsLeftSlider .itemsLeftSliderNav {
   position: absolute;
-  bottom: 40px;
+  bottom: 30px;
   left: -4px;
   width: 88px;
   z-index: 9;
@@ -4708,6 +4744,7 @@ End brends
   justify-content: center;
   max-width: 100%;
   width: 100%;
+  margin-top: 33px;
 }
 
 .catalogAdaptive {
@@ -4948,7 +4985,6 @@ New slider
 }
 
 .mobilSarch {
-  border-top: 1px solid rgba(0, 0, 0, .12);
   padding-top: 32px;
   position: absolute;
   top: 10px;
@@ -5303,6 +5339,7 @@ New slider
   padding-left: 10px;
   max-width: 90%;
   width: 100%;
+  text-transform: none;
 }
 
 .blockTopIn .select-selected:after {
@@ -5446,16 +5483,6 @@ Start filter
     width: 100%;
   }
 }
-
-/*.qualityRightList li:before {*/
-/*  content: '';*/
-/*  display: block;*/
-/*  width: 0;*/
-/*  border-bottom: 1px solid white;*/
-/*  padding-bottom: 14px;*/
-/*  animation: borderExpand 2s linear forwards;*/
-/*  animation-delay: 2s;*/
-/*}*/
 
 .lineAnim {
   animation: borderExpand 2s linear forwards;
@@ -5707,12 +5734,23 @@ End history
 }
 
 .mistake .brendsScroll {
-  padding: 0 0 ;
+  padding: 0 0;
 }
 
 .mistake .brends {
   margin-top: 0;
 }
+
+.material .clientRightBlock {
+  max-width: 671px;
+}
+
+.clientMobil__img {
+  display: none;
+}
+
+/*background: rgba(2, 41, 92, 0.9);*/
+/*mix-blend-mode: hard-light;*/
 
 /*
 Start responsive
@@ -6034,6 +6072,10 @@ Start responsive
     max-width: 90%;
     width: 100%;
   }
+
+  .material .clientRightBlock {
+    max-width: 44.5%;
+  }
 }
 
 @media (max-width: 1750px) {
@@ -6149,7 +6191,7 @@ Start responsive
   }
 
   .itemsLeftSlider:before {
-    right: 45px;
+    right: 25px;
   }
 
   .itemsRightList__text {
@@ -6259,6 +6301,10 @@ Start responsive
 
   .contact .clientRightBlock {
     max-width: 47%;
+  }
+
+  .material .clientRightBlock {
+    max-width: 41.5%;
   }
 }
 
@@ -6398,7 +6444,11 @@ Start responsive
   }
 
   .itemsLeftSlider:before {
-    right: 30px;
+    right: 0;
+  }
+
+  .itemsContent {
+    margin-top: 10px;
   }
 
   .answearBlockRight {
@@ -6790,6 +6840,7 @@ Start responsive
   .itemsRightList {
     max-width: 49%;
   }
+
   .matrialContent {
     max-width: 89.4%;
   }
@@ -6914,6 +6965,14 @@ Start responsive
 
   .historySlider .swiper-button-container {
     right: 12%;
+  }
+
+  .itemSlider2 .swiper-slide {
+    padding-top: 10px;
+  }
+
+  .itemsSlider .client__text {
+    margin-top: 70px;
   }
 }
 
@@ -7596,7 +7655,9 @@ Start responsive
     right: -8px;
   }
 
-
+  .material .clientRightBlock {
+    max-width: 47.5%;
+  }
 }
 
 @media (max-width: 1210px) {
@@ -7745,6 +7806,30 @@ Start responsive
 @media (max-width: 1170px) {
   .liveCompanySliderRight__title {
     font-size: 30px;
+  }
+
+  #tab-containerBlock2 {
+    max-width: 49%;
+  }
+
+  #tab-containerBlock2 .etabs {
+    justify-content: space-between;
+  }
+
+  #tab-containerBlock2 .etabs li {
+    margin-right: 0;
+  }
+
+  .smazkaRightBlock #tab-containerBlock2 {
+    max-width: 100%;
+  }
+
+  .smazkaRightBlock #tab-containerBlock2 .etabs {
+    justify-content: flex-start;
+  }
+
+  .smazkaRightBlock #tab-containerBlock2 .etabs li {
+    margin-right: 20px;
   }
 }
 
@@ -7991,7 +8076,7 @@ Start responsive
   }
 
   .matrialImg {
-    margin-left: 0;
+    margin-left: 5px;
   }
 
   .matrialContent {
@@ -8050,6 +8135,10 @@ Start responsive
 
   .itemsDocuments {
     max-width: 50%;
+  }
+
+  .itemsLeftSlider:before {
+    right: 30px;
   }
 }
 
@@ -8224,6 +8313,39 @@ Start responsive
 
   .slides {
     height: 700px;
+  }
+
+  .material .clientRightBlock {
+    max-width: 70%;
+    margin: 21px 0 0 52px;
+  }
+
+  .mapTop .clientRightBlock {
+    margin: 21px 0 0 51px;
+  }
+
+  .mapFormInput {
+    justify-content: space-between;
+  }
+
+  .mapFormInput__btn {
+    margin-left: 0;
+  }
+
+  #tab-containerBlock2 {
+    max-width: 55%;
+  }
+
+  .matrialImg {
+    margin-left: 2px;
+  }
+
+  .contact .clientLeft {
+    max-width: 100%;
+  }
+
+  .contact .clientRightBlock {
+    margin: 21px 0 0 88px;
   }
 }
 
@@ -8553,6 +8675,18 @@ Start responsive
     display: block;
     left: -167px;
   }
+
+  .itemsLeftSlider .itemsLeftSliderNav {
+    bottom: 30px;
+  }
+
+  .itemsContent {
+    margin-top: 5px;
+  }
+
+  .contactsRight {
+    margin-top: 0;
+  }
 }
 
 @media (max-width: 990px) {
@@ -8805,16 +8939,27 @@ Start responsive
   .itemsSlider .client__text {
     margin-left: -73px;
   }
+
+  #tab-containerBlock2 {
+    max-width: 100%;
+  }
+
+  #tab-containerBlock2 .etabs {
+    justify-content: flex-start;
+  }
+
+  #tab-containerBlock2 .etabs li:last-of-type {
+    margin-left: 20px;
+  }
 }
 
 @media (max-width: 945px) {
-  .historySlider .swiper-button-container {
-    right: 45%;
+  .answerLeft {
+    background-position: 6.5% 78.4%;
   }
 
-  .contact .clientLeft {
-    margin-left: 20px;
-    max-width: 43%;
+  .historySlider .swiper-button-container {
+    right: 45%;
   }
 
   .contact .client__text {
@@ -8870,6 +9015,10 @@ Start responsive
 
   .itemsRightInfo:after {
     left: -133px;
+  }
+
+  .answerLeft {
+    background-position: 6.5% 79.4%;
   }
 }
 
@@ -8980,10 +9129,6 @@ Start responsive
     margin-left: 40px;
   }
 
-  .mapFormInput__btn {
-    max-width: 18%;
-  }
-
   .mapFormInput {
     justify-content: space-between;
   }
@@ -9057,6 +9202,10 @@ Start responsive
 }
 
 @media (max-width: 870px) {
+  .mapTop .clientRightBlock {
+    margin: 21px 0 0 40px;
+  }
+
   .itemsRightInfo:after {
     left: -112px;
   }
@@ -9269,6 +9418,10 @@ Start responsive
 }
 
 @media (max-width: 830px) {
+  .questionContent {
+    margin-top: 0;
+  }
+
   .h2_caps {
     font-size: 25px;
   }
@@ -9302,7 +9455,11 @@ Start responsive
 
   .contact .clientLeft {
     margin-left: 40px;
-    max-width: 44%;
+    max-width: 100%;
+  }
+
+  .contact .clientRightBlock {
+    margin: 21px 0 0 40px;
   }
 
   .itemsDocuments {
@@ -9411,12 +9568,12 @@ Start responsive
 }
 
 @media (max-width: 810px) {
-  .itemsRightInfo:after {
-    left: -90px;
+  .answerLeft {
+    background-position: 8.5% 80.4%;
   }
 
-  .mapTop .clientRightBlock {
-    max-width: 45%;
+  .itemsRightInfo:after {
+    left: -90px;
   }
 
   .history .timeline {
@@ -9472,9 +9629,17 @@ Start responsive
   .historySlider .swiper-button-container {
     bottom: -7px;
   }
+
+  .material .clientRightBlock {
+    margin: 21px 0 0 40px;
+  }
 }
 
 @media (max-width: 770px) {
+  .items {
+    padding-top: 114px;
+  }
+
   .itemsRightInfo:after {
     left: -60px;
   }
@@ -9515,11 +9680,16 @@ Start responsive
 
   .headerRight,
   .headerRightInfo {
-    max-width: 320px;
+    max-width: 330px;
+  }
+
+  .headerBtn:hover:before {
+    background-color: #fff;
   }
 
   .headerRightInfo {
     justify-content: space-between;
+    margin-right: 10px;
   }
 
   .headerLeft {
@@ -9654,6 +9824,10 @@ Start responsive
     margin-top: 25px;
   }
 
+  .mapTop .clientRight {
+    margin-top: 15px;
+  }
+
   .answerRight {
     margin-left: 32px;
   }
@@ -9664,8 +9838,8 @@ Start responsive
   }
 
   .answerLeft {
-    height: 250px;
-    background: url('../images/icon4.svg') no-repeat 10.5% 93.4%;
+    height: 265px;
+    background: url('../images/icon4.svg') no-repeat 7.5% 98.4%;
   }
 
   .answerIn {
@@ -9812,7 +9986,8 @@ Start responsive
     position: absolute;
     top: 80px;
     z-index: 9;
-    padding-top: 20px;
+    padding-top: 50px;
+    border-top: 1px solid rgb(224,224,224);
   }
 
   .mobileMenuBlockFormInput input {
@@ -9829,6 +10004,15 @@ Start responsive
 
   body.hide {
     overflow: hidden;
+    overflow-x: hidden;
+  }
+
+  #question2 .itemBlock {
+    height: 490px;
+  }
+
+  #question2 .itemSliderContent {
+    padding-top: 10px;
   }
 
   .mobileMenuBlockScroll {
@@ -9946,8 +10130,13 @@ Start responsive
     height: 280px;
   }
 
+  .itemSlider2 .itemBlockBottom p,
   .itemTabs .itemBlockBottom p {
     display: block;
+  }
+
+  .itemSlider2 .itemBlock {
+    height: 525px;
   }
 
 
@@ -10025,9 +10214,29 @@ Start responsive
   .mapTop .clientRightBlock {
     max-width: 100%;
   }
+
+  .material .clientRightBlock {
+    margin-top: 0;
+    padding-top: 0;
+    max-width: 100%;
+    margin-left: 0;
+    padding-left: 40px;
+  }
 }
 
 @media (max-width: 740px) {
+  .contactsRightBlock {
+    margin-top: 30px;
+  }
+
+  .contactsRight .contactsRightBlockIn {
+    margin-bottom: 30px;
+  }
+
+  .contact .clientRightBlock {
+    margin-top: 10px;
+  }
+
   .itemsRightInfo:after {
     left: -43px;
   }
@@ -10116,9 +10325,21 @@ Start responsive
   .nav-buttons {
     left: 55px;
   }
+
+  .answerLeft {
+    background-position: 8.5% 98.4%;
+  }
 }
 
 @media (max-width: 700px) {
+  .items {
+    padding-top: 70px;
+  }
+
+  .bigProizvodstvoRight {
+    padding-top: 40px;
+  }
+
   .itemsRightInfo:after {
     left: -34px;
   }
@@ -10365,6 +10586,14 @@ Start responsive
   #search .newsContent {
     justify-content: space-between;
   }
+
+  .answerLeft {
+    background-position: 8.5% 96.4%;
+  }
+
+  .foxGearGroup {
+    padding-bottom: 130px;
+  }
 }
 
 @media (max-width: 620px) {
@@ -10529,9 +10758,61 @@ Start responsive
   .itemSlider {
     margin-top: -75px;
   }
+
+  .answerLeft {
+    background-position: 10.5% 96.4%;
+  }
 }
 
 @media (max-width: 590px) {
+  .headerRightInfo {
+    margin-right: 5px;
+  }
+
+  .news {
+    padding-top: 50px;
+  }
+
+  .mainrobot {
+    padding-top: 50px;
+  }
+
+  .headerBtn:hover:before {
+    background: #fff;
+  }
+
+  .topSliderIn:before {
+    max-width: 90%;
+  }
+
+  .preessCenterRight {
+    margin-top: 20px;
+  }
+
+  .catalog__btn {
+    margin: 20px auto 0;
+  }
+
+  .preessCenterBlock .newsItem {
+    margin-bottom: 15px;
+  }
+
+  .bread {
+    margin-left: 12px;
+  }
+
+  .map .itemTabs .tab-btn {
+    margin-top: 105px;
+  }
+
+  .map .mapContent {
+    margin-top: 100px;
+  }
+
+  .map .cnt_2 {
+    margin-top: 70px;
+  }
+
   .slider__subtitle {
     left: -92px;
     top: 180px;
@@ -10602,7 +10883,16 @@ Start responsive
   }
 
   .topSlider .mySwiper {
-    height: 540px;
+    height: 480px;
+  }
+
+  .topSliderIn,
+  .topSlider__img {
+    height: 89%;
+  }
+
+  .clients {
+    margin: 0 auto;
   }
 
   .topSliderContent {
@@ -10728,7 +11018,7 @@ Start responsive
 
   .blockTopIn {
     margin-bottom: 24px;
-    max-width: 80%;
+    max-width: 100%;
   }
 
   .blockTopIn:last-of-type {
@@ -10740,7 +11030,7 @@ Start responsive
     width: 100%;
     background-color: #F1F3F4;
     height: 48px;
-    margin-top: 18px;
+    margin-top: 10px;
     align-items: center;
     text-transform: uppercase;
     padding-left: 24px;
@@ -10749,6 +11039,7 @@ Start responsive
 
   .blockTopInMobilPopup span {
     color: #000E32;
+    text-transform: none;
   }
 
   .blockTopInMobilPopup:after {
@@ -10899,9 +11190,44 @@ Start responsive
   .qualityRight {
     margin-top: 40px;
   }
+
+  .itemSlider2 .itemBlock {
+    max-width: 250px;
+    height: 360px;
+  }
+
+  .itemSlider2 .itemBlockBottom p {
+    display: none;
+  }
+
+  .itemSlider2 .itemBlock__link {
+    height: 160px;
+    margin-top: 30px;
+  }
+
+  .itemSlider2 .itemBlock__link img {
+    height: 100%;
+  }
+
+  .itemSlider2 .itemBlockBottom {
+    margin-top: 10px;
+  }
+
+  .itemSlider2 {
+    width: 1030px;
+  }
 }
 
 @media (max-width: 550px) {
+  .items {
+    padding-top: 60px;
+  }
+  .bread li a:after {
+    width: 3px;
+    height: 3px;
+    margin: 0 10px;
+  }
+
   .slides {
     height: 450px;
   }
@@ -11002,7 +11328,7 @@ Start responsive
 
   .parthnerItem {
     max-width: 320px;
-    height: auto;
+    max-height: 700px;
     padding: 40px 32px;
   }
 
@@ -11084,7 +11410,7 @@ Start responsive
 
   .itemsRightFasovkaBtn__btn {
     max-width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
 
   .itemsRightFasovkaBtn__btn2 {
@@ -11129,12 +11455,18 @@ Start responsive
 
   .popupDoc {
     max-width: 400px !important;
-    height: 500px !important;
+    height: 460px !important;
+    padding: 20px !important;
+  }
+
+  .fancybox-close-small {
+    top: 10px !important;
+    right: 10px !important;
   }
 
   .popupDoc img {
-    width: 250px;
-    height: 340px;
+    width: 90%;
+    height: auto;
   }
 
   .popupCabinetBottom li a {
@@ -11143,10 +11475,6 @@ Start responsive
 
   .foxGearGroupSearchList {
     max-width: 300px;
-  }
-
-  .foxGearGroup {
-    height: 600px;
   }
 
   #tab-container2 .etabs li a {
@@ -11193,6 +11521,103 @@ Start responsive
 
   #search .newsContent .newsItem img {
     height: auto;
+  }
+
+  .answearBlockItem {
+    max-width: 29.6%;
+  }
+
+  .itemsRightFasovkaBtn {
+    margin-top: 22px;
+  }
+
+  .smazkaContent {
+    max-height: 1400px;
+  }
+
+  .proizvodsto .parthnerItem {
+    max-height: 520px;
+    padding: 40px 32px 10px;
+  }
+
+  .stepParthnersRightBottom {
+    padding: 20px;
+  }
+
+  .stepParthnersRightBottom__title {
+    font-size: 15px;
+  }
+
+  .liveCompanySliderRight__paragraf {
+    padding-right: 40px;
+  }
+
+  .liveCompanySliderRight__title {
+    padding-right: 40px;
+  }
+
+  .footerBottomList li:before {
+    margin-right: 8px;
+  }
+
+  .footerLogo {
+    left: -8px;
+  }
+
+  .footerBottomList {
+    max-width: 364px;
+  }
+
+  .answerLeft {
+    background-position: 15.5% 80.4%;
+  }
+
+  .brends {
+    margin-top: 0;
+  }
+
+  .client__img {
+    display: none;
+  }
+
+  .clientMobil__img {
+    display: block;
+  }
+
+  .slider__title {
+
+  }
+
+  .slide:nth-child(2) {
+    right: -40% !important;
+  }
+
+  .slide:nth-child(3) {
+    right: -47% !important;
+  }
+
+  .slide:nth-child(4) {
+    right: -56% !important;
+  }
+
+  .slide:nth-child(5) {
+    right: -86% !important;
+  }
+
+  .slide:nth-child(2).slide_current {
+    right: 0 !important;
+  }
+
+  .slide:nth-child(3).slide_current {
+    right: 0 !important;
+  }
+
+  .slide:nth-child(4).slide_current {
+    right: 0 !important;
+  }
+
+  .slide:nth-child(5).slide_current {
+    right: 0 !important;
   }
 }
 
@@ -11302,6 +11727,10 @@ Start responsive
 }
 
 @media (max-width: 460px) {
+  .blockBtnContent .blockBtn {
+    max-width: 48.5%;
+  }
+
   .history .timeline-dot {
     left: -95px;
   }
@@ -11339,7 +11768,7 @@ Start responsive
   }
 
   .footerBottomList li:before {
-    margin-right: 10px;
+    margin-right: 8px;
   }
 
   .qualityVideo,
@@ -11382,6 +11811,10 @@ Start responsive
     padding-left: 0;
   }
 
+  .mapTop .clientLeft__title {
+    padding-left: 0;
+  }
+
   .clientRightBlock {
     padding-left: 50px;
   }
@@ -11399,7 +11832,7 @@ Start responsive
   }
 
   .mapFormInput input {
-    max-width: 79%;
+    max-width: 80%;
   }
 
   .itemsDocuments {
@@ -11444,9 +11877,29 @@ Start responsive
   .mainrobot .clientLeft__title {
     padding-left: 0;
   }
+
+  .material .clientRightBlock {
+    padding-left: 60px;
+  }
+
+  .contact .clientRightBlock {
+    padding-left: 40px;
+  }
+
+  .mapTop .clientRightBlock {
+    padding-left: 39px;
+  }
+
+  .footerBottomList {
+    max-width: 100%;
+  }
 }
 
 @media (max-width: 430px) {
+  .answearBlockItem {
+    max-width: 27.6%;
+  }
+
   #answear2 .newsContent .newsItem {
     max-width: 100%;
   }
@@ -11472,15 +11925,15 @@ Start responsive
   }
 
   .footerBottomList li:before {
-    margin-right: 6px;
+    margin-right: 11px;
   }
 
   .mapFormInput input {
-    max-width: 70%;
+    max-width: 76%;
   }
 
   .mapFormInput__btn {
-    max-width: 26%;
+    max-width: 23%;
   }
 
   .mapPopup {
@@ -11489,12 +11942,7 @@ Start responsive
 
   .popupDoc {
     max-width: 300px !important;
-    height: 400px !important;
-  }
-
-  .popupDoc img {
-    width: 200px;
-    height: 300px;
+    height: 350px !important;
   }
 
   .fancybox-close-small {
@@ -11505,11 +11953,25 @@ Start responsive
   .popupCabinetBottom li a {
     font-size: 11px;
   }
+
+  .footerBottomList li a {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 415px) {
+  .footerBottomList li:before {
+    margin-right: 8px;
+  }
 }
 
 @media (max-width: 410px) {
-  .blockBtnContent .blockBtn {
-    max-width: 48%;
+  .footerBottomList li a {
+    font-size: 12px;
+  }
+
+  .footerBottomList li:before {
+    margin-right: 9px;
   }
 
   #tab-container2 .mobileMenuBlockFormInput input {
@@ -11518,6 +11980,10 @@ Start responsive
 
   #tab-container2 .mobileMenuBlockFormInput__btn {
     width: 18%;
+  }
+
+  .blockBtn.backBtn:after {
+    left: 27px;
   }
 
   .mistakeContent {
@@ -11531,7 +11997,11 @@ Start responsive
   }
 
   .answerLeft {
-    background-position: 10.5% 83.4%;
+    background-position: 17.5% 78.4%;
+  }
+
+  .answer__title {
+    max-width: 85%;
   }
 
   .answerRight {
@@ -11544,6 +12014,7 @@ Start responsive
 
   .toShareList {
     max-width: 315px;
+    justify-content: flex-start;
   }
 
   .mobileMenuBlockFormInput__btn {
@@ -11577,6 +12048,14 @@ Start responsive
 }
 
 @media (max-width: 385px) {
+  .blockBtn.backBtn:after {
+    left: 20px;
+  }
+
+  .answearBlockItem {
+    max-width: 24.6%;
+  }
+
   .blockIn .input-row {
     max-width: 155px;
   }

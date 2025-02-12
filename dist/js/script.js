@@ -509,3 +509,5 @@ $(document).ready(function () {
 
   window.addEventListener("resize", updateWidth);
 });
+
+
