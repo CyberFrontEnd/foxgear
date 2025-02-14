@@ -5,7 +5,8 @@ $(document).ready(function () {
     autoFocus: false,
   });
 
-  $('.headerBtn').on('click', function () {
+  $('.headerBtn').on('click', function (e) {
+    e.preventDefault();
     $(this).toggleClass('active');
     $('.headerMenu').slideToggle();
     $('.headerRightMenu').toggleClass('active');

@@ -137,28 +137,6 @@ input:focus:-ms-input-placeholder {
 /*
 Start setting
 #############*/
-#width-display {
-  position: fixed;
-  left: 50%;
-  top: 25%;
-  margin: 5px;
-  font-weight: bold;
-  color: red;
-  z-index: 999999;
-}
-
-.line {
-  position: absolute;
-  top: 0;
-  left: 10%;
-  width: 3px;
-  height: 1000vh;
-  background-color: red;
-  cursor: grab;
-  user-select: none;
-  z-index: 9999;
-}
-
 .flex {
   display: -webkit-box;
   display: -webkit-flex;
@@ -320,6 +298,16 @@ Start header
   padding: 26px 0;
   justify-content: space-between;
   align-items: center;
+}
+
+.headerMain {
+  position: fixed;
+  max-width: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  background-color: #fff;
 }
 
 .headerLeft {
@@ -1081,10 +1069,6 @@ Start clients
   margin-bottom: 30px;
 }
 
-.contact .clientRightBlock {
-  max-width: 693px;
-}
-
 .mapTop .clientRightBlock {
   max-width: 690px;
 
@@ -1279,7 +1263,7 @@ Start topSlider
   max-width: 1920px;
   width: 100%;
   height: 712px;
-  margin: 0 auto 16px;
+  margin: 100px auto 16px;
 }
 
 .topSlider .mySwiper {
@@ -1830,6 +1814,8 @@ img.qualityPlanshet__img {
   width: 100%;
   margin: 0 auto;
   display: block;
+  height: 534px;
+  object-fit: cover;
 }
 
 .itemBlockList {
@@ -1962,6 +1948,15 @@ Start documents
   opacity: 0;
 }
 
+.documentItemNoImg {
+  cursor: default;
+}
+
+
+.documentItemNoImg:before {
+  display: none;
+}
+
 .documentItem:hover:before {
   opacity: 1;
 }
@@ -2061,8 +2056,12 @@ End liveCompany
 .catalogHeader {
   max-width: 1920px;
   width: 100%;
-  margin: 0 auto 16px;
+  margin: 93px auto 16px;
   position: relative;
+}
+
+.breadNews {
+  margin-top: 100px;
 }
 
 .catalogHeaderTitle {
@@ -2373,6 +2372,7 @@ End liveCompany
   background-color: rgba(244, 248, 251);
   max-width: 100%;
   width: 100%;
+  margin-top: 80px;
 }
 
 .mistakeContent {
@@ -2381,7 +2381,7 @@ End liveCompany
   flex-direction: column;
   position: relative;
   z-index: 9;
-  margin-top: 100px;
+  margin-top: 200px;
 }
 
 .mistake__title {
@@ -2446,7 +2446,7 @@ End liveCompany
 .preessCenter {
   max-width: 1600px;
   width: 100%;
-  margin: 60px auto 0;
+  margin: 40px auto 0;
   position: relative;
 }
 
@@ -3107,6 +3107,7 @@ End liveCompany
   color: #ffffff;
   text-transform: uppercase;
   margin-left: 10px;
+  word-break: break-word;
 }
 
 .foxGearGroupSearch__btn {
@@ -3303,10 +3304,6 @@ End liveCompany
 .items__title {
   text-transform: uppercase;
   margin-bottom: 13px;
-}
-
-.itemsDocuments {
-  max-width: 658px;
 }
 
 .itemsDocumentsList li {
@@ -3512,7 +3509,7 @@ End liveCompany
 .itemsContent {
   max-width: 100%;
   width: 100%;
-  margin-top: 20px;
+  margin-top: 10px;
   position: relative;
 }
 
@@ -5752,6 +5749,18 @@ End history
 /*background: rgba(2, 41, 92, 0.9);*/
 /*mix-blend-mode: hard-light;*/
 
+.compensate-for-scrollbar {
+  margin-right: 0 !important;
+}
+
+.contact .clientRightBlock {
+  max-width: 689px;
+}
+
+.itemDoc .itemsDocuments {
+  max-width: 658px;
+}
+
 /*
 Start responsive
 ################*/
@@ -6076,6 +6085,10 @@ Start responsive
   .material .clientRightBlock {
     max-width: 44.5%;
   }
+
+  .itemDoc .itemsDocuments {
+    max-width: 658px;
+  }
 }
 
 @media (max-width: 1750px) {
@@ -6247,7 +6260,7 @@ Start responsive
   }
 
   .smazkaFormInput input {
-    max-width: 77.5%;
+    max-width: 78.3%;
   }
 
   .smazkaFormInput__send {
@@ -6299,12 +6312,16 @@ Start responsive
     max-width: 47%;
   }
 
+  .material .clientRightBlock {
+    max-width: 41.5%;
+  }
+
   .contact .clientRightBlock {
     max-width: 47%;
   }
 
-  .material .clientRightBlock {
-    max-width: 41.5%;
+  .itemDoc .itemsDocuments {
+    max-width: 633px;
   }
 }
 
@@ -6608,6 +6625,10 @@ Start responsive
   .itemsDocuments {
     max-width: 44%;
   }
+
+  .itemDoc .itemsDocuments {
+    max-width: 44%;
+  }
 }
 
 @media (max-width: 1600px) {
@@ -6653,7 +6674,7 @@ Start responsive
   }
 
   .headerMenuListMenu {
-    padding-right: 35px;
+    padding-right: 31px;
   }
 
   .qualityRight {
@@ -7524,6 +7545,11 @@ Start responsive
 }
 
 @media (max-width: 1260px) {
+  .headerMenuListMenu {
+    padding-right: 32px;
+    padding-left: 32px;
+  }
+
   .title {
     margin-left: 83px;
   }
@@ -7658,9 +7684,21 @@ Start responsive
   .material .clientRightBlock {
     max-width: 47.5%;
   }
+
+  .contact .clientRightBlock {
+    max-width: 46.5%;
+  }
+
+  .itemDoc .itemsDocuments {
+    max-width: 44%;
+  }
 }
 
 @media (max-width: 1210px) {
+  .client3Img {
+    height: 400px;
+  }
+
   .historySlider .swiper-button-container {
     right: 15%;
   }
@@ -7684,6 +7722,10 @@ Start responsive
 
   .footerTopRight {
     max-width: 65%;
+  }
+
+  .itemDoc .itemsDocuments {
+    max-width: 44%;
   }
 }
 
@@ -8140,9 +8182,22 @@ Start responsive
   .itemsLeftSlider:before {
     right: 30px;
   }
+
+  .itemDoc .itemsDocuments {
+    max-width: 50%;
+  }
 }
 
 @media (max-width: 1125px) {
+  .contact .clientRightBlock {
+    max-width: 47%;
+  }
+
+  .headerMenuListMenu {
+    padding-right: 21px;
+    padding-left: 21px;
+  }
+
   .liveCompanySliderNavBlock .swiper-button-prev {
     left: 0;
   }
@@ -8252,6 +8307,10 @@ Start responsive
 }
 
 @media (max-width: 1060px) {
+  .client3Img {
+    height: 350px;
+  }
+
   .historySlider .swiper-button-container {
     right: auto;
     left: 120px;
@@ -8347,9 +8406,18 @@ Start responsive
   .contact .clientRightBlock {
     margin: 21px 0 0 88px;
   }
+
+  .itemDoc .clientLeft {
+    max-width: 100%;
+  }
 }
 
 @media (max-width: 1030px) {
+  .headerMenuListMenu {
+    padding-right: 12px;
+    padding-left: 12px;
+  }
+
   .contactBlock .contactsRight {
     max-width: 100%;
   }
@@ -8635,10 +8703,6 @@ Start responsive
     margin-top: 0;
   }
 
-  .itemDoc .clientLeft {
-    max-width: 46%;
-  }
-
   .itemDoc .itemsDocuments {
     max-width: 48%;
   }
@@ -8794,6 +8858,7 @@ Start responsive
     max-width: 100%;
     width: 100%;
     object-fit: cover;
+    height: 360px;
   }
 
   .serviceList li {
@@ -8954,6 +9019,10 @@ Start responsive
 }
 
 @media (max-width: 945px) {
+  .popupSearch .itemSliderContent .itemBlock {
+    max-width: 32%;
+  }
+
   .answerLeft {
     background-position: 6.5% 78.4%;
   }
@@ -9041,8 +9110,8 @@ Start responsive
   }
 
   .headerMenuListMenu {
-    padding-right: 10px;
-    padding-left: 10px;
+    padding-right: 7px;
+    padding-left: 7px;
   }
 
   .headerMenuList {
@@ -9154,8 +9223,8 @@ Start responsive
   }
 
   .headerMenuListMenu {
-    padding-right: 3%;
-    padding-left: 3%;
+    padding-right: 2%;
+    padding-left: 2%;
   }
 
   .blockIn .input-row {
@@ -9179,7 +9248,7 @@ Start responsive
   }
 
   .popupSearch .itemSliderContent .itemBlock {
-    max-width: 32.2%;
+    max-width: 32%;
     height: 545px;
   }
 
@@ -9373,7 +9442,7 @@ Start responsive
   }
 
   .popupSearch .itemSliderContent .itemBlock {
-    max-width: 32.4%;
+    max-width: 32%;
   }
 
   .bigProizvodstvo {
@@ -9435,14 +9504,10 @@ Start responsive
     margin-right: 0 !important;
   }
 
-  .preessCenter {
-    margin: 40px auto 0;
-  }
-
   .preessCenterBlockList {
     position: relative;
     top: -20px;
-    left: 50px;
+    left: 43px;
   }
 
   .preessCenter .newsContent {
@@ -9589,8 +9654,8 @@ Start responsive
   }
 
   .headerMenuListMenu {
-    padding-right: 2%;
-    padding-left: 2%;
+    padding-right: 1%;
+    padding-left: 1%;
   }
 
   .popupDoc {
@@ -9636,6 +9701,18 @@ Start responsive
 }
 
 @media (max-width: 770px) {
+  .catalogHeader {
+    margin: 103px auto 16px;
+  }
+
+  .topSlider {
+    margin: 87px auto 16px;
+  }
+
+  .client3Img {
+    height: 280px;
+  }
+
   .items {
     padding-top: 114px;
   }
@@ -9969,10 +10046,6 @@ Start responsive
     top: 365px !important;
   }
 
-  .preessCenter {
-    margin: 30px auto;
-  }
-
   .contact .clientRight {
     margin-top: 0;
   }
@@ -9987,7 +10060,7 @@ Start responsive
     top: 80px;
     z-index: 9;
     padding-top: 50px;
-    border-top: 1px solid rgb(224,224,224);
+    border-top: 1px solid rgb(224, 224, 224);
   }
 
   .mobileMenuBlockFormInput input {
@@ -10222,6 +10295,22 @@ Start responsive
     margin-left: 0;
     padding-left: 40px;
   }
+
+  .simbol .clientRightBlock {
+    padding-left: 40px;
+  }
+
+  .itemDoc .itemsDocuments {
+    margin-top: 40px;
+  }
+
+  .mistakeBtn__main.btn, .mistakeBtn__question.btn {
+    max-width: 180px;
+  }
+
+  .mistakeBtn {
+    max-width: 390px;
+  }
 }
 
 @media (max-width: 740px) {
@@ -10328,6 +10417,10 @@ Start responsive
 
   .answerLeft {
     background-position: 8.5% 98.4%;
+  }
+
+  .simbol .client__text {
+    margin-top: 40px;
   }
 }
 
@@ -10457,6 +10550,14 @@ Start responsive
 }
 
 @media (max-width: 670px) {
+  .catalogHeader {
+    margin: 90px auto 16px;
+  }
+
+  .topSlider {
+    margin: 80px auto 16px;
+  }
+
   .itemsRightInfo:after {
     display: none;
   }
@@ -10570,7 +10671,6 @@ Start responsive
   }
 
   .itemDoc .itemsDocuments {
-    margin-top: 0;
     max-width: 90%;
   }
 
@@ -10765,6 +10865,18 @@ Start responsive
 }
 
 @media (max-width: 590px) {
+  .smazkaFormInput input {
+    max-width: 75%;
+  }
+
+  .smazkaFormInput__send {
+    max-width: 24%;
+  }
+
+  .pressSlider img {
+    height: 300px;
+  }
+
   .headerRightInfo {
     margin-right: 5px;
   }
@@ -10848,6 +10960,10 @@ Start responsive
     padding-left: 48px;
   }
 
+  .serviceInfo .clientRightBlock {
+    padding-left: 41px;
+  }
+
   .history {
     padding-top: 70px;
   }
@@ -10874,12 +10990,12 @@ Start responsive
   }
 
   .mistakeContent {
-    max-width: 80%;
+    max-width: 95%;
     width: 100%;
   }
 
   .mistakeBtn__main.btn, .mistakeBtn__question.btn {
-    max-width: 150px;
+    max-width: 180px;
   }
 
   .topSlider .mySwiper {
@@ -10917,7 +11033,7 @@ Start responsive
   }
 
   .topSlider {
-    height: 540px;
+    height: 480px;
   }
 
   .h2_caps {
@@ -10955,7 +11071,7 @@ Start responsive
     max-width: 100%;
     width: 100%;
     object-fit: cover;
-    height: 290px;
+    height: 280px;
   }
 
   .clientRightBlock__title {
@@ -11162,10 +11278,6 @@ Start responsive
     margin-top: 150px;
   }
 
-  .itemDoc .itemsDocuments {
-    padding-left: 0;
-  }
-
   .itemTabs .itemBlockBottom p {
     display: none;
   }
@@ -11175,7 +11287,19 @@ Start responsive
   }
 
   .itemTabs .itemBlock__link img {
-    height: 100%;
+    height: 165px;
+  }
+
+  .itemBlockTop {
+    top: -12px;
+  }
+
+  .itemSlider .swiper-slide {
+    padding-top: 13px !important;
+  }
+
+  .itemBlockBottom {
+    padding-top: 10px;
   }
 
   .items .itemBlock__href {
@@ -11216,12 +11340,66 @@ Start responsive
   .itemSlider2 {
     width: 1030px;
   }
+
+  .serviceInfo {
+    margin-top: 40px;
+  }
+
+  .documents .documentItem {
+    max-width: 220px;
+    height: 260px;
+  }
+
+  .documents {
+    height: 390px;
+  }
+
+  .material {
+    margin-top: 40px;
+  }
+
+  .answearList {
+    margin-top: 30px;
+  }
+
+  .companyItems {
+    margin-top: 40px;
+  }
+
+  .itemsSlider .client__text {
+    margin-left: -91px;
+  }
+
+  .itemSlider2 {
+    margin-left: 10px !important;
+  }
+
+  .parthner {
+    margin-top: 50px;
+  }
+
+  .breadNews {
+    margin-top: 80px;
+  }
+
+  .simbol {
+    margin: 40px auto 0;
+  }
+
+  .mistakeBtn {
+    max-width: 100%;
+  }
 }
 
 @media (max-width: 550px) {
+  .contactsRight .contactsRightBlockIn {
+    margin-bottom: 15px;
+  }
+
   .items {
     padding-top: 60px;
   }
+
   .bread li a:after {
     width: 3px;
     height: 3px;
@@ -11234,10 +11412,6 @@ Start responsive
 
   .itemsSlider {
     max-width: 90%;
-  }
-
-  .preessCenter {
-    margin: 20px auto;
   }
 
   .preessCenterContent {
@@ -11371,10 +11545,6 @@ Start responsive
 
   .itemBlockTop__text2, .itemBlockTop__text {
     font-size: 9px;
-  }
-
-  .itemBlockBottom {
-    padding-top: 5px;
   }
 
   .itemBlockBottom__name {
@@ -11619,9 +11789,29 @@ Start responsive
   .slide:nth-child(5).slide_current {
     right: 0 !important;
   }
+
+  .itemSelection {
+    margin: -60px auto 110px;
+  }
+
+  .foxGearGroupSearch__btn {
+    margin: 15px auto 0;
+  }
+
+  .foxGearGroupSearchList {
+    margin: 20px auto 0;
+  }
 }
 
 @media (max-width: 480px) {
+  .mistakeContent {
+    max-width: 100%;
+  }
+
+  .mistake__text {
+    padding: 0 30px;
+  }
+
   .footerTopRight {
     padding-left: 3px;
   }
@@ -11632,6 +11822,10 @@ Start responsive
 
   .client__btn {
     margin-left: 19px;
+  }
+
+  .simbol .client__btn {
+    margin-left: 0;
   }
 
   .items .client__btn {
@@ -11727,6 +11921,10 @@ Start responsive
 }
 
 @media (max-width: 460px) {
+  .itemSelection {
+    margin: -30px auto 110px;
+  }
+
   .blockBtnContent .blockBtn {
     max-width: 48.5%;
   }
@@ -11752,7 +11950,11 @@ Start responsive
   }
 
   .itemDoc .itemsDocuments {
-    margin-left: 28px;
+    margin-left: 38px;
+  }
+
+  .companyItems .client__btn {
+    margin-left: 0;
   }
 
   .matrialContent {
@@ -11807,6 +12009,10 @@ Start responsive
     padding-left: 20px;
   }
 
+  .serviceInfo .clientLeft__title {
+    padding-left: 0;
+  }
+
   .items .clientLeft__title {
     padding-left: 0;
   }
@@ -11852,10 +12058,6 @@ Start responsive
     margin-left: 5px;
   }
 
-  .foxGearGroup {
-    height: 630px;
-  }
-
   .itemSelection .itemBlock__link {
     height: 190px;
   }
@@ -11871,7 +12073,7 @@ Start responsive
 
   .itemBlockTop__text2, .itemBlockTop__text {
     padding: 5px 7px;
-    margin: -4px 2px 0;
+    margin: 2px 2px 0;
   }
 
   .mainrobot .clientLeft__title {
@@ -11893,9 +12095,17 @@ Start responsive
   .footerBottomList {
     max-width: 100%;
   }
+
+  .simbol .clientLeft__title {
+    padding-left: 0;
+  }
 }
 
 @media (max-width: 430px) {
+  .pressSlider img {
+    height: 200px;
+  }
+
   .answearBlockItem {
     max-width: 27.6%;
   }
@@ -11941,8 +12151,8 @@ Start responsive
   }
 
   .popupDoc {
-    max-width: 300px !important;
-    height: 350px !important;
+    max-width: 270px !important;
+    height: 310px !important;
   }
 
   .fancybox-close-small {
@@ -11963,9 +12173,29 @@ Start responsive
   .footerBottomList li:before {
     margin-right: 8px;
   }
+
+  .smazkaFormInput input {
+    max-width: 70%;
+  }
+
+  .smazkaFormInput__send {
+    max-width: 29%;
+  }
 }
 
 @media (max-width: 410px) {
+  .serviceItemLeft__title:before {
+    width: 33px;
+    height: 40px;
+    background-size: cover;
+    margin-right: 10px;
+  }
+
+  .history .title {
+    margin-left: 30px;
+    font-size: 20px;
+  }
+
   .footerBottomList li a {
     font-size: 12px;
   }
@@ -11987,7 +12217,7 @@ Start responsive
   }
 
   .mistakeContent {
-    max-width: 90%;
+    max-width: 100%;
     width: 100%;
   }
 
@@ -12050,6 +12280,10 @@ Start responsive
 @media (max-width: 385px) {
   .blockBtn.backBtn:after {
     left: 20px;
+  }
+
+  .mistakeBtn__main.btn, .mistakeBtn__question.btn {
+    max-width: 160px;
   }
 
   .answearBlockItem {
@@ -12148,7 +12382,7 @@ Start responsive height
 
 @media (max-height: 940px) {
   .mistakeContent {
-    margin-top: 0;
+    margin-top: 150px;
   }
 
   .mobilCheckboxScroll {
@@ -12179,13 +12413,13 @@ Start responsive height
   }
 
   .mistakeContent {
-    margin-top: 0;
+    margin-top: 90px;
   }
 }
 
 @media (max-height: 700px) {
   .mobileMenuBlockScroll {
-    height: 500px;
+    height: 356px;
   }
 
   .mobilCheckboxScroll {
@@ -12196,16 +12430,16 @@ Start responsive height
 }
 
 @media (max-height: 650px) {
-  .mistakeContent {
-    margin-top: 0;
-  }
-
   .mistakeBottomList {
     display: none;
   }
 }
 
 @media (max-height: 580px) {
+  .mistakeContent {
+    margin-top: 40px;
+  }
+
   .mobileMenuBlockScroll {
     height: 400px;
   }
@@ -12314,7 +12548,7 @@ Start responsive height
   }
 
   .mobileMenuBlockFormBtn {
-    bottom: 50px;
+    bottom: 80px;
   }
 }
 
