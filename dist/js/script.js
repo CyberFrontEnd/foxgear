@@ -384,7 +384,9 @@ $(document).ready(function() {
 
 
 $(document).ready(function () {
-  const swiper = new Swiper(".client3Imgslider", {});
+  const swiper = new Swiper(".client3Imgslider", {
+    loop: true,
+  });
 });
 
 
@@ -510,5 +512,3 @@ $(document).ready(function () {
 
   window.addEventListener("resize", updateWidth);
 });
-
-

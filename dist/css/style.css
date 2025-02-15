@@ -1494,7 +1494,8 @@ Start items
   letter-spacing: 1px;
   margin-top: 5px;
   display: block;
-  height: 24px;
+  min-height: 24px;
+  max-height: 50px;
   overflow: hidden;
   margin-bottom: 15px;
 }
@@ -1731,7 +1732,7 @@ End popupCabinet
 }
 
 .topSliderIn__4 {
-  min-width: 1134px;
+  min-width: 1105px;
 }
 
 .topSliderIn__4 .topSliderInBlock {
@@ -5336,6 +5337,9 @@ New slider
   padding-left: 10px;
   max-width: 90%;
   width: 100%;
+}
+
+.block3 .blockTopIn .select-selected {
   text-transform: none;
 }
 
@@ -5761,6 +5765,19 @@ End history
   max-width: 658px;
 }
 
+.client3ImgsliderBlock {
+  max-width: 99%;
+  width: 100%;
+}
+
+.client3Img {
+  display: block;
+  width: 100%;
+  object-fit: contain;
+  transform: scale(1.1);
+  height: 100%;
+}
+
 /*
 Start responsive
 ################*/
@@ -5781,6 +5798,20 @@ Start responsive
     max-width: 19.5%;
     width: 100%;
   }
+
+  .topSliderIn__2 .topSliderInBlock {
+    margin: 0 0 0 116px;
+  }
+}
+
+@media (max-width: 1870px) {
+  .topSliderNavIn {
+    left: -7px;
+  }
+
+  .topSliderIn__3 .topSliderInBlock {
+    margin: 0 0 0 119px;
+  }
 }
 
 @media (max-width: 1830px) {
@@ -5795,9 +5826,25 @@ Start responsive
   .topSliderNav {
     max-width: 90%;
   }
+
+  .topSliderIn__4 .topSliderInBlock {
+    left: -1px;
+  }
+
+  .topSliderNavIn {
+    left: -1px;
+  }
+
+  .topSliderIn__3 .topSliderInBlock {
+    margin: 0 0 0 94px;
+  }
 }
 
 @media (max-width: 1800px) {
+  .topSliderIn__3 .topSliderInBlock {
+    margin: 0 0 0 114px;
+  }
+
   .nav-buttons {
     left: 224px;
   }
@@ -6089,6 +6136,14 @@ Start responsive
   .itemDoc .itemsDocuments {
     max-width: 658px;
   }
+
+  .topSliderIn__4 .topSliderInBlock {
+    left: 18px;
+  }
+
+  .topSliderNavIn {
+    left: 20px;
+  }
 }
 
 @media (max-width: 1750px) {
@@ -6323,6 +6378,10 @@ Start responsive
   .itemDoc .itemsDocuments {
     max-width: 633px;
   }
+
+  .topSliderIn__4 .topSliderInBlock {
+    left: 9px;
+  }
 }
 
 @media (max-width: 1700px) {
@@ -6332,6 +6391,14 @@ Start responsive
 }
 
 @media (max-width: 1660px) {
+  .topSliderIn__2 .topSliderInBlock {
+    margin: 0 0 0 65px;
+  }
+
+  .topSliderIn__3 .topSliderInBlock {
+    margin: 0 0 0 52px;
+  }
+
   .contactMap {
     padding-left: 112px;
   }
@@ -7695,10 +7762,6 @@ Start responsive
 }
 
 @media (max-width: 1210px) {
-  .client3Img {
-    height: 400px;
-  }
-
   .historySlider .swiper-button-container {
     right: 15%;
   }
@@ -8307,10 +8370,6 @@ Start responsive
 }
 
 @media (max-width: 1060px) {
-  .client3Img {
-    height: 350px;
-  }
-
   .historySlider .swiper-button-container {
     right: auto;
     left: 120px;
@@ -9392,6 +9451,11 @@ Start responsive
 
   .map .contactsRightBlockIn {
     max-width: 100%;
+    margin-bottom: 0;
+  }
+
+  .map .itemTabs {
+    height: 790px;
   }
 
   .map .cnt_2 {
@@ -9698,19 +9762,23 @@ Start responsive
   .material .clientRightBlock {
     margin: 21px 0 0 40px;
   }
+
+  .popupSearch .itemSliderContent .itemBlock__link {
+    height: 250px;
+  }
 }
 
 @media (max-width: 770px) {
+  .blockTopIn .select-selected {
+    text-transform: none;
+  }
+
   .catalogHeader {
     margin: 103px auto 16px;
   }
 
   .topSlider {
     margin: 87px auto 16px;
-  }
-
-  .client3Img {
-    height: 280px;
   }
 
   .items {
@@ -10311,6 +10379,19 @@ Start responsive
   .mistakeBtn {
     max-width: 390px;
   }
+
+  .parthner .clientRight {
+    margin-top: 0;
+  }
+
+  .parthner .clientRightBlock {
+    padding-top: 20px;
+  }
+
+  .popupSearch .itemSliderContent .itemBlock__link {
+    height: 280px;
+    margin-top: 20px;
+  }
 }
 
 @media (max-width: 740px) {
@@ -10550,6 +10631,10 @@ Start responsive
 }
 
 @media (max-width: 670px) {
+  .popupSearch .itemSliderContent .itemBlock__link {
+    height: 250px;
+  }
+
   .catalogHeader {
     margin: 90px auto 16px;
   }
@@ -10865,6 +10950,22 @@ Start responsive
 }
 
 @media (max-width: 590px) {
+  .popupSearch .itemSliderContent .itemBlock{
+    height: 360px;
+  }
+
+  .popupSearch .itemSliderContent .itemBlock__link{
+    height: 160px;
+  }
+
+  .popupSearch .itemBlockBottom{
+    margin-top: 20px;
+  }
+
+  .map .itemTabs {
+    height: 760px;
+  }
+
   .smazkaFormInput input {
     max-width: 75%;
   }
@@ -11063,15 +11164,13 @@ Start responsive
   }
 
   .client3Img {
-    display: none;
+    height: 300px;
+    object-fit: cover;
+    transform: scale(1);
   }
 
-  .client3ImgMobil {
-    display: block;
+  .client3ImgsliderBlock {
     max-width: 100%;
-    width: 100%;
-    object-fit: cover;
-    height: 280px;
   }
 
   .clientRightBlock__title {
@@ -11299,7 +11398,15 @@ Start responsive
   }
 
   .itemBlockBottom {
-    padding-top: 10px;
+    padding-top: 0;
+  }
+
+  .itemBlockList {
+    margin-top: 10px;
+  }
+
+  .itemBlockBottom > div {
+    margin-bottom: 0;
   }
 
   .items .itemBlock__href {
@@ -11325,8 +11432,27 @@ Start responsive
   }
 
   .itemSlider2 .itemBlock__link {
-    height: 160px;
+    height: 163px;
     margin-top: 30px;
+  }
+
+  .itemSelection .itemBlock__link {
+    height: 163px;
+    margin-bottom: 20px;
+  }
+
+  .itemSelection .itemBlock {
+    height: 360px;
+  }
+
+  .catalogMain .itemBlock__link img,
+  .catalogMain .itemBlock__link {
+    height: 163px;
+  }
+
+  .catalogMain .itemBlock__link {
+    margin-top: 20px;
+    margin-bottom: 20px;
   }
 
   .itemSlider2 .itemBlock__link img {
@@ -11334,7 +11460,9 @@ Start responsive
   }
 
   .itemSlider2 .itemBlockBottom {
-    margin-top: 10px;
+    margin-top: 0;
+    max-width: 88%;
+    padding-top: 7px;
   }
 
   .itemSlider2 {
@@ -11388,6 +11516,18 @@ Start responsive
 
   .mistakeBtn {
     max-width: 100%;
+  }
+
+  .catalogMain .itemBlock {
+    margin-right: 0;
+    max-width: 49%;
+    height: 360px;
+  }
+
+  .itemBlockBottom__name {
+    font-size: 15px;
+    letter-spacing: 1px;
+    line-height: 15px;
   }
 }
 
@@ -11841,7 +11981,11 @@ Start responsive
   }
 
   .catalogMain .itemBlock {
-    max-width: 47.9%;
+    max-width: 48.5%;
+  }
+
+  .catalogMain .itemBlock__link {
+    margin-bottom: 15px;
   }
 
   .itemBlock__link {
@@ -12059,12 +12203,13 @@ Start responsive
   }
 
   .itemSelection .itemBlock__link {
-    height: 190px;
+    height: 165px;
+    margin-bottom: 10px;
   }
 
   .itemSelection .itemBlock {
     min-height: 365px;
-    max-height: 390px;
+    max-height: 360px;
   }
 
   .itemBlockTop {
@@ -12184,6 +12329,22 @@ Start responsive
 }
 
 @media (max-width: 410px) {
+  .popupSearch .itemBlockBottom{
+    margin-top: 0px;
+  }
+
+  .text_16 {
+    font-size: 15px;
+  }
+
+  .popupSearch {
+    padding: 40px 11px !important;
+  }
+
+  .blockBtn.backBtn3:after {
+    left: 25px;
+  }
+
   .serviceItemLeft__title:before {
     width: 33px;
     height: 40px;
@@ -12278,6 +12439,10 @@ Start responsive
 }
 
 @media (max-width: 385px) {
+  .blockBtn.backBtn3:after {
+    left: 18px;
+  }
+
   .blockBtn.backBtn:after {
     left: 20px;
   }
