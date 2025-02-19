@@ -137,6 +137,28 @@ input:focus:-ms-input-placeholder {
 /*
 Start setting
 #############*/
+#width-display {
+  position: fixed;
+  left: 50%;
+  top: 25%;
+  margin: 5px;
+  font-weight: bold;
+  color: red;
+  z-index: 999999;
+}
+
+.line {
+  position: absolute;
+  top: 0;
+  left: 10%;
+  width: 3px;
+  height: 1000vh;
+  background-color: red;
+  cursor: grab;
+  user-select: none;
+  z-index: 9999;
+}
+
 .flex {
   display: -webkit-box;
   display: -webkit-flex;
@@ -3971,7 +3993,7 @@ End liveCompany
   background: #E9EFF3;
   border-radius: 100px;
   position: absolute;
-  left: 767px;
+  left: 800px;
 }
 
 .parthnerImgMobil {
@@ -4394,8 +4416,7 @@ End brends
   max-width: 93%;
   width: 100%;
   margin: 0 auto;
-  height: 74%;
-  overflow: auto;
+  height: 80%;
 }
 
 .mobileMenuBlockForm {
@@ -4499,6 +4520,7 @@ End brends
   max-width: 1600px !important;
   width: 100% !important;
   background: #ffffff !important;
+  height: 980px;
 }
 
 .popupSearch__title {
@@ -4576,7 +4598,7 @@ End brends
 .popupSearch .itemSliderContent .itemBlock {
   margin-bottom: 10px;
   margin-right: 10px;
-  max-width: 370px;
+  max-width: 360px;
 }
 
 .popupSearch .itemSliderContent .itemBlock:nth-child(4n+4) {
@@ -5339,10 +5361,6 @@ New slider
   width: 100%;
 }
 
-.block3 .blockTopIn .select-selected {
-  text-transform: none;
-}
-
 .blockTopIn .select-selected:after {
   position: absolute;
   right: 19px;
@@ -5778,10 +5796,18 @@ End history
   height: 100%;
 }
 
+.client3ImgMobil {
+  display: none;
+}
+
 /*
 Start responsive
 ################*/
 @media (max-width: 1895px) {
+  .imageScroll {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
   .slider__subtitle {
     left: 6px;
   }
@@ -6202,7 +6228,7 @@ Start responsive
   }
 
   .mistakeBottomNum:after {
-    left: 649px;
+    left: 720px;
   }
 
   .serviceInfo {
@@ -6762,11 +6788,7 @@ Start responsive
   }
 
   .mistakeBottomNum:after {
-    left: 649px;
-  }
-
-  .mistakeBottomNum:after {
-    left: 595px;
+    left: 664px;
   }
 
   .stepParthnersRight,
@@ -7130,10 +7152,6 @@ Start responsive
     margin-right: 120px;
   }
 
-  .mistakeBottomNum:after {
-    left: 649px;
-  }
-
   .mistakeBottomList {
     margin-left: -47px;
   }
@@ -7143,7 +7161,7 @@ Start responsive
   }
 
   .mistakeBottomNum:after {
-    left: 454px;
+    left: 520px;
     width: 38px;
     height: 38px;
   }
@@ -7609,6 +7627,10 @@ Start responsive
   .history .historySlider {
     width: 1300px;
   }
+
+  .itemBlock {
+    height: 545px;
+  }
 }
 
 @media (max-width: 1260px) {
@@ -7939,6 +7961,14 @@ Start responsive
 }
 
 @media (max-width: 1160px) {
+  .topSliderIn__2 .topSliderInBlock {
+    margin: 0 0 0 42px;
+  }
+
+  .topSliderIn__3 .topSliderInBlock {
+    margin: 0 0 0 44px;
+  }
+
   .history {
     margin-left: 0;
   }
@@ -8469,6 +8499,18 @@ Start responsive
   .itemDoc .clientLeft {
     max-width: 100%;
   }
+
+  .itemBlockList li {
+    padding: 0 10px;
+  }
+
+  .itemBlockList li:after {
+    right: 0;
+  }
+
+  .itemBlockList li:first-of-type:after {
+    right: -6px;
+  }
 }
 
 @media (max-width: 1030px) {
@@ -8605,10 +8647,7 @@ Start responsive
   .mistakeBottomNum:after {
     width: 48px;
     height: 48px;
-  }
-
-  .mistakeBottomNum:after {
-    left: 660px;
+    left: 734px;
   }
 
   .mistakeBottomList {
@@ -9330,6 +9369,18 @@ Start responsive
 }
 
 @media (max-width: 870px) {
+  .topSliderIn__2 .topSliderInBlock {
+    margin: 0 0 0 27px;
+  }
+
+  .topSliderIn__4 .topSliderInBlock {
+    left: 0;
+  }
+
+  .topSliderIn__3 .topSliderInBlock {
+    margin: 0 0 0 27px;
+  }
+
   .mapTop .clientRightBlock {
     margin: 21px 0 0 40px;
   }
@@ -9551,6 +9602,11 @@ Start responsive
 }
 
 @media (max-width: 830px) {
+  .metisMenu3InList .input-row {
+    border-right: 1px solid #CDCED5;
+    border-left: 1px solid #CDCED5;
+  }
+
   .questionContent {
     margin-top: 0;
   }
@@ -9769,6 +9825,10 @@ Start responsive
 }
 
 @media (max-width: 770px) {
+  .newsItem {
+    max-width: 336px;
+  }
+
   .blockTopIn .select-selected {
     text-transform: none;
   }
@@ -10392,6 +10452,10 @@ Start responsive
     height: 280px;
     margin-top: 20px;
   }
+
+  .whenParthners {
+    padding-top: 40px;
+  }
 }
 
 @media (max-width: 740px) {
@@ -10421,7 +10485,7 @@ Start responsive
   }
 
   .catalogMain .itemBlock {
-    max-width: 49%;
+    max-width: 48.5%;
   }
 
   .catalogContent {
@@ -10572,7 +10636,7 @@ Start responsive
   }
 
   .mistakeBottomNum:after {
-    left: 510px;
+    left: 561px;
   }
 
   .serviceItemRevers .serviceItemLeft,
@@ -10628,15 +10692,43 @@ Start responsive
   .answearBlock .mapSliderContactsNavIn {
     left: -2px;
   }
+
+  #question2 .itemBlock__link img,
+  #question2 .itemBlock__link {
+    height: 200px;
+    object-fit: cover;
+    margin-top: 10px;
+  }
+
+  #question2 .itemBlock {
+    height: 380px;
+  }
 }
 
 @media (max-width: 670px) {
+  .topSliderInBlock {
+    margin: 0 0 0 21px;
+  }
+
+  .topSliderIn__2 .topSliderInBlock {
+    margin: 0 0 0 24px;
+  }
+
+  .topSliderIn__3 .topSliderInBlock {
+    margin: 0 0 0 21px;
+  }
+
   .popupSearch .itemSliderContent .itemBlock__link {
     height: 250px;
   }
 
   .catalogHeader {
-    margin: 90px auto 16px;
+    margin: 70px auto 16px;
+  }
+
+  .catalogContent .itemBlockBottom > div {
+    margin-bottom: 10px !important;
+    margin-top: 10px !important;
   }
 
   .topSlider {
@@ -10950,15 +11042,27 @@ Start responsive
 }
 
 @media (max-width: 590px) {
-  .popupSearch .itemSliderContent .itemBlock{
+  .preessCenter {
+    margin: 20px auto;
+  }
+
+  .documentsIn {
+    width: 1170px;
+  }
+
+  .newsItem {
+    max-width: 300px;
+  }
+
+  .popupSearch .itemSliderContent .itemBlock {
     height: 360px;
   }
 
-  .popupSearch .itemSliderContent .itemBlock__link{
+  .popupSearch .itemSliderContent .itemBlock__link {
     height: 160px;
   }
 
-  .popupSearch .itemBlockBottom{
+  .popupSearch .itemBlockBottom {
     margin-top: 20px;
   }
 
@@ -11160,7 +11264,8 @@ Start responsive
   }
 
   .proizvodsto {
-    padding-left: 0px;
+    padding-left: 0;
+    padding-top: 0;
   }
 
   .client3Img {
@@ -11254,7 +11359,6 @@ Start responsive
 
   .blockTopInMobilPopup span {
     color: #000E32;
-    text-transform: none;
   }
 
   .blockTopInMobilPopup:after {
@@ -11401,6 +11505,18 @@ Start responsive
     padding-top: 0;
   }
 
+  #question2 .itemBlockBottom {
+    margin-top: 20px;
+  }
+
+  #question2 .itemBlock__link img, #question2 .itemBlock__link {
+    height: 165px;
+  }
+
+  #question2 .itemBlock {
+    height: 348px;
+  }
+
   .itemBlockList {
     margin-top: 10px;
   }
@@ -11529,11 +11645,37 @@ Start responsive
     letter-spacing: 1px;
     line-height: 15px;
   }
+
+  .mapTop {
+    margin-top: 20px;
+  }
+
+  .whenParthners {
+    padding-top: 30px;
+  }
+
+  .whenParthners__title {
+    margin-bottom: 20px;
+  }
+
+  .stepParthners {
+    padding-top: 40px;
+  }
+
+  .client3ImgMobil {
+    display: block;
+    object-fit: contain;
+    transform: scale(1.12);
+  }
+
+  .client3Img {
+    display: none;
+  }
 }
 
 @media (max-width: 550px) {
   .contactsRight .contactsRightBlockIn {
-    margin-bottom: 15px;
+    margin-bottom: 40px;
   }
 
   .items {
@@ -11637,7 +11779,7 @@ Start responsive
   }
 
   .mistakeBottomNum:after {
-    left: 380px;
+    left: 434px;
   }
 
   .parthnerItem {
@@ -11733,6 +11875,15 @@ Start responsive
 
   .itemsDocumentsList li {
     max-width: 100%;
+    margin-right: 0;
+  }
+
+  .answearBlockItemTopRight {
+    padding-top: 2px;
+  }
+
+  .itemDoc .itemsDocuments {
+    max-width: 87%;
   }
 
   .catalogMain .itemBlock {
@@ -11944,6 +12095,10 @@ Start responsive
 }
 
 @media (max-width: 480px) {
+  .topSliderIn__2 .topSliderInBlock {
+    margin: 0 0 0 17px;
+  }
+
   .mistakeContent {
     max-width: 100%;
   }
@@ -12061,6 +12216,11 @@ Start responsive
 
   .mainrobot .client__btn {
     margin-left: 0;
+  }
+
+  .itemTabs .itemBlock,
+  .itemSlider2 .itemBlock {
+    height: 348px;
   }
 }
 
@@ -12247,6 +12407,10 @@ Start responsive
 }
 
 @media (max-width: 430px) {
+  .documentsIn {
+    width: 1170px;
+  }
+
   .pressSlider img {
     height: 200px;
   }
@@ -12329,8 +12493,8 @@ Start responsive
 }
 
 @media (max-width: 410px) {
-  .popupSearch .itemBlockBottom{
-    margin-top: 0px;
+  .popupSearch .itemBlockBottom {
+    margin-top: 0;
   }
 
   .text_16 {
@@ -12439,6 +12603,15 @@ Start responsive
 }
 
 @media (max-width: 385px) {
+  .catalogContent .itemBlockBottom > div {
+    margin-bottom: 5px !important;
+    margin-top: 5px !important;
+  }
+
+  #question2 .itemBlock__link img, #question2 .itemBlock__link {
+    height: 145px;
+  }
+
   .blockBtn.backBtn3:after {
     left: 18px;
   }
@@ -12476,7 +12649,7 @@ Start responsive
   }
 
   .itemBlockList li {
-    margin-right: 10px;
+    margin-right: 5px;
   }
 
   .blockIn .input-row {
@@ -12487,10 +12660,6 @@ Start responsive
 
   .blockIn .input-row:nth-child(2n+2) {
     margin-right: 0;
-  }
-
-  .itemBlockList li {
-    margin-right: 1px;
   }
 
   .itemBlockList li:first-of-type:after {
@@ -12556,7 +12725,11 @@ Start responsive height
   }
 }
 
-@media (max-height: 840px) {
+@media (max-height: 845px) {
+  .mobileMenuBlockMenu {
+    height: 90%;
+  }
+
   .mistakeContent {
     margin-top: 0;
   }
@@ -12713,7 +12886,11 @@ Start responsive height
   }
 
   .mobileMenuBlockFormBtn {
-    bottom: 80px;
+    bottom: 50px;
+  }
+
+  .mobileMenuBlockMenu {
+    height: 85%;
   }
 }
 
