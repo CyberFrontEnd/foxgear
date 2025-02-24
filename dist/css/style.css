@@ -10570,6 +10570,10 @@ Start responsive
 }
 
 @media (max-width: 700px) {
+  .newsContent {
+    width: 1380px;
+  }
+
   .items {
     padding-top: 70px;
   }
@@ -11042,6 +11046,10 @@ Start responsive
 }
 
 @media (max-width: 590px) {
+  .newsContent {
+    width: 1250px;
+  }
+
   .preessCenter {
     margin: 20px auto;
   }
@@ -11192,6 +11200,19 @@ Start responsive
 
   .h3_caps {
     font-size: 18px;
+    line-height: 22px;
+  }
+
+  .itemsContent .itemsRight {
+    margin-top: 50px;
+  }
+
+  .itemsRightBody {
+    margin-top: 18px;
+  }
+
+  .serviceInfo .clientRight {
+    margin-top: 0;
   }
 
   .mistakeContent {
@@ -11665,7 +11686,7 @@ Start responsive
   .client3ImgMobil {
     display: block;
     object-fit: contain;
-    transform: scale(1.12);
+    transform: scale(1.13);
   }
 
   .client3Img {
