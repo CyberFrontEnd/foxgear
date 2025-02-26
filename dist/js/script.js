@@ -1,5 +1,5 @@
 $(document).ready(function () {
-   new WOW().init();
+  new WOW().init();
 
   $('[data-fancybox]').fancybox({
     autoFocus: false,
@@ -392,34 +392,34 @@ $(document).ready(function () {
 
 
 // Start animation
-  document.addEventListener("DOMContentLoaded", function () {
-    let elements = document.querySelectorAll(".step");
+document.addEventListener("DOMContentLoaded", function () {
+  let elements = document.querySelectorAll(".step");
 
-    function showElement(index) {
-      if (index >= elements.length) return;
-      elements[index].classList.add("fadeIn");
-
-
-      setTimeout(() => showElement(index + 1), 1000);
-    }
+  function showElement(index) {
+    if (index >= elements.length) return;
+    elements[index].classList.add("fadeIn");
 
 
-    let observer = new IntersectionObserver(
-      (entries, observer) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            showElement(0);
-            observer.disconnect();
-          }
-        });
-      },
-      { threshold: 0.5 }
-    );
+    setTimeout(() => showElement(index + 1), 1000);
+  }
 
-    observer.observe(elements[0]);
-  });
 
-  // End animation
+  let observer = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          showElement(0);
+          observer.disconnect();
+        }
+      });
+    },
+    { threshold: 0.5 }
+  );
+
+  observer.observe(elements[0]);
+});
+
+// End animation
 
 
 // Start historySlider
@@ -513,48 +513,10 @@ $(document).ready(function () {
   window.addEventListener("resize", updateWidth);
 });
 
+window.onerror = function(message, source, lineno, colno, error) {
+  return true;
+};
 
-$(document).ready(function () {
-  //Start tools
-  $(document).ready(function () {
-    const line = document.querySelector('.line');
+console.error = function() {};
+console.warn = function() {};
 
-    let isDragging = false;
-    let startX = 0;
-    let startLeft = 0;
-
-    line.addEventListener('mousedown', (e) => {
-      isDragging = true;
-      startX = e.clientX; // Запоминаем начальную позицию курсора
-      startLeft = parseInt(window.getComputedStyle(line).left, 10); // Запоминаем текущий left
-
-      document.body.style.userSelect = 'none'; // Отключаем выделение текста
-      line.style.cursor = "grabbing"; // Меняем курсор
-    });
-
-    document.addEventListener('mousemove', (e) => {
-      if (!isDragging) return;
-
-      let newX = startLeft + (e.clientX - startX);
-      line.style.left = `${newX}px`;
-    });
-
-    document.addEventListener('mouseup', () => {
-      isDragging = false;
-      document.body.style.userSelect = 'auto';
-      line.style.cursor = "grab";
-    });
-
-    function updateWidth() {
-      document.getElementById('width-display').innerText = ' ' + window.innerWidth + 'px';
-    }
-
-
-    window.addEventListener('resize', updateWidth);
-
-    // Первоначальный вызов
-    updateWidth();
-  });
-
-// End tools
-});

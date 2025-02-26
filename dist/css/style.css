@@ -1017,7 +1017,7 @@ Start clients
 }
 
 .simbol {
-  margin-bottom: 0;
+  margin: 60px auto 0;
 }
 
 .clientIn {
@@ -1390,7 +1390,7 @@ Start items
   max-width: 1600px;
   width: 100%;
   margin: 0 auto;
-  padding-top: 100px;
+  padding-top: 90px;
 }
 
 .itemTabs {
@@ -1554,7 +1554,7 @@ Start items
 }
 
 .itemSlider {
-  margin-top: 60px;
+  margin-top: 50px;
 }
 
 /*
@@ -5798,6 +5798,10 @@ End history
 
 .client3ImgMobil {
   display: none;
+}
+
+.mainrobot {
+  margin: 90px auto 0;
 }
 
 /*
